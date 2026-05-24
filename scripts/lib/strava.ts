@@ -78,15 +78,36 @@ export async function fetchRecentStravaActivities(
 }
 
 function normalizeStravaActivity(activity: StravaActivity): Activity {
+  const runLike = activity.sport_type === 'Run'
+  const averageRhythm = runLike ? getAverageRhythm(activity) : null
+
   return {
     id: String(activity.id),
     sportType: activity.sport_type,
     startDate: activity.start_date,
+    title: activity.name,
+    description: activity.description ?? null,
     distanceKm: round(activity.distance / 1000),
     movingTimeSeconds: activity.moving_time,
+    calories: activity.calories ?? null,
+    averageRhythm,
     averageHeartRate: activity.average_heartrate ?? null,
     sensation: null,
   }
+}
+
+function getAverageRhythm(activity: StravaActivity): number | null {
+  if (typeof activity.average_speed === 'number' && activity.average_speed > 0) {
+    const secondsPerKm = 1000 / activity.average_speed
+    return round(secondsPerKm / 60)
+  }
+
+  if (activity.distance > 0) {
+    const secondsPerKm = activity.moving_time / (activity.distance / 1000)
+    return round(secondsPerKm / 60)
+  }
+
+  return null
 }
 
 function round(value: number): number {

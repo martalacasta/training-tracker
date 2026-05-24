@@ -2,10 +2,15 @@ import { z } from 'zod'
 
 export const stravaActivitySchema = z.object({
   id: z.number(),
+  name: z.string().optional(),
+  description: z.string().nullable().optional(),
   sport_type: z.string(),
   start_date: z.string(),
   distance: z.number(),
   moving_time: z.number(),
+  calories: z.number().nullable().optional(),
+  average_cadence: z.number().nullable().optional(),
+  average_speed: z.number().nullable().optional(),
   average_heartrate: z.number().nullable().optional(),
 })
 
@@ -15,8 +20,12 @@ export type Activity = {
   id: string
   sportType: string
   startDate: string
+  title?: string
+  description?: string | null
   distanceKm: number
   movingTimeSeconds: number
+  calories?: number | null
+  averageRhythm?: number | null
   averageHeartRate: number | null
   sensation: string | null
 }

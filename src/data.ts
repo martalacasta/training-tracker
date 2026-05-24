@@ -2,8 +2,12 @@ export type Activity = {
   id: string
   sportType: string
   startDate: string
+  title?: string
+  description?: string | null
   distanceKm: number
   movingTimeSeconds: number
+  calories?: number | null
+  averageRhythm?: number | null
   averageHeartRate: number | null
   sensation: string | null
 }

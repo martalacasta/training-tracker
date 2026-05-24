@@ -26,6 +26,8 @@ function App() {
   )
   const [insights, setInsights] = useState<InsightsData>(defaultInsightsData)
   const [error, setError] = useState<string | null>(null)
+  const [selectedTab, setSelectedTab] = useState<string>('all')
+  const [expandedRunIds, setExpandedRunIds] = useState<Record<string, boolean>>({})
 
   useEffect(() => {
     const load = async () => {
@@ -67,9 +69,52 @@ function App() {
   const activeGoalCount = goals.items.filter((goal) => goal.status !== 'completed').length
 
   const recentActivities = useMemo(
-    () => activities.items.slice().sort((a, b) => b.startDate.localeCompare(a.startDate)).slice(0, 8),
+    () => activities.items.slice().sort((a, b) => b.startDate.localeCompare(a.startDate)),
     [activities.items],
   )
+
+  const activityTabs = useMemo(() => {
+    const categories = new Map<string, { label: string; count: number }>()
+    for (const activity of recentActivities) {
+      const id = toActivityTabId(activity.sportType)
+      const existing = categories.get(id)
+      if (existing) {
+        existing.count += 1
+      } else {
+        categories.set(id, { label: toActivityTabLabel(id), count: 1 })
+      }
+    }
+
+    return [
+      { id: 'all', label: `All (${recentActivities.length})` },
+      ...[...categories.entries()].map(([id, value]) => ({
+        id,
+        label: `${value.label} (${value.count})`,
+      })),
+    ]
+  }, [recentActivities])
+
+  const selectedTabId = useMemo(
+    () => (activityTabs.some((tab) => tab.id === selectedTab) ? selectedTab : 'all'),
+    [activityTabs, selectedTab],
+  )
+
+  const filteredRecentActivities = useMemo(() => {
+    if (selectedTabId === 'all') {
+      return recentActivities.slice(0, 16)
+    }
+
+    return recentActivities
+      .filter((activity) => toActivityTabId(activity.sportType) === selectedTabId)
+      .slice(0, 16)
+  }, [recentActivities, selectedTabId])
+
+  const toggleRunDetails = (activityId: string) => {
+    setExpandedRunIds((previous) => ({
+      ...previous,
+      [activityId]: !previous[activityId],
+    }))
+  }
 
   return (
     <main>
@@ -158,28 +203,66 @@ function App() {
 
       <section className="panel">
         <h2>Recent activities</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Sport</th>
-              <th>Distance</th>
-              <th>Duration</th>
-              <th>Avg HR</th>
-            </tr>
-          </thead>
-          <tbody>
-            {recentActivities.map((activity) => (
-              <tr key={activity.id}>
-                <td>{activity.startDate.slice(0, 10)}</td>
-                <td>{activity.sportType}</td>
-                <td>{activity.distanceKm.toFixed(2)} km</td>
-                <td>{Math.round(activity.movingTimeSeconds / 60)} min</td>
-                <td>{activity.averageHeartRate ? Math.round(activity.averageHeartRate) : '-'}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="activity-tabs">
+          {activityTabs.map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              className={tab.id === selectedTabId ? 'tab-button tab-button-active' : 'tab-button'}
+              onClick={() => setSelectedTab(tab.id)}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        <ul className="activity-list">
+          {filteredRecentActivities.map((activity) => {
+            const isRun = activity.sportType === 'Run'
+            const isExpanded = expandedRunIds[activity.id] ?? false
+
+            return (
+              <li key={activity.id} className="activity-item">
+                <div className="activity-row">
+                  <p className="activity-title">{activity.title ?? `${activity.sportType} activity`}</p>
+                  <div className="activity-actions">
+                    <span>{activity.startDate.slice(0, 10)}</span>
+                    {isRun ? (
+                      <button
+                        type="button"
+                        className="link-button"
+                        onClick={() => toggleRunDetails(activity.id)}
+                      >
+                        {isExpanded ? 'Hide details' : 'Expand details'}
+                      </button>
+                    ) : null}
+                  </div>
+                </div>
+                <p className="activity-meta">
+                  {activity.sportType} · {activity.distanceKm.toFixed(2)} km ·{' '}
+                  {Math.round(activity.movingTimeSeconds / 60)} min · Avg HR{' '}
+                  {activity.averageHeartRate ? Math.round(activity.averageHeartRate) : '-'}
+                </p>
+                {isRun && isExpanded ? (
+                  <div className="activity-details">
+                    <p>
+                      <strong>Description:</strong> {activity.description?.trim() || 'No description'}
+                    </p>
+                    <p>
+                      <strong>Calories:</strong>{' '}
+                      {typeof activity.calories === 'number' ? `${Math.round(activity.calories)} kcal` : '-'}
+                    </p>
+                    <p>
+                      <strong>Average rhythm:</strong>{' '}
+                      {typeof activity.averageRhythm === 'number'
+                        ? `${formatRhythm(activity.averageRhythm)} min/km`
+                        : '-'}
+                    </p>
+                  </div>
+                ) : null}
+              </li>
+            )
+          })}
+        </ul>
       </section>
 
       <section className="panel">
@@ -188,6 +271,33 @@ function App() {
       </section>
     </main>
   )
+}
+
+function toActivityTabId(sportType: string): string {
+  if (sportType === 'Run') return 'run'
+  if (sportType === 'WeightTraining') return 'weight-training'
+  if (sportType === 'HighIntensityIntervalTraining') return 'hiit'
+  if (sportType === 'Tennis' || sportType === 'Padel') return 'racket-sports'
+  return `sport-${sportType.toLowerCase()}`
+}
+
+function toActivityTabLabel(tabId: string): string {
+  if (tabId === 'run') return 'Run'
+  if (tabId === 'weight-training') return 'Weight Training'
+  if (tabId === 'hiit') return 'HIIT'
+  if (tabId === 'racket-sports') return 'Tennis/Padel'
+  if (tabId.startsWith('sport-')) {
+    const raw = tabId.replace('sport-', '')
+    return raw.charAt(0).toUpperCase() + raw.slice(1)
+  }
+  return tabId
+}
+
+function formatRhythm(minutesPerKm: number): string {
+  const totalSeconds = Math.round(minutesPerKm * 60)
+  const minutes = Math.floor(totalSeconds / 60)
+  const seconds = totalSeconds % 60
+  return `${minutes}:${String(seconds).padStart(2, '0')}`
 }
 
 export default App
