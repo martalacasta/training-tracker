@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "data:sync": "tsx scripts/sync-strava-reconcile.ts",
+    "data:backfill": "tsx scripts/backfill-strava-details.ts",
     "data:coach": "tsx scripts/update-coach-memory.ts",
     "data:recommend": "tsx scripts/generate-recommendations.ts",
     "data:insights": "tsx scripts/generate-insights.ts",
