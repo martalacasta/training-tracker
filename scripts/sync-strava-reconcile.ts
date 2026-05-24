@@ -21,7 +21,9 @@ async function main() {
   const { accessToken } = await refreshStravaToken()
   const latestActivities = await fetchRecentStravaActivities(accessToken, syncState.lastSyncEpochSeconds)
 
-  const mergedById = new Map(existing.items.map((item) => [item.id, item]))
+  const mergedById = new Map(
+    existing.items.filter((item) => isStravaActivityId(item.id)).map((item) => [item.id, item]),
+  )
   for (const activity of latestActivities) {
     mergedById.set(activity.id, activity)
   }
@@ -40,6 +42,10 @@ async function main() {
   await writeRuntimeState('sync-state.json', { lastSyncEpochSeconds: nowEpoch })
 
   console.log(`Synced ${latestActivities.length} activities. Total activities: ${merged.length}.`)
+}
+
+function isStravaActivityId(id: string): boolean {
+  return /^\d+$/.test(id)
 }
 
 await main()
