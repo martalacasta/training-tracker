@@ -18,6 +18,7 @@ export type Goal = {
   targetDate: string
   status: 'on-track' | 'at-risk' | 'completed'
   type: 'race' | 'volume' | 'consistency'
+  url?: string
 }
 
 export type Recommendation = {

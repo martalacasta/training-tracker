@@ -74,7 +74,43 @@ export async function fetchRecentStravaActivities(
     page += 1
   }
 
-  return activities.map(normalizeStravaActivity)
+  const detailed: StravaActivity[] = []
+  const concurrency = 4
+  for (let index = 0; index < activities.length; index += concurrency) {
+    const batch = activities.slice(index, index + concurrency)
+    const results = await Promise.all(
+      batch.map(async (activity) => {
+        const detail = await fetchStravaActivityDetail(accessToken, activity.id)
+        return detail ?? activity
+      }),
+    )
+    detailed.push(...results)
+  }
+
+  return detailed.map(normalizeStravaActivity)
+}
+
+// The list endpoint omits `description` and `calories`; fetch the detail endpoint to get them.
+export async function fetchStravaActivityDetail(
+  accessToken: string,
+  activityId: number,
+): Promise<StravaActivity | null> {
+  const response = await fetch(
+    `https://www.strava.com/api/v3/activities/${activityId}?include_all_efforts=false`,
+    { headers: { authorization: `Bearer ${accessToken}` } },
+  )
+
+  if (response.status === 404) {
+    return null
+  }
+
+  if (!response.ok) {
+    throw new Error(
+      `Could not fetch Strava activity ${activityId}. Status ${response.status}`,
+    )
+  }
+
+  return stravaActivitySchema.parse(await response.json())
 }
 
 function normalizeStravaActivity(activity: StravaActivity): Activity {
