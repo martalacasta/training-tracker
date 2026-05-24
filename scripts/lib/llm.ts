@@ -94,6 +94,8 @@ async function requestChatCompletion(
   })
 
   if (!response.ok) {
+    const errorText = await response.text()
+    console.error(`LLM API Error (${response.status}):`, errorText)
     throw new Error(`LLM request failed with status ${response.status}`)
   }
 
