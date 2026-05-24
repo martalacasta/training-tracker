@@ -27,6 +27,10 @@ Set in `.env`:
 - `STRAVA_CLIENT_SECRET`
 - `STRAVA_REFRESH_TOKEN`
 
+Optional Strava retry tuning:
+- `STRAVA_RETRY_MAX` (defaults to `4`)
+- `STRAVA_RETRY_BASE_MS` (defaults to `1500`)
+
 Optional LLM:
 - `LLM_API_URL`
 - `LLM_API_KEY`

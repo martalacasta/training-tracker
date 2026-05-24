@@ -7,6 +7,16 @@ const tokenResponseSchema = z.object({
   expires_at: z.number(),
 })
 
+const STRAVA_RETRY_MAX = Number(process.env.STRAVA_RETRY_MAX ?? 4)
+const STRAVA_RETRY_BASE_MS = Number(process.env.STRAVA_RETRY_BASE_MS ?? 1500)
+
+class StravaRateLimitError extends Error {
+  constructor(message: string) {
+    super(message)
+    this.name = 'StravaRateLimitError'
+  }
+}
+
 export async function refreshStravaToken(): Promise<{
   accessToken: string
   refreshToken: string
@@ -60,7 +70,7 @@ export async function fetchRecentStravaActivities(
     url.searchParams.set('page', String(page))
     url.searchParams.set('after', String(afterEpochSeconds))
 
-    const response = await fetch(url, {
+    const response = await fetchWithRetry(url, {
       headers: { authorization: `Bearer ${accessToken}` },
     })
 
@@ -76,12 +86,25 @@ export async function fetchRecentStravaActivities(
 
   const detailed: StravaActivity[] = []
   const concurrency = 4
+  let stopDetailFetchDueToRateLimit = false
   for (let index = 0; index < activities.length; index += concurrency) {
     const batch = activities.slice(index, index + concurrency)
     const results = await Promise.all(
       batch.map(async (activity) => {
-        const detail = await fetchStravaActivityDetail(accessToken, activity.id)
-        return detail ?? activity
+        if (stopDetailFetchDueToRateLimit) {
+          return activity
+        }
+
+        try {
+          const detail = await fetchStravaActivityDetail(accessToken, activity.id)
+          return detail ?? activity
+        } catch (error) {
+          if (isStravaRateLimitError(error)) {
+            stopDetailFetchDueToRateLimit = true
+            return activity
+          }
+          throw error
+        }
       }),
     )
     detailed.push(...results)
@@ -95,7 +118,7 @@ export async function fetchStravaActivityDetail(
   accessToken: string,
   activityId: number,
 ): Promise<StravaActivity | null> {
-  const response = await fetch(
+  const response = await fetchWithRetry(
     `https://www.strava.com/api/v3/activities/${activityId}?include_all_efforts=false`,
     { headers: { authorization: `Bearer ${accessToken}` } },
   )
@@ -111,6 +134,56 @@ export async function fetchStravaActivityDetail(
   }
 
   return stravaActivitySchema.parse(await response.json())
+}
+
+async function fetchWithRetry(input: string | URL, init: RequestInit): Promise<Response> {
+  const attempts = Math.max(0, STRAVA_RETRY_MAX) + 1
+
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    const response = await fetch(input, init)
+    if (response.ok || response.status === 404) {
+      return response
+    }
+
+    const shouldRetry = response.status === 429 || response.status >= 500
+    const hasAttemptsLeft = attempt + 1 < attempts
+    if (!shouldRetry || !hasAttemptsLeft) {
+      if (response.status === 429) {
+        throw new StravaRateLimitError(
+          `Strava rate limit reached (status 429) after ${attempt + 1} attempts.`,
+        )
+      }
+      return response
+    }
+
+    const retryAfter = getRetryAfterMilliseconds(response)
+    const backoff = STRAVA_RETRY_BASE_MS * 2 ** attempt
+    await sleep(Math.max(retryAfter, backoff))
+  }
+
+  throw new Error('Unexpected Strava retry state')
+}
+
+function getRetryAfterMilliseconds(response: Response): number {
+  const header = response.headers.get('retry-after')
+  if (!header) {
+    return 0
+  }
+
+  const seconds = Number(header)
+  if (Number.isFinite(seconds) && seconds >= 0) {
+    return seconds * 1000
+  }
+
+  return 0
+}
+
+function isStravaRateLimitError(error: unknown): error is StravaRateLimitError {
+  return error instanceof StravaRateLimitError
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
 function normalizeStravaActivity(activity: StravaActivity): Activity {
