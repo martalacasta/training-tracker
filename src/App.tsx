@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import './App.css'
 import {
+  type ActivityAdviceData,
   type ActivitiesData,
   type AggregatesData,
   type CoachStateData,
@@ -31,7 +32,14 @@ function App() {
   const [insights, setInsights] = useState<InsightsData>(defaultInsightsData)
   const [error, setError] = useState<string | null>(null)
   const [selectedTab, setSelectedTab] = useState<string>('all')
-  const [expandedRunIds, setExpandedRunIds] = useState<Record<string, boolean>>({})
+  const [expandedActivityIds, setExpandedActivityIds] = useState<Record<string, boolean>>({})
+  const [activityAdviceById, setActivityAdviceById] = useState<
+    Record<string, ActivityAdviceData | null | undefined>
+  >({})
+  const [activityAdviceLoadingById, setActivityAdviceLoadingById] = useState<Record<string, boolean>>(
+    {},
+  )
+  const [activityAdviceErrorById, setActivityAdviceErrorById] = useState<Record<string, string>>({})
   const defaultRange = useMemo(() => getDefaultDateRange(), [])
   const [fromDate, setFromDate] = useState<string>(defaultRange.from)
   const [toDate, setToDate] = useState<string>(defaultRange.to)
@@ -121,8 +129,35 @@ function App() {
     )
   }, [dateFilteredActivities, selectedTabId])
 
-  const toggleRunDetails = (activityId: string) => {
-    setExpandedRunIds((previous) => ({
+  const loadActivityAdvice = async (activityId: string) => {
+    setActivityAdviceLoadingById((previous) => ({ ...previous, [activityId]: true }))
+    setActivityAdviceErrorById((previous) => {
+      const next = { ...previous }
+      delete next[activityId]
+      return next
+    })
+
+    try {
+      const adviceResponse = await fetchDataFile<ActivityAdviceData>(`activity-advice/${activityId}.json`)
+      setActivityAdviceById((previous) => ({ ...previous, [activityId]: adviceResponse }))
+    } catch {
+      setActivityAdviceErrorById((previous) => ({
+        ...previous,
+        [activityId]: 'Could not load activity advice.',
+      }))
+      setActivityAdviceById((previous) => ({ ...previous, [activityId]: null }))
+    } finally {
+      setActivityAdviceLoadingById((previous) => ({ ...previous, [activityId]: false }))
+    }
+  }
+
+  const toggleActivityDetails = (activityId: string) => {
+    const isExpanded = expandedActivityIds[activityId] ?? false
+    if (!isExpanded && activityAdviceById[activityId] === undefined) {
+      void loadActivityAdvice(activityId)
+    }
+
+    setExpandedActivityIds((previous) => ({
       ...previous,
       [activityId]: !previous[activityId],
     }))
@@ -272,7 +307,10 @@ function App() {
           ) : null}
           {filteredRecentActivities.map((activity) => {
             const isRun = activity.sportType === 'Run'
-            const isExpanded = expandedRunIds[activity.id] ?? false
+            const isExpanded = expandedActivityIds[activity.id] ?? false
+            const advice = activityAdviceById[activity.id]
+            const isAdviceLoading = activityAdviceLoadingById[activity.id] ?? false
+            const adviceError = activityAdviceErrorById[activity.id]
 
             return (
               <li key={activity.id} className="activity-item">
@@ -280,15 +318,13 @@ function App() {
                   <p className="activity-title">{activity.title ?? `${activity.sportType} activity`}</p>
                   <div className="activity-actions">
                     <span>{activity.startDate.slice(0, 10)}</span>
-                    {isRun ? (
-                      <button
-                        type="button"
-                        className="link-button"
-                        onClick={() => toggleRunDetails(activity.id)}
-                      >
-                        {isExpanded ? 'Hide details' : 'Expand details'}
-                      </button>
-                    ) : null}
+                    <button
+                      type="button"
+                      className="link-button"
+                      onClick={() => toggleActivityDetails(activity.id)}
+                    >
+                      {isExpanded ? 'Hide details' : 'Expand details'}
+                    </button>
                   </div>
                 </div>
                 <p className="activity-meta">
@@ -296,21 +332,52 @@ function App() {
                   {Math.round(activity.movingTimeSeconds / 60)} min · Avg HR{' '}
                   {activity.averageHeartRate ? Math.round(activity.averageHeartRate) : '-'}
                 </p>
-                {isRun && isExpanded ? (
+                {isExpanded ? (
                   <div className="activity-details">
                     <p>
                       <strong>Description:</strong> {activity.description?.trim() || 'No description'}
                     </p>
                     <p>
                       <strong>Calories:</strong>{' '}
-                      {typeof activity.calories === 'number' ? `${Math.round(activity.calories)} kcal` : '-'}
-                    </p>
-                    <p>
-                      <strong>Average rhythm:</strong>{' '}
-                      {typeof activity.averageRhythm === 'number'
-                        ? `${formatRhythm(activity.averageRhythm)} min/km`
-                        : '-'}
-                    </p>
+                        {typeof activity.calories === 'number' ? `${Math.round(activity.calories)} kcal` : '-'}
+                      </p>
+                    {isRun ? (
+                      <p>
+                        <strong>Average rhythm:</strong>{' '}
+                        {typeof activity.averageRhythm === 'number'
+                          ? `${formatRhythm(activity.averageRhythm)} min/km`
+                          : '-'}
+                      </p>
+                    ) : null}
+                    <div className="activity-advice">
+                      <p className="activity-advice-title">Coaching advice</p>
+                      {isAdviceLoading ? <p>Loading advice…</p> : null}
+                      {!isAdviceLoading && adviceError ? <p>{adviceError}</p> : null}
+                      {!isAdviceLoading && !adviceError && advice ? (
+                        <>
+                          <p>
+                            <strong>Summary:</strong> {advice.advice.summary}
+                          </p>
+                          <p>
+                            <strong>Focus:</strong> {advice.advice.focus}
+                          </p>
+                          <p>
+                            <strong>Next session:</strong> {advice.advice.nextSession}
+                          </p>
+                          {advice.advice.caution ? (
+                            <p>
+                              <strong>Caution:</strong> {advice.advice.caution}
+                            </p>
+                          ) : null}
+                          <p className="activity-advice-meta">
+                            Generated {advice.generatedAt.slice(0, 10)} · model {advice.model}
+                          </p>
+                        </>
+                      ) : null}
+                      {!isAdviceLoading && !adviceError && advice === null ? (
+                        <p>No activity advice generated yet.</p>
+                      ) : null}
+                    </div>
                   </div>
                 ) : null}
               </li>
