@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-24T19:34:06.598Z",
+  "updatedAt": "2026-05-24T19:42:13.836Z",
   "items": [
     {
       "id": "8997857366",
@@ -3776,13 +3776,16 @@
       "sportType": "Run",
       "startDate": "2026-03-12T16:16:24Z",
       "title": "intervalos",
-      "description": null,
+      "description": "",
       "distanceKm": 7.73,
       "movingTimeSeconds": 2998,
-      "calories": null,
+      "calories": 485,
       "averageRhythm": 6.46,
       "averageHeartRate": 160.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:13.634Z"
     },
     {
       "id": "17710296604",
@@ -3792,10 +3795,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2875,
-      "calories": null,
+      "calories": 133,
       "averageRhythm": null,
       "averageHeartRate": 88.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:12.908Z"
     },
     {
       "id": "17722152955",
@@ -3805,10 +3811,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 3846,
-      "calories": null,
+      "calories": 151,
       "averageRhythm": null,
       "averageHeartRate": 84.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:12.368Z"
     },
     {
       "id": "17729692355",
@@ -3818,10 +3827,13 @@
       "description": null,
       "distanceKm": 17.02,
       "movingTimeSeconds": 6979,
-      "calories": null,
+      "calories": 1092,
       "averageRhythm": 6.84,
       "averageHeartRate": 159.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:11.857Z"
     },
     {
       "id": "17769697959",
@@ -3831,10 +3843,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2723,
-      "calories": null,
+      "calories": 142,
       "averageRhythm": null,
       "averageHeartRate": 93.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:11.035Z"
     },
     {
       "id": "17769698223",
@@ -3844,10 +3859,13 @@
       "description": null,
       "distanceKm": 4.72,
       "movingTimeSeconds": 1803,
-      "calories": null,
+      "calories": 309,
       "averageRhythm": 6.37,
       "averageHeartRate": 163.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:10.533Z"
     },
     {
       "id": "17769698564",
@@ -3857,23 +3875,29 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2768,
-      "calories": null,
+      "calories": 153,
       "averageRhythm": null,
       "averageHeartRate": 95,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:09.890Z"
     },
     {
       "id": "17832511708",
       "sportType": "Run",
       "startDate": "2026-03-23T16:42:03Z",
       "title": "intentando recuperar",
-      "description": null,
+      "description": "",
       "distanceKm": 7.4,
       "movingTimeSeconds": 2848,
-      "calories": null,
+      "calories": 486,
       "averageRhythm": 6.41,
       "averageHeartRate": 166.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:09.365Z"
     },
     {
       "id": "17843047740",
@@ -3883,10 +3907,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2499,
-      "calories": null,
+      "calories": 161,
       "averageRhythm": null,
       "averageHeartRate": 102,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:08.698Z"
     },
     {
       "id": "17857600328",
@@ -3896,10 +3923,13 @@
       "description": null,
       "distanceKm": 7.42,
       "movingTimeSeconds": 2798,
-      "calories": null,
+      "calories": 478,
       "averageRhythm": 6.29,
       "averageHeartRate": 165.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:08.171Z"
     },
     {
       "id": "18024765572",
@@ -3909,10 +3939,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 3195,
-      "calories": null,
+      "calories": 151,
       "averageRhythm": null,
       "averageHeartRate": 90.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:07.454Z"
     },
     {
       "id": "17903789701",
@@ -3922,10 +3955,13 @@
       "description": null,
       "distanceKm": 10.3,
       "movingTimeSeconds": 4215,
-      "calories": null,
+      "calories": 677,
       "averageRhythm": 6.82,
       "averageHeartRate": 162.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:06.981Z"
     },
     {
       "id": "17977280347",
@@ -3935,10 +3971,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 3651,
-      "calories": null,
+      "calories": 286,
       "averageRhythm": null,
       "averageHeartRate": 113.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:06.207Z"
     },
     {
       "id": "17995431588",
@@ -3948,10 +3987,13 @@
       "description": null,
       "distanceKm": 5.09,
       "movingTimeSeconds": 2031,
-      "calories": null,
+      "calories": 345,
       "averageRhythm": 6.65,
       "averageHeartRate": 173.3,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:05.663Z"
     },
     {
       "id": "17996538513",
@@ -3961,36 +4003,45 @@
       "description": null,
       "distanceKm": 6.16,
       "movingTimeSeconds": 2577,
-      "calories": null,
+      "calories": 406,
       "averageRhythm": 6.97,
       "averageHeartRate": 163.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:05.086Z"
     },
     {
       "id": "18028153005",
       "sportType": "Run",
       "startDate": "2026-04-08T14:24:45Z",
       "title": "último entreno 😬😬",
-      "description": null,
+      "description": "",
       "distanceKm": 5.09,
       "movingTimeSeconds": 2078,
-      "calories": null,
+      "calories": 338,
       "averageRhythm": 6.8,
       "averageHeartRate": 163.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:04.384Z"
     },
     {
       "id": "18080836887",
       "sportType": "Run",
       "startDate": "2026-04-12T11:31:53Z",
       "title": "primera media!!",
-      "description": null,
+      "description": "con pinchazo en el km19 pero se ha acabado que es lo que importa!!",
       "distanceKm": 21.35,
       "movingTimeSeconds": 8838,
-      "calories": null,
+      "calories": 1402,
       "averageRhythm": 6.9,
       "averageHeartRate": 168.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:03.738Z"
     },
     {
       "id": "18129933374",
@@ -4000,10 +4051,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2749,
-      "calories": null,
+      "calories": 163,
       "averageRhythm": null,
       "averageHeartRate": 101.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:02.547Z"
     },
     {
       "id": "18136343291",
@@ -4013,10 +4067,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 3749,
-      "calories": null,
+      "calories": 340,
       "averageRhythm": null,
       "averageHeartRate": 125.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:02.004Z"
     },
     {
       "id": "18143389575",
@@ -4026,10 +4083,13 @@
       "description": null,
       "distanceKm": 5.17,
       "movingTimeSeconds": 2029,
-      "calories": null,
+      "calories": 339,
       "averageRhythm": 6.54,
       "averageHeartRate": 166.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:01.484Z"
     },
     {
       "id": "18160167329",
@@ -4039,10 +4099,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2407,
-      "calories": null,
+      "calories": 119,
       "averageRhythm": null,
       "averageHeartRate": 92.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:00.843Z"
     },
     {
       "id": "18181352779",
@@ -4052,10 +4115,13 @@
       "description": null,
       "distanceKm": 6.01,
       "movingTimeSeconds": 2194,
-      "calories": null,
+      "calories": 378,
       "averageRhythm": 6.08,
       "averageHeartRate": 171.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:42:00.355Z"
     },
     {
       "id": "18186436949",
@@ -4065,10 +4131,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2027,
-      "calories": null,
+      "calories": 117,
       "averageRhythm": null,
       "averageHeartRate": 98.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:59.703Z"
     },
     {
       "id": "18193742522",
@@ -4078,23 +4147,29 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2859,
-      "calories": null,
+      "calories": 215,
       "averageRhythm": null,
       "averageHeartRate": 113.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:59.165Z"
     },
     {
       "id": "18208689705",
       "sportType": "Run",
       "startDate": "2026-04-22T08:03:08Z",
       "title": "seriesss",
-      "description": null,
+      "description": "",
       "distanceKm": 6.05,
       "movingTimeSeconds": 2503,
-      "calories": null,
+      "calories": 416,
       "averageRhythm": 6.89,
       "averageHeartRate": 168.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:58.622Z"
     },
     {
       "id": "18255972443",
@@ -4104,10 +4179,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2566,
-      "calories": null,
+      "calories": 285,
       "averageRhythm": null,
       "averageHeartRate": 133.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:57.842Z"
     },
     {
       "id": "18255972920",
@@ -4117,10 +4195,13 @@
       "description": null,
       "distanceKm": 8.03,
       "movingTimeSeconds": 3285,
-      "calories": null,
+      "calories": 529,
       "averageRhythm": 6.82,
       "averageHeartRate": 164.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:57.331Z"
     },
     {
       "id": "18264187335",
@@ -4130,10 +4211,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2911,
-      "calories": null,
+      "calories": 278,
       "averageRhythm": null,
       "averageHeartRate": 125.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:56.653Z"
     },
     {
       "id": "18275742940",
@@ -4143,10 +4227,13 @@
       "description": null,
       "distanceKm": 5.88,
       "movingTimeSeconds": 2090,
-      "calories": null,
+      "calories": 359,
       "averageRhythm": 5.93,
       "averageHeartRate": 165.5,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:56.077Z"
     },
     {
       "id": "18323149478",
@@ -4156,10 +4243,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2421,
-      "calories": null,
+      "calories": 185,
       "averageRhythm": null,
       "averageHeartRate": 111.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:55.282Z"
     },
     {
       "id": "18323150503",
@@ -4169,10 +4259,13 @@
       "description": null,
       "distanceKm": 4.19,
       "movingTimeSeconds": 1504,
-      "calories": null,
+      "calories": 262,
       "averageRhythm": 5.98,
       "averageHeartRate": 171.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:54.745Z"
     },
     {
       "id": "18347085442",
@@ -4182,10 +4275,13 @@
       "description": null,
       "distanceKm": 8.55,
       "movingTimeSeconds": 3450,
-      "calories": null,
+      "calories": 581,
       "averageRhythm": 6.72,
       "averageHeartRate": 170.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:54.063Z"
     },
     {
       "id": "18349894658",
@@ -4195,10 +4291,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 1803,
-      "calories": null,
+      "calories": 130,
       "averageRhythm": null,
       "averageHeartRate": 106.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:53.350Z"
     },
     {
       "id": "18374690175",
@@ -4208,10 +4307,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2173,
-      "calories": null,
+      "calories": 96,
       "averageRhythm": null,
       "averageHeartRate": 88,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:52.773Z"
     },
     {
       "id": "18383043185",
@@ -4221,23 +4323,29 @@
       "description": null,
       "distanceKm": 5.98,
       "movingTimeSeconds": 2225,
-      "calories": null,
+      "calories": 375,
       "averageRhythm": 6.2,
       "averageHeartRate": 164.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:52.281Z"
     },
     {
       "id": "18397161611",
       "sportType": "Run",
       "startDate": "2026-05-06T10:11:44Z",
       "title": "trying z2 🥲",
-      "description": null,
+      "description": "",
       "distanceKm": 4.23,
       "movingTimeSeconds": 2010,
-      "calories": null,
+      "calories": 257,
       "averageRhythm": 7.91,
       "averageHeartRate": 143.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:51.506Z"
     },
     {
       "id": "18401520829",
@@ -4247,10 +4355,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2362,
-      "calories": null,
+      "calories": 154,
       "averageRhythm": null,
       "averageHeartRate": 102.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:50.794Z"
     },
     {
       "id": "18428150200",
@@ -4260,36 +4371,45 @@
       "description": null,
       "distanceKm": 6.04,
       "movingTimeSeconds": 2406,
-      "calories": null,
+      "calories": 392,
       "averageRhythm": 6.63,
       "averageHeartRate": 163.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:50.271Z"
     },
     {
       "id": "18435591910",
       "sportType": "Run",
       "startDate": "2026-05-09T08:57:31Z",
       "title": "tempo run",
-      "description": null,
+      "description": "",
       "distanceKm": 6.04,
       "movingTimeSeconds": 2250,
-      "calories": null,
+      "calories": 389,
       "averageRhythm": 6.21,
       "averageHeartRate": 167.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:49.618Z"
     },
     {
       "id": "18467584643",
       "sportType": "Run",
       "startDate": "2026-05-11T16:23:40Z",
       "title": "zone2 again",
-      "description": null,
+      "description": "",
       "distanceKm": 4.61,
       "movingTimeSeconds": 2204,
-      "calories": null,
+      "calories": 287,
       "averageRhythm": 7.96,
       "averageHeartRate": 146.5,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:48.937Z"
     },
     {
       "id": "18501074968",
@@ -4299,23 +4419,29 @@
       "description": null,
       "distanceKm": 5.15,
       "movingTimeSeconds": 1933,
-      "calories": null,
+      "calories": 339,
       "averageRhythm": 6.25,
       "averageHeartRate": 172.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:48.287Z"
     },
     {
       "id": "18517317695",
       "sportType": "Hike",
       "startDate": "2026-05-15T09:38:59Z",
       "title": "paseito por Huesca",
-      "description": null,
+      "description": "",
       "distanceKm": 11.8,
       "movingTimeSeconds": 8559,
-      "calories": null,
+      "calories": 437,
       "averageRhythm": null,
       "averageHeartRate": 95.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:47.584Z"
     },
     {
       "id": "18527959581",
@@ -4325,10 +4451,13 @@
       "description": null,
       "distanceKm": 5.34,
       "movingTimeSeconds": 1864,
-      "calories": null,
+      "calories": 328,
       "averageRhythm": 5.82,
       "averageHeartRate": 163.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:47.000Z"
     },
     {
       "id": "18570241833",
@@ -4338,10 +4467,13 @@
       "description": null,
       "distanceKm": 4.61,
       "movingTimeSeconds": 2240,
-      "calories": null,
+      "calories": 283,
       "averageRhythm": 8.09,
       "averageHeartRate": 148.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:46.279Z"
     },
     {
       "id": "18592610792",
@@ -4351,23 +4483,29 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2928,
-      "calories": null,
+      "calories": 302,
       "averageRhythm": null,
       "averageHeartRate": 132.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:45.569Z"
     },
     {
       "id": "18593128860",
       "sportType": "Run",
       "startDate": "2026-05-21T09:53:33Z",
       "title": "intervals",
-      "description": null,
+      "description": "8mins warm up\n5x600m 5:25km\n10mins cool down",
       "distanceKm": 5.07,
       "movingTimeSeconds": 1803,
-      "calories": null,
+      "calories": 317,
       "averageRhythm": 5.93,
       "averageHeartRate": 170.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:45.061Z"
     },
     {
       "id": "18610778425",
@@ -4377,49 +4515,61 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2998,
-      "calories": null,
+      "calories": 175,
       "averageRhythm": null,
       "averageHeartRate": 99.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:44.316Z"
     },
     {
       "id": "18617842934",
       "sportType": "Run",
       "startDate": "2026-05-23T08:38:32Z",
       "title": "calentamiento",
-      "description": null,
+      "description": "",
       "distanceKm": 1.19,
       "movingTimeSeconds": 485,
-      "calories": null,
+      "calories": 79,
       "averageRhythm": 6.78,
       "averageHeartRate": 163.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:43.733Z"
     },
     {
       "id": "18618406480",
       "sportType": "Run",
       "startDate": "2026-05-23T08:48:25Z",
       "title": "tempo",
-      "description": null,
+      "description": "",
       "distanceKm": 4.66,
       "movingTimeSeconds": 1798,
-      "calories": null,
+      "calories": 317,
       "averageRhythm": 6.43,
       "averageHeartRate": 175.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:42.883Z"
     },
     {
       "id": "18632897588",
       "sportType": "HighIntensityIntervalTraining",
       "startDate": "2026-05-24T09:36:52Z",
       "title": "body pump",
-      "description": null,
+      "description": "",
       "distanceKm": 0,
       "movingTimeSeconds": 3354,
-      "calories": null,
+      "calories": 300,
       "averageRhythm": null,
       "averageHeartRate": 123.5,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T19:41:42.227Z"
     }
   ]
 }
