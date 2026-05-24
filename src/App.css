@@ -1,0 +1,85 @@
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #4b5563;
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.card,
+.panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.card h2,
+.panel h2 {
+  font-size: 0.95rem;
+  margin: 0 0 6px;
+  color: #111827;
+}
+
+.metric {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.error {
+  color: #b91c1c;
+  margin: 0;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 8px;
+}
+
+.list-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.list-meta {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 4px;
+  border-bottom: 1px solid #f0f2f5;
+  font-size: 0.92rem;
+}
+
+thead th {
+  color: #374151;
+  font-weight: 600;
+}

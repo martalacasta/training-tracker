@@ -1,0 +1,26 @@
+{
+  "updatedAt": "2026-05-24T14:37:23.847Z",
+  "items": [
+    {
+      "id": "20260524-recovery",
+      "title": "Prioritize recovery day",
+      "description": "Keep one complete rest or easy mobility day to absorb this week load.",
+      "intensity": "low",
+      "confidence": 0.82
+    },
+    {
+      "id": "20260524-quality",
+      "title": "Add one quality running session",
+      "description": "Include one threshold or interval workout and keep easy days truly easy.",
+      "intensity": "high",
+      "confidence": 0.74
+    },
+    {
+      "id": "20260524-long-run",
+      "title": "Keep long aerobic run",
+      "description": "Maintain one longer low-intensity run this week for race-specific endurance.",
+      "intensity": "moderate",
+      "confidence": 0.76
+    }
+  ]
+}

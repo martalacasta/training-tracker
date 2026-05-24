@@ -1,0 +1,20 @@
+{
+  "updatedAt": "2026-05-24T00:00:00.000Z",
+  "weeks": [
+    {
+      "isoWeek": "2026-W21",
+      "distanceKm": 21,
+      "movingTimeHours": 2.76,
+      "sessions": 3,
+      "avgHeartRate": 139.67
+    }
+  ],
+  "months": [
+    {
+      "month": "2026-05",
+      "distanceKm": 21,
+      "movingTimeHours": 2.76,
+      "sessions": 3
+    }
+  ]
+}

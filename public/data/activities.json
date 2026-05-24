@@ -1,0 +1,32 @@
+{
+  "updatedAt": "2026-05-24T00:00:00.000Z",
+  "items": [
+    {
+      "id": "a-1001",
+      "sportType": "Run",
+      "startDate": "2026-05-20T06:40:00.000Z",
+      "distanceKm": 12.4,
+      "movingTimeSeconds": 3920,
+      "averageHeartRate": 151,
+      "sensation": "strong"
+    },
+    {
+      "id": "a-1002",
+      "sportType": "Workout",
+      "startDate": "2026-05-21T18:00:00.000Z",
+      "distanceKm": 0,
+      "movingTimeSeconds": 3000,
+      "averageHeartRate": 122,
+      "sensation": "moderate"
+    },
+    {
+      "id": "a-1003",
+      "sportType": "Run",
+      "startDate": "2026-05-23T07:15:00.000Z",
+      "distanceKm": 8.6,
+      "movingTimeSeconds": 3020,
+      "averageHeartRate": 146,
+      "sensation": "easy"
+    }
+  ]
+}
