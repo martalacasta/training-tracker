@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-24T19:16:15.389Z",
+  "updatedAt": "2026-05-24T19:34:06.598Z",
   "items": [
     {
       "id": "8997857366",
@@ -685,7 +685,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2566,
-      "calories": null,
+      "calories": 164,
       "averageRhythm": null,
       "averageHeartRate": 104.8,
       "sensation": null
@@ -698,7 +698,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 710,
-      "calories": null,
+      "calories": 82,
       "averageRhythm": null,
       "averageHeartRate": 139.1,
       "sensation": null
@@ -711,7 +711,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 3362,
-      "calories": null,
+      "calories": 222,
       "averageRhythm": null,
       "averageHeartRate": 106.5,
       "sensation": null
@@ -724,7 +724,7 @@
       "description": null,
       "distanceKm": 6.01,
       "movingTimeSeconds": 2472,
-      "calories": null,
+      "calories": 0,
       "averageRhythm": 6.86,
       "averageHeartRate": 184.1,
       "sensation": null
@@ -737,7 +737,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 4718,
-      "calories": null,
+      "calories": 331,
       "averageRhythm": null,
       "averageHeartRate": 106.7,
       "sensation": null
@@ -750,7 +750,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2077,
-      "calories": null,
+      "calories": 177,
       "averageRhythm": null,
       "averageHeartRate": 156,
       "sensation": null
@@ -763,7 +763,7 @@
       "description": null,
       "distanceKm": 6.69,
       "movingTimeSeconds": 2728,
-      "calories": null,
+      "calories": 0,
       "averageRhythm": 6.79,
       "averageHeartRate": 175.2,
       "sensation": null
@@ -776,7 +776,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2900,
-      "calories": null,
+      "calories": 200,
       "averageRhythm": null,
       "averageHeartRate": 110.7,
       "sensation": null
@@ -789,7 +789,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2249,
-      "calories": null,
+      "calories": 185,
       "averageRhythm": null,
       "averageHeartRate": 119.9,
       "sensation": null
@@ -802,7 +802,7 @@
       "description": null,
       "distanceKm": 1.39,
       "movingTimeSeconds": 675,
-      "calories": null,
+      "calories": 94,
       "averageRhythm": 8.11,
       "averageHeartRate": 163.7,
       "sensation": null
@@ -815,7 +815,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2143,
-      "calories": null,
+      "calories": 123,
       "averageRhythm": null,
       "averageHeartRate": 93.8,
       "sensation": null
@@ -828,7 +828,7 @@
       "description": null,
       "distanceKm": 7.29,
       "movingTimeSeconds": 2990,
-      "calories": null,
+      "calories": 0,
       "averageRhythm": 6.83,
       "averageHeartRate": 176.2,
       "sensation": null
@@ -841,7 +841,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2807,
-      "calories": null,
+      "calories": 219,
       "averageRhythm": null,
       "averageHeartRate": 117,
       "sensation": null
@@ -854,7 +854,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2529,
-      "calories": null,
+      "calories": 206,
       "averageRhythm": null,
       "averageHeartRate": 120.1,
       "sensation": null
@@ -867,7 +867,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2626,
-      "calories": null,
+      "calories": 202,
       "averageRhythm": null,
       "averageHeartRate": 118,
       "sensation": null
@@ -880,7 +880,7 @@
       "description": null,
       "distanceKm": 1.35,
       "movingTimeSeconds": 889,
-      "calories": null,
+      "calories": 92,
       "averageRhythm": null,
       "averageHeartRate": 139.2,
       "sensation": null
@@ -893,7 +893,7 @@
       "description": null,
       "distanceKm": 3.86,
       "movingTimeSeconds": 1547,
-      "calories": null,
+      "calories": 0,
       "averageRhythm": 6.68,
       "averageHeartRate": 166.9,
       "sensation": null
@@ -906,7 +906,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 1898,
-      "calories": null,
+      "calories": 116,
       "averageRhythm": null,
       "averageHeartRate": 118.2,
       "sensation": null
@@ -919,7 +919,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2458,
-      "calories": null,
+      "calories": 153,
       "averageRhythm": null,
       "averageHeartRate": 105.2,
       "sensation": null
@@ -932,7 +932,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2623,
-      "calories": null,
+      "calories": 181,
       "averageRhythm": null,
       "averageHeartRate": 110.6,
       "sensation": null
@@ -945,7 +945,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2653,
-      "calories": null,
+      "calories": 216,
       "averageRhythm": null,
       "averageHeartRate": 121.5,
       "sensation": null
@@ -958,7 +958,7 @@
       "description": null,
       "distanceKm": 1.48,
       "movingTimeSeconds": 1054,
-      "calories": null,
+      "calories": 92,
       "averageRhythm": null,
       "averageHeartRate": 137.5,
       "sensation": null
@@ -971,7 +971,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 1808,
-      "calories": null,
+      "calories": 199,
       "averageRhythm": null,
       "averageHeartRate": 144.7,
       "sensation": null
@@ -984,7 +984,7 @@
       "description": null,
       "distanceKm": 3.05,
       "movingTimeSeconds": 1287,
-      "calories": null,
+      "calories": 0,
       "averageRhythm": 7.04,
       "averageHeartRate": 175.9,
       "sensation": null
@@ -997,7 +997,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2346,
-      "calories": null,
+      "calories": 160,
       "averageRhythm": null,
       "averageHeartRate": 112.5,
       "sensation": null
@@ -1010,7 +1010,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 296,
-      "calories": null,
+      "calories": 27,
       "averageRhythm": null,
       "averageHeartRate": 141.6,
       "sensation": null
@@ -1023,7 +1023,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2825,
-      "calories": null,
+      "calories": 220,
       "averageRhythm": null,
       "averageHeartRate": 120.8,
       "sensation": null
@@ -1036,7 +1036,7 @@
       "description": null,
       "distanceKm": 1.23,
       "movingTimeSeconds": 849,
-      "calories": null,
+      "calories": 85,
       "averageRhythm": null,
       "averageHeartRate": 138.8,
       "sensation": null
@@ -1049,7 +1049,7 @@
       "description": null,
       "distanceKm": 8.03,
       "movingTimeSeconds": 3227,
-      "calories": null,
+      "calories": 0,
       "averageRhythm": 6.7,
       "averageHeartRate": 182,
       "sensation": null
@@ -1062,7 +1062,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2576,
-      "calories": null,
+      "calories": 181,
       "averageRhythm": null,
       "averageHeartRate": 111.9,
       "sensation": null
@@ -1075,7 +1075,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2375,
-      "calories": null,
+      "calories": 164,
       "averageRhythm": null,
       "averageHeartRate": 112.5,
       "sensation": null
@@ -1088,7 +1088,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2715,
-      "calories": null,
+      "calories": 209,
       "averageRhythm": null,
       "averageHeartRate": 113.3,
       "sensation": null
@@ -1101,7 +1101,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2219,
-      "calories": null,
+      "calories": 274,
       "averageRhythm": null,
       "averageHeartRate": 150.4,
       "sensation": null
@@ -1114,7 +1114,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2273,
-      "calories": null,
+      "calories": 142,
       "averageRhythm": null,
       "averageHeartRate": 104.4,
       "sensation": null
@@ -1127,7 +1127,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2545,
-      "calories": null,
+      "calories": 188,
       "averageRhythm": null,
       "averageHeartRate": 114.5,
       "sensation": null
@@ -1140,7 +1140,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2949,
-      "calories": null,
+      "calories": 204,
       "averageRhythm": null,
       "averageHeartRate": 112.8,
       "sensation": null
@@ -1153,7 +1153,7 @@
       "description": null,
       "distanceKm": 7.53,
       "movingTimeSeconds": 3162,
-      "calories": null,
+      "calories": 0,
       "averageRhythm": 7,
       "averageHeartRate": 173,
       "sensation": null
@@ -1166,7 +1166,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2605,
-      "calories": null,
+      "calories": 205,
       "averageRhythm": null,
       "averageHeartRate": 118.7,
       "sensation": null
@@ -1179,7 +1179,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2516,
-      "calories": null,
+      "calories": 162,
       "averageRhythm": null,
       "averageHeartRate": 104.3,
       "sensation": null
@@ -1192,7 +1192,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 1875,
-      "calories": null,
+      "calories": 125,
       "averageRhythm": null,
       "averageHeartRate": 108.3,
       "sensation": null
@@ -1205,7 +1205,7 @@
       "description": null,
       "distanceKm": 10.23,
       "movingTimeSeconds": 4325,
-      "calories": null,
+      "calories": 0,
       "averageRhythm": 7.05,
       "averageHeartRate": 178.4,
       "sensation": null
@@ -1218,7 +1218,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2561,
-      "calories": null,
+      "calories": 170,
       "averageRhythm": null,
       "averageHeartRate": 107.7,
       "sensation": null
@@ -1231,7 +1231,7 @@
       "description": null,
       "distanceKm": 4.51,
       "movingTimeSeconds": 1932,
-      "calories": null,
+      "calories": 0,
       "averageRhythm": 7.14,
       "averageHeartRate": 164.5,
       "sensation": null
@@ -1244,7 +1244,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 3152,
-      "calories": null,
+      "calories": 188,
       "averageRhythm": null,
       "averageHeartRate": 99.5,
       "sensation": null
@@ -1257,7 +1257,7 @@
       "description": null,
       "distanceKm": 4.64,
       "movingTimeSeconds": 3418,
-      "calories": null,
+      "calories": 210,
       "averageRhythm": null,
       "averageHeartRate": 100.6,
       "sensation": null
@@ -1270,7 +1270,7 @@
       "description": null,
       "distanceKm": 5.3,
       "movingTimeSeconds": 5956,
-      "calories": null,
+      "calories": 435,
       "averageRhythm": null,
       "averageHeartRate": 113.3,
       "sensation": null
@@ -1283,7 +1283,7 @@
       "description": null,
       "distanceKm": 4.95,
       "movingTimeSeconds": 2654,
-      "calories": null,
+      "calories": 216,
       "averageRhythm": null,
       "averageHeartRate": 109.2,
       "sensation": null
@@ -1296,7 +1296,7 @@
       "description": null,
       "distanceKm": 8.09,
       "movingTimeSeconds": 7823,
-      "calories": null,
+      "calories": 532,
       "averageRhythm": null,
       "averageHeartRate": 107.3,
       "sensation": null
@@ -1309,7 +1309,7 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2499,
-      "calories": null,
+      "calories": 222,
       "averageRhythm": null,
       "averageHeartRate": 118.3,
       "sensation": null
