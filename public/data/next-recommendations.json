@@ -1,13 +1,6 @@
 {
-  "updatedAt": "2026-05-24T15:16:54.983Z",
+  "updatedAt": "2026-05-24T15:19:41.714Z",
   "items": [
-    {
-      "id": "20260524-recovery",
-      "title": "Prioritize recovery day",
-      "description": "Keep one complete rest or easy mobility day to absorb this week load.",
-      "intensity": "low",
-      "confidence": 0.82
-    },
     {
       "id": "20260524-quality",
       "title": "Add one quality running session",
