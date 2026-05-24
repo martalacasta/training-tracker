@@ -59,7 +59,7 @@ async function main() {
       await sleep(DELAY_BETWEEN_REQUESTS_MS)
     } catch (error) {
       const message = String(error)
-      if (message.includes('Status 429')) {
+      if (isStravaRateLimit(error, message)) {
         console.warn('Hit Strava rate limit. Persisting progress and waiting 16 minutes...')
         await persist(activities, byId)
         await sleep(RATE_LIMIT_BACKOFF_MS)
@@ -87,6 +87,15 @@ async function persist(activities: ActivitiesData, byId: Map<string, Activity>):
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+function isStravaRateLimit(error: unknown, message: string): boolean {
+  const errorName =
+    typeof error === 'object' && error !== null && 'name' in error
+      ? String((error as { name?: string }).name)
+      : ''
+
+  return errorName === 'StravaRateLimitError' || message.includes('Status 429') || message.includes('status 429')
 }
 
 await main()
