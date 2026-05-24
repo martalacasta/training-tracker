@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-24T20:20:49.050Z",
+  "updatedAt": "2026-05-24T20:45:09.808Z",
   "items": [
     {
       "id": "8997857366",
@@ -12,7 +12,10 @@
       "calories": 0,
       "averageRhythm": 7.7,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:09.608Z"
     },
     {
       "id": "9020442519",
@@ -25,7 +28,10 @@
       "calories": 0,
       "averageRhythm": null,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:09.013Z"
     },
     {
       "id": "9076930453",
@@ -38,7 +44,10 @@
       "calories": 0,
       "averageRhythm": 6.86,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:08.272Z"
     },
     {
       "id": "9120639767",
@@ -51,7 +60,10 @@
       "calories": 0,
       "averageRhythm": 7.87,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:07.681Z"
     },
     {
       "id": "9120643822",
@@ -64,7 +76,10 @@
       "calories": 0,
       "averageRhythm": 8.78,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:07.047Z"
     },
     {
       "id": "12611106167",
@@ -77,7 +92,10 @@
       "calories": 0,
       "averageRhythm": 7.53,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:06.279Z"
     },
     {
       "id": "12615273375",
@@ -90,7 +108,10 @@
       "calories": 0,
       "averageRhythm": 8.61,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:05.706Z"
     },
     {
       "id": "12658355852",
@@ -103,7 +124,10 @@
       "calories": 0,
       "averageRhythm": 7.41,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:05.207Z"
     },
     {
       "id": "12671011910",
@@ -116,7 +140,10 @@
       "calories": 0,
       "averageRhythm": 7.46,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:04.634Z"
     },
     {
       "id": "12714005247",
@@ -129,7 +156,10 @@
       "calories": 0,
       "averageRhythm": 8.22,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:04.035Z"
     },
     {
       "id": "12732580963",
@@ -142,7 +172,10 @@
       "calories": 0,
       "averageRhythm": 6.93,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:03.402Z"
     },
     {
       "id": "12766946794",
@@ -155,7 +188,10 @@
       "calories": 0,
       "averageRhythm": 7.4,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:02.714Z"
     },
     {
       "id": "12838879257",
@@ -168,7 +204,10 @@
       "calories": 0,
       "averageRhythm": 7.73,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:02.083Z"
     },
     {
       "id": "12838879294",
@@ -181,7 +220,10 @@
       "calories": 0,
       "averageRhythm": 7.16,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:01.451Z"
     },
     {
       "id": "12866119875",
@@ -194,7 +236,10 @@
       "calories": 0,
       "averageRhythm": 9.13,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:00.808Z"
     },
     {
       "id": "12877567201",
@@ -207,7 +252,10 @@
       "calories": 0,
       "averageRhythm": 7.63,
       "averageHeartRate": null,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:45:00.297Z"
     },
     {
       "id": "12921871849",
@@ -220,7 +268,10 @@
       "calories": 144,
       "averageRhythm": 8.47,
       "averageHeartRate": 167.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:59.647Z"
     },
     {
       "id": "12921871916",
@@ -233,7 +284,10 @@
       "calories": 176,
       "averageRhythm": null,
       "averageHeartRate": 118.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:59.170Z"
     },
     {
       "id": "12952478647",
@@ -246,7 +300,10 @@
       "calories": 28,
       "averageRhythm": 8.42,
       "averageHeartRate": 151.3,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:58.724Z"
     },
     {
       "id": "12963640219",
@@ -259,7 +316,10 @@
       "calories": 175,
       "averageRhythm": null,
       "averageHeartRate": 101.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:58.240Z"
     },
     {
       "id": "12963640210",
@@ -272,7 +332,10 @@
       "calories": 245,
       "averageRhythm": null,
       "averageHeartRate": 120.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:57.776Z"
     },
     {
       "id": "12971158267",
@@ -285,7 +348,10 @@
       "calories": 435,
       "averageRhythm": 8.02,
       "averageHeartRate": 179.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:57.347Z"
     },
     {
       "id": "12996646955",
@@ -298,7 +364,10 @@
       "calories": 149,
       "averageRhythm": null,
       "averageHeartRate": 98.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:56.861Z"
     },
     {
       "id": "13004280013",
@@ -311,7 +380,10 @@
       "calories": 45,
       "averageRhythm": 13.65,
       "averageHeartRate": 125.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:56.420Z"
     },
     {
       "id": "13004279997",
@@ -324,7 +396,10 @@
       "calories": 138,
       "averageRhythm": null,
       "averageHeartRate": 100.3,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:55.846Z"
     },
     {
       "id": "13046765550",
@@ -337,7 +412,10 @@
       "calories": 201,
       "averageRhythm": null,
       "averageHeartRate": 114.3,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:55.418Z"
     },
     {
       "id": "13046765568",
@@ -350,7 +428,10 @@
       "calories": 156,
       "averageRhythm": null,
       "averageHeartRate": 96.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:54.984Z"
     },
     {
       "id": "13047082795",
@@ -363,7 +444,10 @@
       "calories": 48,
       "averageRhythm": null,
       "averageHeartRate": 115.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:54.567Z"
     },
     {
       "id": "13073391499",
@@ -376,7 +460,10 @@
       "calories": 322,
       "averageRhythm": null,
       "averageHeartRate": 128.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:44:54.117Z"
     },
     {
       "id": "13094778155",
@@ -402,7 +489,10 @@
       "calories": 189,
       "averageRhythm": null,
       "averageHeartRate": 112.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:30.224Z"
     },
     {
       "id": "13120438557",
@@ -415,7 +505,10 @@
       "calories": 99,
       "averageRhythm": null,
       "averageHeartRate": 145.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:29.652Z"
     },
     {
       "id": "13128828295",
@@ -428,7 +521,10 @@
       "calories": 0,
       "averageRhythm": 7.55,
       "averageHeartRate": 176.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:29.209Z"
     },
     {
       "id": "13245742647",
@@ -441,7 +537,10 @@
       "calories": 195,
       "averageRhythm": null,
       "averageHeartRate": 104.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:28.634Z"
     },
     {
       "id": "13160042264",
@@ -454,7 +553,10 @@
       "calories": 159,
       "averageRhythm": null,
       "averageHeartRate": 113.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:28.198Z"
     },
     {
       "id": "13245742896",
@@ -467,7 +569,10 @@
       "calories": 217,
       "averageRhythm": null,
       "averageHeartRate": 103.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:27.764Z"
     },
     {
       "id": "13194653836",
@@ -480,7 +585,10 @@
       "calories": 321,
       "averageRhythm": 8.27,
       "averageHeartRate": 171.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:27.319Z"
     },
     {
       "id": "13213940439",
@@ -493,7 +601,10 @@
       "calories": 224,
       "averageRhythm": null,
       "averageHeartRate": 112.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:26.844Z"
     },
     {
       "id": "13222377224",
@@ -506,7 +617,10 @@
       "calories": 194,
       "averageRhythm": null,
       "averageHeartRate": 110.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:26.366Z"
     },
     {
       "id": "13222377315",
@@ -519,7 +633,10 @@
       "calories": 24,
       "averageRhythm": 11.02,
       "averageHeartRate": 130.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:25.937Z"
     },
     {
       "id": "13233339545",
@@ -532,7 +649,10 @@
       "calories": 0,
       "averageRhythm": 6.87,
       "averageHeartRate": 177.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:25.446Z"
     },
     {
       "id": "13245742060",
@@ -545,7 +665,10 @@
       "calories": 186,
       "averageRhythm": null,
       "averageHeartRate": 95.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:23.901Z"
     },
     {
       "id": "13253139481",
@@ -558,7 +681,10 @@
       "calories": 158,
       "averageRhythm": null,
       "averageHeartRate": 99.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:23.423Z"
     },
     {
       "id": "13253305145",
@@ -571,7 +697,10 @@
       "calories": 190,
       "averageRhythm": 7.61,
       "averageHeartRate": 173.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:22.985Z"
     },
     {
       "id": "13344574790",
@@ -584,7 +713,10 @@
       "calories": 65,
       "averageRhythm": null,
       "averageHeartRate": 132.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:22.463Z"
     },
     {
       "id": "13345084443",
@@ -597,7 +729,10 @@
       "calories": 137,
       "averageRhythm": null,
       "averageHeartRate": 105.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:21.889Z"
     },
     {
       "id": "13395014524",
@@ -610,7 +745,10 @@
       "calories": 139,
       "averageRhythm": null,
       "averageHeartRate": 158.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:21.423Z"
     },
     {
       "id": "13395666978",
@@ -623,7 +761,10 @@
       "calories": 0,
       "averageRhythm": 7.01,
       "averageHeartRate": 172.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:20.977Z"
     },
     {
       "id": "13407277410",
@@ -636,7 +777,10 @@
       "calories": 153,
       "averageRhythm": null,
       "averageHeartRate": 97.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:20.351Z"
     },
     {
       "id": "13456259405",
@@ -649,7 +793,10 @@
       "calories": 0,
       "averageRhythm": 7.05,
       "averageHeartRate": 181.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:19.906Z"
     },
     {
       "id": "13460757316",
@@ -662,7 +809,10 @@
       "calories": 111,
       "averageRhythm": null,
       "averageHeartRate": 143.5,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:19.279Z"
     },
     {
       "id": "13538945045",
@@ -672,10 +822,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2650,
-      "calories": null,
+      "calories": 171,
       "averageRhythm": null,
       "averageHeartRate": 103.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:18.690Z"
     },
     {
       "id": "13538945053",
@@ -688,7 +841,10 @@
       "calories": 164,
       "averageRhythm": null,
       "averageHeartRate": 104.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:18.114Z"
     },
     {
       "id": "13539074541",
@@ -701,7 +857,10 @@
       "calories": 82,
       "averageRhythm": null,
       "averageHeartRate": 139.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:17.660Z"
     },
     {
       "id": "13570789693",
@@ -714,7 +873,10 @@
       "calories": 222,
       "averageRhythm": null,
       "averageHeartRate": 106.5,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:17.235Z"
     },
     {
       "id": "13571242150",
@@ -727,7 +889,10 @@
       "calories": 0,
       "averageRhythm": 6.86,
       "averageHeartRate": 184.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:16.796Z"
     },
     {
       "id": "13596144098",
@@ -740,7 +905,10 @@
       "calories": 331,
       "averageRhythm": null,
       "averageHeartRate": 106.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:16.169Z"
     },
     {
       "id": "13627032506",
@@ -753,7 +921,10 @@
       "calories": 177,
       "averageRhythm": null,
       "averageHeartRate": 156,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:15.730Z"
     },
     {
       "id": "13644452296",
@@ -766,7 +937,10 @@
       "calories": 0,
       "averageRhythm": 6.79,
       "averageHeartRate": 175.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:15.265Z"
     },
     {
       "id": "13653042160",
@@ -779,7 +953,10 @@
       "calories": 200,
       "averageRhythm": null,
       "averageHeartRate": 110.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:14.564Z"
     },
     {
       "id": "13692462588",
@@ -792,7 +969,10 @@
       "calories": 185,
       "averageRhythm": null,
       "averageHeartRate": 119.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:14.122Z"
     },
     {
       "id": "13692462589",
@@ -805,7 +985,10 @@
       "calories": 94,
       "averageRhythm": 8.11,
       "averageHeartRate": 163.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:13.549Z"
     },
     {
       "id": "13697349131",
@@ -818,7 +1001,10 @@
       "calories": 123,
       "averageRhythm": null,
       "averageHeartRate": 93.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:12.926Z"
     },
     {
       "id": "13707332842",
@@ -831,7 +1017,10 @@
       "calories": 0,
       "averageRhythm": 6.83,
       "averageHeartRate": 176.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:12.495Z"
     },
     {
       "id": "13724770890",
@@ -844,7 +1033,10 @@
       "calories": 219,
       "averageRhythm": null,
       "averageHeartRate": 117,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:11.707Z"
     },
     {
       "id": "13734271161",
@@ -857,7 +1049,10 @@
       "calories": 206,
       "averageRhythm": null,
       "averageHeartRate": 120.1,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:11.216Z"
     },
     {
       "id": "13752466391",
@@ -870,7 +1065,10 @@
       "calories": 202,
       "averageRhythm": null,
       "averageHeartRate": 118,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:10.780Z"
     },
     {
       "id": "13752572830",
@@ -883,7 +1081,10 @@
       "calories": 92,
       "averageRhythm": null,
       "averageHeartRate": 139.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:10.324Z"
     },
     {
       "id": "13779260160",
@@ -896,7 +1097,10 @@
       "calories": 0,
       "averageRhythm": 6.68,
       "averageHeartRate": 166.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:09.880Z"
     },
     {
       "id": "13789099363",
@@ -909,7 +1113,10 @@
       "calories": 116,
       "averageRhythm": null,
       "averageHeartRate": 118.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:09.216Z"
     },
     {
       "id": "13844392234",
@@ -922,7 +1129,10 @@
       "calories": 153,
       "averageRhythm": null,
       "averageHeartRate": 105.2,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:08.747Z"
     },
     {
       "id": "13863685313",
@@ -935,7 +1145,10 @@
       "calories": 181,
       "averageRhythm": null,
       "averageHeartRate": 110.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:08.267Z"
     },
     {
       "id": "13882068679",
@@ -948,7 +1161,10 @@
       "calories": 216,
       "averageRhythm": null,
       "averageHeartRate": 121.5,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:07.703Z"
     },
     {
       "id": "13882213153",
@@ -961,7 +1177,10 @@
       "calories": 92,
       "averageRhythm": null,
       "averageHeartRate": 137.5,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:07.275Z"
     },
     {
       "id": "13896614406",
@@ -974,7 +1193,10 @@
       "calories": 199,
       "averageRhythm": null,
       "averageHeartRate": 144.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:06.838Z"
     },
     {
       "id": "13909114178",
@@ -987,7 +1209,10 @@
       "calories": 0,
       "averageRhythm": 7.04,
       "averageHeartRate": 175.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:06.370Z"
     },
     {
       "id": "13928416567",
@@ -1000,7 +1225,10 @@
       "calories": 160,
       "averageRhythm": null,
       "averageHeartRate": 112.5,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:05.792Z"
     },
     {
       "id": "13928550514",
@@ -1013,7 +1241,10 @@
       "calories": 27,
       "averageRhythm": null,
       "averageHeartRate": 141.6,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:05.301Z"
     },
     {
       "id": "13947115959",
@@ -1026,7 +1257,10 @@
       "calories": 220,
       "averageRhythm": null,
       "averageHeartRate": 120.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:04.830Z"
     },
     {
       "id": "13947252568",
@@ -1039,7 +1273,10 @@
       "calories": 85,
       "averageRhythm": null,
       "averageHeartRate": 138.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:04.396Z"
     },
     {
       "id": "13966061662",
@@ -1052,7 +1289,10 @@
       "calories": 0,
       "averageRhythm": 6.7,
       "averageHeartRate": 182,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:03.928Z"
     },
     {
       "id": "13984624772",
@@ -1065,7 +1305,10 @@
       "calories": 181,
       "averageRhythm": null,
       "averageHeartRate": 111.9,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:03.270Z"
     },
     {
       "id": "13994658273",
@@ -1078,7 +1321,10 @@
       "calories": 164,
       "averageRhythm": null,
       "averageHeartRate": 112.5,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:02.795Z"
     },
     {
       "id": "14017989671",
@@ -1091,7 +1337,10 @@
       "calories": 209,
       "averageRhythm": null,
       "averageHeartRate": 113.3,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:02.331Z"
     },
     {
       "id": "14031280667",
@@ -1104,7 +1353,10 @@
       "calories": 274,
       "averageRhythm": null,
       "averageHeartRate": 150.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:01.890Z"
     },
     {
       "id": "14050229670",
@@ -1117,7 +1369,10 @@
       "calories": 142,
       "averageRhythm": null,
       "averageHeartRate": 104.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:01.451Z"
     },
     {
       "id": "14060087402",
@@ -1130,7 +1385,10 @@
       "calories": 188,
       "averageRhythm": null,
       "averageHeartRate": 114.5,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:00.964Z"
     },
     {
       "id": "14084463636",
@@ -1143,7 +1401,10 @@
       "calories": 204,
       "averageRhythm": null,
       "averageHeartRate": 112.8,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:00.529Z"
     },
     {
       "id": "14094892349",
@@ -1156,7 +1417,10 @@
       "calories": 0,
       "averageRhythm": 7,
       "averageHeartRate": 173,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:28:00.080Z"
     },
     {
       "id": "14118338178",
@@ -1169,7 +1433,10 @@
       "calories": 205,
       "averageRhythm": null,
       "averageHeartRate": 118.7,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:27:59.409Z"
     },
     {
       "id": "14128866597",
@@ -1182,7 +1449,10 @@
       "calories": 162,
       "averageRhythm": null,
       "averageHeartRate": 104.3,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:27:58.923Z"
     },
     {
       "id": "14147209336",
@@ -1800,10 +2070,13 @@
       "description": null,
       "distanceKm": 0,
       "movingTimeSeconds": 2333,
-      "calories": null,
+      "calories": 137,
       "averageRhythm": null,
       "averageHeartRate": 98.4,
-      "sensation": null
+      "sensation": null,
+      "detailsFetchAttempts": 1,
+      "detailsBackfillDone": true,
+      "detailsFetchedAt": "2026-05-24T20:27:58.469Z"
     },
     {
       "id": "14867269322",
