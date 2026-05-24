@@ -37,6 +37,7 @@ export type Goal = {
   type: 'race' | 'volume' | 'consistency'
   status: 'on-track' | 'at-risk' | 'completed'
   targetSessionsPerWeek?: number
+  url?: string
 }
 
 export type Recommendation = {
@@ -103,6 +104,7 @@ export const defaultGoalsData: GoalsData = {
       type: 'race',
       status: 'on-track',
       targetSessionsPerWeek: 4,
+      url: 'https://www.romehalfmarathon.it',
     },
   ],
 }

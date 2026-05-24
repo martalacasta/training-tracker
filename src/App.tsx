@@ -15,6 +15,10 @@ import {
   defaultRecommendationsData,
   fetchDataFile,
 } from './data'
+import {
+  filterActivitiesByDateRange,
+  getDefaultDateRange,
+} from './lib/activityFilters'
 
 function App() {
   const [activities, setActivities] = useState<ActivitiesData>(defaultActivitiesData)
@@ -28,6 +32,9 @@ function App() {
   const [error, setError] = useState<string | null>(null)
   const [selectedTab, setSelectedTab] = useState<string>('all')
   const [expandedRunIds, setExpandedRunIds] = useState<Record<string, boolean>>({})
+  const defaultRange = useMemo(() => getDefaultDateRange(), [])
+  const [fromDate, setFromDate] = useState<string>(defaultRange.from)
+  const [toDate, setToDate] = useState<string>(defaultRange.to)
 
   useEffect(() => {
     const load = async () => {
@@ -73,9 +80,14 @@ function App() {
     [activities.items],
   )
 
+  const dateFilteredActivities = useMemo(
+    () => filterActivitiesByDateRange(recentActivities, fromDate, toDate),
+    [recentActivities, fromDate, toDate],
+  )
+
   const activityTabs = useMemo(() => {
     const categories = new Map<string, { label: string; count: number }>()
-    for (const activity of recentActivities) {
+    for (const activity of dateFilteredActivities) {
       const id = toActivityTabId(activity.sportType)
       const existing = categories.get(id)
       if (existing) {
@@ -86,13 +98,13 @@ function App() {
     }
 
     return [
-      { id: 'all', label: `All (${recentActivities.length})` },
+      { id: 'all', label: `All (${dateFilteredActivities.length})` },
       ...[...categories.entries()].map(([id, value]) => ({
         id,
         label: `${value.label} (${value.count})`,
       })),
     ]
-  }, [recentActivities])
+  }, [dateFilteredActivities])
 
   const selectedTabId = useMemo(
     () => (activityTabs.some((tab) => tab.id === selectedTab) ? selectedTab : 'all'),
@@ -101,13 +113,13 @@ function App() {
 
   const filteredRecentActivities = useMemo(() => {
     if (selectedTabId === 'all') {
-      return recentActivities.slice(0, 16)
+      return dateFilteredActivities
     }
 
-    return recentActivities
-      .filter((activity) => toActivityTabId(activity.sportType) === selectedTabId)
-      .slice(0, 16)
-  }, [recentActivities, selectedTabId])
+    return dateFilteredActivities.filter(
+      (activity) => toActivityTabId(activity.sportType) === selectedTabId,
+    )
+  }, [dateFilteredActivities, selectedTabId])
 
   const toggleRunDetails = (activityId: string) => {
     setExpandedRunIds((previous) => ({
@@ -192,7 +204,15 @@ function App() {
           <tbody>
             {goals.items.map((goal) => (
               <tr key={goal.id}>
-                <td>{goal.name}</td>
+                <td>
+                  {goal.url ? (
+                    <a href={goal.url} target="_blank" rel="noopener noreferrer">
+                      {goal.name}
+                    </a>
+                  ) : (
+                    goal.name
+                  )}
+                </td>
                 <td>{goal.status}</td>
                 <td>{goal.targetDate}</td>
               </tr>
@@ -203,6 +223,37 @@ function App() {
 
       <section className="panel">
         <h2>Recent activities</h2>
+        <div className="activity-filters">
+          <label className="date-filter">
+            <span>From</span>
+            <input
+              type="date"
+              value={fromDate}
+              max={toDate}
+              onChange={(event) => setFromDate(event.target.value)}
+            />
+          </label>
+          <label className="date-filter">
+            <span>To</span>
+            <input
+              type="date"
+              value={toDate}
+              min={fromDate}
+              onChange={(event) => setToDate(event.target.value)}
+            />
+          </label>
+          <button
+            type="button"
+            className="link-button"
+            onClick={() => {
+              const next = getDefaultDateRange()
+              setFromDate(next.from)
+              setToDate(next.to)
+            }}
+          >
+            Reset to last 7 days
+          </button>
+        </div>
         <div className="activity-tabs">
           {activityTabs.map((tab) => (
             <button
@@ -216,6 +267,9 @@ function App() {
           ))}
         </div>
         <ul className="activity-list">
+          {filteredRecentActivities.length === 0 ? (
+            <li className="activity-item">No activities in this date range.</li>
+          ) : null}
           {filteredRecentActivities.map((activity) => {
             const isRun = activity.sportType === 'Run'
             const isExpanded = expandedRunIds[activity.id] ?? false
