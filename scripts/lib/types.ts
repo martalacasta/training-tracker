@@ -94,6 +94,15 @@ export type InsightsData = {
   summary: string
 }
 
+export type AthleteProfileData = {
+  updatedAt: string
+  summary: string
+  trainingDaysPerWeek: number | null
+  preferredSessionStyle: string | null
+  background: string | null
+  constraints: string | null
+}
+
 export type ActivityAdvice = {
   summary: string
   focus: string
