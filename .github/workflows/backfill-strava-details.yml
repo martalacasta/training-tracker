@@ -6,7 +6,7 @@ on:
       max_per_run:
         description: 'Maximum activities to process in this run (default 250)'
         required: false
-        default: '250'
+        default: '50'
 
 permissions:
   contents: write
