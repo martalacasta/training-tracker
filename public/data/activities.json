@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-24T19:10:14.266Z",
+  "updatedAt": "2026-05-24T19:16:15.389Z",
   "items": [
     {
       "id": "8997857366",
@@ -659,7 +659,7 @@
       "description": null,
       "distanceKm": 1.9,
       "movingTimeSeconds": 1395,
-      "calories": null,
+      "calories": 111,
       "averageRhythm": null,
       "averageHeartRate": 143.5,
       "sensation": null
