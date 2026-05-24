@@ -1,20 +1,721 @@
 {
-  "updatedAt": "2026-05-24T00:00:00.000Z",
+  "updatedAt": "2026-05-24T15:14:32.293Z",
   "weeks": [
     {
-      "isoWeek": "2026-W21",
-      "distanceKm": 21,
-      "movingTimeHours": 2.76,
+      "isoWeek": "2023-W18",
+      "distanceKm": 12.78,
+      "movingTimeHours": 3.39,
+      "sessions": 2,
+      "avgHeartRate": null
+    },
+    {
+      "isoWeek": "2023-W20",
+      "distanceKm": 4.3,
+      "movingTimeHours": 0.49,
+      "sessions": 1,
+      "avgHeartRate": null
+    },
+    {
+      "isoWeek": "2023-W21",
+      "distanceKm": 10.07,
+      "movingTimeHours": 1.39,
+      "sessions": 2,
+      "avgHeartRate": null
+    },
+    {
+      "isoWeek": "2024-W41",
+      "distanceKm": 6.4,
+      "movingTimeHours": 0.86,
+      "sessions": 2,
+      "avgHeartRate": null
+    },
+    {
+      "isoWeek": "2024-W42",
+      "distanceKm": 6.06,
+      "movingTimeHours": 0.75,
+      "sessions": 2,
+      "avgHeartRate": null
+    },
+    {
+      "isoWeek": "2024-W43",
+      "distanceKm": 6.72,
+      "movingTimeHours": 0.85,
+      "sessions": 2,
+      "avgHeartRate": null
+    },
+    {
+      "isoWeek": "2024-W44",
+      "distanceKm": 6.23,
+      "movingTimeHours": 0.78,
+      "sessions": 2,
+      "avgHeartRate": null
+    },
+    {
+      "isoWeek": "2024-W45",
+      "distanceKm": 6.48,
+      "movingTimeHours": 0.82,
+      "sessions": 2,
+      "avgHeartRate": null
+    },
+    {
+      "isoWeek": "2024-W46",
+      "distanceKm": 7.72,
+      "movingTimeHours": 1.63,
       "sessions": 3,
-      "avgHeartRate": 139.67
+      "avgHeartRate": 142.95
+    },
+    {
+      "isoWeek": "2024-W47",
+      "distanceKm": 6.23,
+      "movingTimeHours": 2.47,
+      "sessions": 4,
+      "avgHeartRate": 138.38
+    },
+    {
+      "isoWeek": "2024-W48",
+      "distanceKm": 0.78,
+      "movingTimeHours": 2.33,
+      "sessions": 4,
+      "avgHeartRate": 109.7
+    },
+    {
+      "isoWeek": "2024-W49",
+      "distanceKm": 5.58,
+      "movingTimeHours": 2.06,
+      "sessions": 3,
+      "avgHeartRate": 113.57
+    },
+    {
+      "isoWeek": "2024-W50",
+      "distanceKm": 4.75,
+      "movingTimeHours": 1.41,
+      "sessions": 3,
+      "avgHeartRate": 144.07
+    },
+    {
+      "isoWeek": "2024-W51",
+      "distanceKm": 5.11,
+      "movingTimeHours": 2.13,
+      "sessions": 3,
+      "avgHeartRate": 131.4
+    },
+    {
+      "isoWeek": "2024-W52",
+      "distanceKm": 4.53,
+      "movingTimeHours": 2.44,
+      "sessions": 3,
+      "avgHeartRate": 129.03
+    },
+    {
+      "isoWeek": "2025-W01",
+      "distanceKm": 7.98,
+      "movingTimeHours": 3.32,
+      "sessions": 6,
+      "avgHeartRate": 131.33
+    },
+    {
+      "isoWeek": "2025-W03",
+      "distanceKm": 8.24,
+      "movingTimeHours": 1.78,
+      "sessions": 4,
+      "avgHeartRate": 142.45
+    },
+    {
+      "isoWeek": "2025-W04",
+      "distanceKm": 6.92,
+      "movingTimeHours": 1.71,
+      "sessions": 3,
+      "avgHeartRate": 140.83
+    },
+    {
+      "isoWeek": "2025-W06",
+      "distanceKm": 6.01,
+      "movingTimeHours": 3.27,
+      "sessions": 5,
+      "avgHeartRate": 127.52
+    },
+    {
+      "isoWeek": "2025-W07",
+      "distanceKm": 6.69,
+      "movingTimeHours": 2.65,
+      "sessions": 3,
+      "avgHeartRate": 145.97
+    },
+    {
+      "isoWeek": "2025-W08",
+      "distanceKm": 8.68,
+      "movingTimeHours": 3.04,
+      "sessions": 5,
+      "avgHeartRate": 132.86
+    },
+    {
+      "isoWeek": "2025-W09",
+      "distanceKm": 1.35,
+      "movingTimeHours": 2.46,
+      "sessions": 4,
+      "avgHeartRate": 123.58
+    },
+    {
+      "isoWeek": "2025-W10",
+      "distanceKm": 3.86,
+      "movingTimeHours": 0.96,
+      "sessions": 2,
+      "avgHeartRate": 142.55
+    },
+    {
+      "isoWeek": "2025-W11",
+      "distanceKm": 1.48,
+      "movingTimeHours": 2.94,
+      "sessions": 5,
+      "avgHeartRate": 123.9
+    },
+    {
+      "isoWeek": "2025-W12",
+      "distanceKm": 12.31,
+      "movingTimeHours": 3.01,
+      "sessions": 6,
+      "avgHeartRate": 145.27
+    },
+    {
+      "isoWeek": "2025-W13",
+      "distanceKm": 0,
+      "movingTimeHours": 2.75,
+      "sessions": 4,
+      "avgHeartRate": 122.03
+    },
+    {
+      "isoWeek": "2025-W14",
+      "distanceKm": 7.53,
+      "movingTimeHours": 3.04,
+      "sessions": 4,
+      "avgHeartRate": 126.18
+    },
+    {
+      "isoWeek": "2025-W15",
+      "distanceKm": 10.23,
+      "movingTimeHours": 3.14,
+      "sessions": 4,
+      "avgHeartRate": 127.43
+    },
+    {
+      "isoWeek": "2025-W16",
+      "distanceKm": 4.51,
+      "movingTimeHours": 2.12,
+      "sessions": 3,
+      "avgHeartRate": 123.9
+    },
+    {
+      "isoWeek": "2025-W17",
+      "distanceKm": 22.98,
+      "movingTimeHours": 5.51,
+      "sessions": 4,
+      "avgHeartRate": 107.6
+    },
+    {
+      "isoWeek": "2025-W18",
+      "distanceKm": 5.06,
+      "movingTimeHours": 1.93,
+      "sessions": 3,
+      "avgHeartRate": 136.8
+    },
+    {
+      "isoWeek": "2025-W19",
+      "distanceKm": 4.05,
+      "movingTimeHours": 1.3,
+      "sessions": 2,
+      "avgHeartRate": 136.65
+    },
+    {
+      "isoWeek": "2025-W20",
+      "distanceKm": 5.02,
+      "movingTimeHours": 2.81,
+      "sessions": 4,
+      "avgHeartRate": 138.88
+    },
+    {
+      "isoWeek": "2025-W21",
+      "distanceKm": 0,
+      "movingTimeHours": 1.55,
+      "sessions": 2,
+      "avgHeartRate": 101.4
+    },
+    {
+      "isoWeek": "2025-W22",
+      "distanceKm": 5.01,
+      "movingTimeHours": 3.13,
+      "sessions": 4,
+      "avgHeartRate": 141.7
+    },
+    {
+      "isoWeek": "2025-W23",
+      "distanceKm": 10.55,
+      "movingTimeHours": 4.39,
+      "sessions": 6,
+      "avgHeartRate": 136.55
+    },
+    {
+      "isoWeek": "2025-W24",
+      "distanceKm": 6.72,
+      "movingTimeHours": 2.97,
+      "sessions": 5,
+      "avgHeartRate": 125.5
+    },
+    {
+      "isoWeek": "2025-W25",
+      "distanceKm": 3.06,
+      "movingTimeHours": 3.24,
+      "sessions": 5,
+      "avgHeartRate": 130.18
+    },
+    {
+      "isoWeek": "2025-W26",
+      "distanceKm": 6.01,
+      "movingTimeHours": 3.94,
+      "sessions": 5,
+      "avgHeartRate": 123.22
+    },
+    {
+      "isoWeek": "2025-W27",
+      "distanceKm": 12.42,
+      "movingTimeHours": 3.95,
+      "sessions": 7,
+      "avgHeartRate": 134.81
+    },
+    {
+      "isoWeek": "2025-W28",
+      "distanceKm": 0,
+      "movingTimeHours": 0.62,
+      "sessions": 1,
+      "avgHeartRate": 110.9
+    },
+    {
+      "isoWeek": "2025-W29",
+      "distanceKm": 0,
+      "movingTimeHours": 0.75,
+      "sessions": 1,
+      "avgHeartRate": 110.7
+    },
+    {
+      "isoWeek": "2025-W30",
+      "distanceKm": 6.43,
+      "movingTimeHours": 3.47,
+      "sessions": 5,
+      "avgHeartRate": 128.64
+    },
+    {
+      "isoWeek": "2025-W31",
+      "distanceKm": 7.01,
+      "movingTimeHours": 1.42,
+      "sessions": 2,
+      "avgHeartRate": 139.15
+    },
+    {
+      "isoWeek": "2025-W32",
+      "distanceKm": 11.23,
+      "movingTimeHours": 1.73,
+      "sessions": 4,
+      "avgHeartRate": 161.68
+    },
+    {
+      "isoWeek": "2025-W33",
+      "distanceKm": 12.19,
+      "movingTimeHours": 5.27,
+      "sessions": 3,
+      "avgHeartRate": 94.35
+    },
+    {
+      "isoWeek": "2025-W34",
+      "distanceKm": 5.02,
+      "movingTimeHours": 1.23,
+      "sessions": 2,
+      "avgHeartRate": 156.5
+    },
+    {
+      "isoWeek": "2025-W35",
+      "distanceKm": 8.91,
+      "movingTimeHours": 2.58,
+      "sessions": 4,
+      "avgHeartRate": 127.65
+    },
+    {
+      "isoWeek": "2025-W37",
+      "distanceKm": 7.49,
+      "movingTimeHours": 2.39,
+      "sessions": 3,
+      "avgHeartRate": 126.07
+    },
+    {
+      "isoWeek": "2025-W38",
+      "distanceKm": 11.43,
+      "movingTimeHours": 3.47,
+      "sessions": 5,
+      "avgHeartRate": 136.2
+    },
+    {
+      "isoWeek": "2025-W40",
+      "distanceKm": 11.03,
+      "movingTimeHours": 2.64,
+      "sessions": 4,
+      "avgHeartRate": 143.48
+    },
+    {
+      "isoWeek": "2025-W41",
+      "distanceKm": 7.06,
+      "movingTimeHours": 0.81,
+      "sessions": 1,
+      "avgHeartRate": 168.9
+    },
+    {
+      "isoWeek": "2025-W42",
+      "distanceKm": 13.55,
+      "movingTimeHours": 2.32,
+      "sessions": 3,
+      "avgHeartRate": 148.93
+    },
+    {
+      "isoWeek": "2025-W43",
+      "distanceKm": 14.89,
+      "movingTimeHours": 2.98,
+      "sessions": 4,
+      "avgHeartRate": 133.85
+    },
+    {
+      "isoWeek": "2025-W44",
+      "distanceKm": 17.61,
+      "movingTimeHours": 5.01,
+      "sessions": 7,
+      "avgHeartRate": 138.43
+    },
+    {
+      "isoWeek": "2025-W45",
+      "distanceKm": 19.58,
+      "movingTimeHours": 4.37,
+      "sessions": 5,
+      "avgHeartRate": 146.8
+    },
+    {
+      "isoWeek": "2025-W46",
+      "distanceKm": 19.4,
+      "movingTimeHours": 8.81,
+      "sessions": 9,
+      "avgHeartRate": 134.99
+    },
+    {
+      "isoWeek": "2025-W47",
+      "distanceKm": 22.44,
+      "movingTimeHours": 5.22,
+      "sessions": 8,
+      "avgHeartRate": 128.64
+    },
+    {
+      "isoWeek": "2025-W48",
+      "distanceKm": 14.8,
+      "movingTimeHours": 2.14,
+      "sessions": 3,
+      "avgHeartRate": 150.63
+    },
+    {
+      "isoWeek": "2025-W49",
+      "distanceKm": 18.81,
+      "movingTimeHours": 3.63,
+      "sessions": 4,
+      "avgHeartRate": 132.15
+    },
+    {
+      "isoWeek": "2025-W50",
+      "distanceKm": 26.81,
+      "movingTimeHours": 6.93,
+      "sessions": 7,
+      "avgHeartRate": 134.23
+    },
+    {
+      "isoWeek": "2025-W51",
+      "distanceKm": 23.79,
+      "movingTimeHours": 5.56,
+      "sessions": 7,
+      "avgHeartRate": 138.04
+    },
+    {
+      "isoWeek": "2025-W52",
+      "distanceKm": 16.68,
+      "movingTimeHours": 2.69,
+      "sessions": 3,
+      "avgHeartRate": 151.57
+    },
+    {
+      "isoWeek": "2026-W01",
+      "distanceKm": 19.02,
+      "movingTimeHours": 3.22,
+      "sessions": 3,
+      "avgHeartRate": 155.27
+    },
+    {
+      "isoWeek": "2026-W02",
+      "distanceKm": 11.36,
+      "movingTimeHours": 4.46,
+      "sessions": 7,
+      "avgHeartRate": 139.1
+    },
+    {
+      "isoWeek": "2026-W03",
+      "distanceKm": 26.76,
+      "movingTimeHours": 4.76,
+      "sessions": 5,
+      "avgHeartRate": 145.16
+    },
+    {
+      "isoWeek": "2026-W04",
+      "distanceKm": 21.02,
+      "movingTimeHours": 3.79,
+      "sessions": 5,
+      "avgHeartRate": 139.46
+    },
+    {
+      "isoWeek": "2026-W05",
+      "distanceKm": 4.66,
+      "movingTimeHours": 2.36,
+      "sessions": 4,
+      "avgHeartRate": 123.95
+    },
+    {
+      "isoWeek": "2026-W06",
+      "distanceKm": 27.28,
+      "movingTimeHours": 6.8,
+      "sessions": 6,
+      "avgHeartRate": 140.43
+    },
+    {
+      "isoWeek": "2026-W07",
+      "distanceKm": 26.76,
+      "movingTimeHours": 4.44,
+      "sessions": 4,
+      "avgHeartRate": 157.52
+    },
+    {
+      "isoWeek": "2026-W08",
+      "distanceKm": 21.84,
+      "movingTimeHours": 5.78,
+      "sessions": 5,
+      "avgHeartRate": 136.86
+    },
+    {
+      "isoWeek": "2026-W09",
+      "distanceKm": 108.34,
+      "movingTimeHours": 7.12,
+      "sessions": 4,
+      "avgHeartRate": 127.75
+    },
+    {
+      "isoWeek": "2026-W10",
+      "distanceKm": 34.92,
+      "movingTimeHours": 7.71,
+      "sessions": 7,
+      "avgHeartRate": 129.99
+    },
+    {
+      "isoWeek": "2026-W11",
+      "distanceKm": 32.24,
+      "movingTimeHours": 6.31,
+      "sessions": 6,
+      "avgHeartRate": 124.22
+    },
+    {
+      "isoWeek": "2026-W12",
+      "distanceKm": 4.72,
+      "movingTimeHours": 2.03,
+      "sessions": 3,
+      "avgHeartRate": 117.3
+    },
+    {
+      "isoWeek": "2026-W13",
+      "distanceKm": 25.12,
+      "movingTimeHours": 4.32,
+      "sessions": 5,
+      "avgHeartRate": 137.24
+    },
+    {
+      "isoWeek": "2026-W14",
+      "distanceKm": 5.09,
+      "movingTimeHours": 1.58,
+      "sessions": 2,
+      "avgHeartRate": 143.45
+    },
+    {
+      "isoWeek": "2026-W15",
+      "distanceKm": 32.6,
+      "movingTimeHours": 3.75,
+      "sessions": 3,
+      "avgHeartRate": 164.97
+    },
+    {
+      "isoWeek": "2026-W16",
+      "distanceKm": 5.17,
+      "movingTimeHours": 3.04,
+      "sessions": 4,
+      "avgHeartRate": 121.33
+    },
+    {
+      "isoWeek": "2026-W17",
+      "distanceKm": 20.09,
+      "movingTimeHours": 5.1,
+      "sessions": 7,
+      "avgHeartRate": 139.59
+    },
+    {
+      "isoWeek": "2026-W18",
+      "distanceKm": 18.62,
+      "movingTimeHours": 3.13,
+      "sessions": 5,
+      "avgHeartRate": 145.24
+    },
+    {
+      "isoWeek": "2026-W19",
+      "distanceKm": 22.29,
+      "movingTimeHours": 3.73,
+      "sessions": 6,
+      "avgHeartRate": 138.25
+    },
+    {
+      "isoWeek": "2026-W20",
+      "distanceKm": 26.9,
+      "movingTimeHours": 4.04,
+      "sessions": 4,
+      "avgHeartRate": 144.38
+    },
+    {
+      "isoWeek": "2026-W21",
+      "distanceKm": 36.53,
+      "movingTimeHours": 7.1,
+      "sessions": 10,
+      "avgHeartRate": 143.36
     }
   ],
   "months": [
     {
+      "month": "2023-05",
+      "distanceKm": 27.15,
+      "movingTimeHours": 5.28,
+      "sessions": 5
+    },
+    {
+      "month": "2024-10",
+      "distanceKm": 22.51,
+      "movingTimeHours": 2.87,
+      "sessions": 7
+    },
+    {
+      "month": "2024-11",
+      "distanceKm": 24.11,
+      "movingTimeHours": 6.81,
+      "sessions": 13
+    },
+    {
+      "month": "2024-12",
+      "distanceKm": 25.29,
+      "movingTimeHours": 10.28,
+      "sessions": 16
+    },
+    {
+      "month": "2025-01",
+      "distanceKm": 17.82,
+      "movingTimeHours": 5.38,
+      "sessions": 10
+    },
+    {
+      "month": "2025-02",
+      "distanceKm": 22.73,
+      "movingTimeHours": 11.41,
+      "sessions": 17
+    },
+    {
+      "month": "2025-03",
+      "distanceKm": 17.65,
+      "movingTimeHours": 9.65,
+      "sessions": 17
+    },
+    {
+      "month": "2025-04",
+      "distanceKm": 50.31,
+      "movingTimeHours": 15.1,
+      "sessions": 17
+    },
+    {
+      "month": "2025-05",
+      "distanceKm": 14.08,
+      "movingTimeHours": 8.52,
+      "sessions": 12
+    },
+    {
+      "month": "2025-06",
+      "distanceKm": 26.34,
+      "movingTimeHours": 15.47,
+      "sessions": 22
+    },
+    {
+      "month": "2025-07",
+      "distanceKm": 25.86,
+      "movingTimeHours": 10.21,
+      "sessions": 16
+    },
+    {
+      "month": "2025-08",
+      "distanceKm": 37.35,
+      "movingTimeHours": 10.8,
+      "sessions": 13
+    },
+    {
+      "month": "2025-09",
+      "distanceKm": 18.92,
+      "movingTimeHours": 5.86,
+      "sessions": 8
+    },
+    {
+      "month": "2025-10",
+      "distanceKm": 56.9,
+      "movingTimeHours": 11.43,
+      "sessions": 17
+    },
+    {
+      "month": "2025-11",
+      "distanceKm": 83.46,
+      "movingTimeHours": 22.87,
+      "sessions": 27
+    },
+    {
+      "month": "2025-12",
+      "distanceKm": 98.09,
+      "movingTimeHours": 21.27,
+      "sessions": 23
+    },
+    {
+      "month": "2026-01",
+      "distanceKm": 70.82,
+      "movingTimeHours": 16.12,
+      "sessions": 22
+    },
+    {
+      "month": "2026-02",
+      "distanceKm": 184.22,
+      "movingTimeHours": 24.14,
+      "sessions": 19
+    },
+    {
+      "month": "2026-03",
+      "distanceKm": 97,
+      "movingTimeHours": 20.36,
+      "sessions": 21
+    },
+    {
+      "month": "2026-04",
+      "distanceKm": 73.02,
+      "movingTimeHours": 15.13,
+      "sessions": 19
+    },
+    {
       "month": "2026-05",
-      "distanceKm": 21,
-      "movingTimeHours": 2.76,
-      "sessions": 3
+      "distanceKm": 94.27,
+      "movingTimeHours": 16.33,
+      "sessions": 22
     }
   ]
 }
