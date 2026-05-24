@@ -170,6 +170,24 @@ thead th {
   margin: 0;
 }
 
+.activity-advice {
+  margin-top: 8px;
+  border-top: 1px dashed #d1d5db;
+  padding-top: 8px;
+  display: grid;
+  gap: 4px;
+}
+
+.activity-advice-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.activity-advice-meta {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
 .activity-filters {
   display: flex;
   flex-wrap: wrap;

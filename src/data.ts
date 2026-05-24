@@ -75,6 +75,26 @@ export type InsightsData = {
   summary: string
 }
 
+export type ActivityAdvice = {
+  summary: string
+  focus: string
+  nextSession: string
+  caution: string | null
+}
+
+export type ActivityAdviceData = {
+  schemaVersion: number
+  activityId: string
+  generatedAt: string
+  source: 'llm'
+  model: string
+  versions: {
+    activity: string
+    context: string
+  }
+  advice: ActivityAdvice
+}
+
 export const defaultActivitiesData: ActivitiesData = {
   updatedAt: new Date(0).toISOString(),
   items: [],
