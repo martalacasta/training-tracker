@@ -84,7 +84,8 @@ export async function fetchRecentStravaActivities(
     page += 1
   }
 
-  const detailed: StravaActivity[] = []
+  const detailFetchedAt = new Date().toISOString()
+  const detailed: Array<{ activity: StravaActivity; detailFetched: boolean }> = []
   const concurrency = 4
   let stopDetailFetchDueToRateLimit = false
   for (let index = 0; index < activities.length; index += concurrency) {
@@ -92,16 +93,16 @@ export async function fetchRecentStravaActivities(
     const results = await Promise.all(
       batch.map(async (activity) => {
         if (stopDetailFetchDueToRateLimit) {
-          return activity
+          return { activity, detailFetched: false }
         }
 
         try {
           const detail = await fetchStravaActivityDetail(accessToken, activity.id)
-          return detail ?? activity
+          return { activity: detail ?? activity, detailFetched: true }
         } catch (error) {
           if (isStravaRateLimitError(error)) {
             stopDetailFetchDueToRateLimit = true
-            return activity
+            return { activity, detailFetched: false }
           }
           throw error
         }
@@ -110,7 +111,12 @@ export async function fetchRecentStravaActivities(
     detailed.push(...results)
   }
 
-  return detailed.map(normalizeStravaActivity)
+  return detailed.map(({ activity, detailFetched }) =>
+    normalizeStravaActivity(activity, {
+      detailFetched,
+      detailFetchedAt: detailFetched ? detailFetchedAt : null,
+    }),
+  )
 }
 
 // The list endpoint omits `description` and `calories`; fetch the detail endpoint to get them.
@@ -186,7 +192,10 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
-function normalizeStravaActivity(activity: StravaActivity): Activity {
+function normalizeStravaActivity(
+  activity: StravaActivity,
+  options?: { detailFetched?: boolean; detailFetchedAt?: string | null },
+): Activity {
   const runLike = activity.sport_type === 'Run'
   const averageRhythm = runLike ? getAverageRhythm(activity) : null
 
@@ -202,6 +211,9 @@ function normalizeStravaActivity(activity: StravaActivity): Activity {
     averageRhythm,
     averageHeartRate: activity.average_heartrate ?? null,
     sensation: null,
+    detailsBackfillDone: options?.detailFetched === true,
+    detailsFetchAttempts: options?.detailFetched ? 1 : 0,
+    detailsFetchedAt: options?.detailFetchedAt ?? null,
   }
 }
 

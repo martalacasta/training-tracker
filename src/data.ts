@@ -10,6 +10,9 @@ export type Activity = {
   averageRhythm?: number | null
   averageHeartRate: number | null
   sensation: string | null
+  detailsBackfillDone?: boolean
+  detailsFetchAttempts?: number
+  detailsFetchedAt?: string | null
 }
 
 export type Goal = {
