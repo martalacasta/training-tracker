@@ -22,6 +22,16 @@ import {
   getDefaultDateRange,
 } from './lib/activityFilters'
 
+type CoachChatMessage = {
+  role: 'user' | 'assistant'
+  content: string
+}
+
+const CHAT_HISTORY_STORAGE_KEY = 'training-tracker-coach-chat-v1'
+const CHAT_HISTORY_LIMIT = 30
+const CHAT_CONTEXT_LIMIT = 16
+const CHAT_API_URL = (import.meta.env.VITE_CHAT_API_URL as string | undefined)?.trim() ?? ''
+
 function App() {
   const [activities, setActivities] = useState<ActivitiesData>(defaultActivitiesData)
   const [aggregates, setAggregates] = useState<AggregatesData>(defaultAggregatesData)
@@ -41,9 +51,17 @@ function App() {
     {},
   )
   const [activityAdviceErrorById, setActivityAdviceErrorById] = useState<Record<string, string>>({})
+  const [chatMessages, setChatMessages] = useState<CoachChatMessage[]>(() => loadChatHistory())
+  const [chatInput, setChatInput] = useState('')
+  const [chatLoading, setChatLoading] = useState(false)
+  const [chatError, setChatError] = useState<string | null>(null)
   const defaultRange = useMemo(() => getDefaultDateRange(), [])
   const [fromDate, setFromDate] = useState<string>(defaultRange.from)
   const [toDate, setToDate] = useState<string>(defaultRange.to)
+
+  useEffect(() => {
+    persistChatHistory(chatMessages)
+  }, [chatMessages])
 
   useEffect(() => {
     const load = async () => {
@@ -194,6 +212,55 @@ function App() {
       ...previous,
       [activityId]: !previous[activityId],
     }))
+  }
+
+  const sendChatMessage = async () => {
+    const text = chatInput.trim()
+    if (!text || chatLoading) {
+      return
+    }
+    if (!CHAT_API_URL) {
+      setChatError('Chat API is not configured. Set VITE_CHAT_API_URL and reload the app.')
+      return
+    }
+
+    const userMessage: CoachChatMessage = { role: 'user', content: text }
+    const nextMessages = [...chatMessages, userMessage].slice(-CHAT_HISTORY_LIMIT)
+    setChatInput('')
+    setChatError(null)
+    setChatMessages(nextMessages)
+    setChatLoading(true)
+
+    try {
+      const response = await fetch(CHAT_API_URL, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          messages: nextMessages.slice(-CHAT_CONTEXT_LIMIT),
+        }),
+      })
+      if (!response.ok) {
+        const errorBody = (await response.json().catch(() => null)) as { error?: string } | null
+        throw new Error(errorBody?.error ?? `Chat request failed (${response.status})`)
+      }
+
+      const payload = (await response.json()) as { message?: string }
+      const assistantMessage = payload.message?.trim()
+      if (!assistantMessage) {
+        throw new Error('Chat response was empty.')
+      }
+      const assistantReply: CoachChatMessage = { role: 'assistant', content: assistantMessage }
+
+      setChatMessages((previous) =>
+        [...previous, assistantReply].slice(-CHAT_HISTORY_LIMIT),
+      )
+    } catch (chatRequestError) {
+      const message =
+        chatRequestError instanceof Error ? chatRequestError.message : 'Could not send chat message.'
+      setChatError(message)
+    } finally {
+      setChatLoading(false)
+    }
   }
 
   return (
@@ -465,6 +532,42 @@ function App() {
         <h2>Latest insight</h2>
         <p>{insights.summary}</p>
       </section>
+
+      <section className="panel">
+        <h2>Chat with your coach</h2>
+        <p className="panel-subtitle">
+          Ask about your progress, next sessions, fatigue, or goal strategy.
+        </p>
+        <div className="chat-thread" aria-live="polite">
+          {chatMessages.length === 0 ? (
+            <p className="chat-empty">No messages yet. Start by asking for your next best workout.</p>
+          ) : (
+            chatMessages.map((message, index) => (
+              <article
+                key={`${message.role}-${index}-${message.content.slice(0, 16)}`}
+                className={
+                  message.role === 'user' ? 'chat-bubble chat-bubble-user' : 'chat-bubble chat-bubble-assistant'
+                }
+              >
+                <p className="chat-role">{message.role === 'user' ? 'You' : 'Coach'}</p>
+                <p>{message.content}</p>
+              </article>
+            ))
+          )}
+        </div>
+        {chatError ? <p className="error">{chatError}</p> : null}
+        <div className="chat-composer">
+          <textarea
+            value={chatInput}
+            onChange={(event) => setChatInput(event.target.value)}
+            placeholder="Ask the coach a question..."
+            rows={3}
+          />
+          <button type="button" className="chat-send-button" onClick={() => void sendChatMessage()} disabled={chatLoading}>
+            {chatLoading ? 'Sending…' : 'Send'}
+          </button>
+        </div>
+      </section>
     </main>
   )
 }
@@ -521,6 +624,41 @@ function getAdaptationSummary(adaptation: RecommendationAdaptationTrace | undefi
   const updated = adaptation.updatedRecommendationIds.length
   const removed = adaptation.removedRecommendationIds.length
   return `${added} added, ${updated} updated, ${removed} removed versus previous run.`
+}
+
+function loadChatHistory(): CoachChatMessage[] {
+  try {
+    const raw = localStorage.getItem(CHAT_HISTORY_STORAGE_KEY)
+    if (!raw) {
+      return []
+    }
+
+    const parsed = JSON.parse(raw) as unknown
+    if (!Array.isArray(parsed)) {
+      return []
+    }
+
+    return parsed
+      .filter((entry): entry is CoachChatMessage => {
+        if (!entry || typeof entry !== 'object') {
+          return false
+        }
+        const role = (entry as { role?: unknown }).role
+        const content = (entry as { content?: unknown }).content
+        return (role === 'user' || role === 'assistant') && typeof content === 'string' && content.length > 0
+      })
+      .slice(-CHAT_HISTORY_LIMIT)
+  } catch {
+    return []
+  }
+}
+
+function persistChatHistory(messages: CoachChatMessage[]): void {
+  try {
+    localStorage.setItem(CHAT_HISTORY_STORAGE_KEY, JSON.stringify(messages.slice(-CHAT_HISTORY_LIMIT)))
+  } catch {
+    // Ignore storage write errors in restricted browser contexts.
+  }
 }
 
 export default App
