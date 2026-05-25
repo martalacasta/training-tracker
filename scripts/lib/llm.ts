@@ -20,7 +20,7 @@ export type LlmConfig = {
 }
 
 export const DEFAULT_GITHUB_MODELS_API_URL =
-  'https://models.inference.ai.azure.com/chat/completions'
+  'https://models.github.ai/inference/chat/completions'
 
 export function resolveLlmConfig(env: NodeJS.ProcessEnv = process.env): LlmConfig | null {
   const apiUrl = env.LLM_API_URL

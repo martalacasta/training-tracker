@@ -39,7 +39,7 @@ Optional LLM:
 Optional GitHub Models:
 - `GITHUB_MODELS_MODEL`
 - `GITHUB_MODELS_API_KEY` (or `GITHUB_TOKEN` in CI)
-- `GITHUB_MODELS_API_URL` (optional override)
+- `GITHUB_MODELS_API_URL` (optional override, default: `https://models.github.ai/inference/chat/completions`)
 
 For GitHub Actions repository **variables**, names cannot start with `GITHUB_`.
 Use `MODELS_MODEL` and optional `MODELS_API_URL` in Actions, which are mapped by workflow to runtime env vars.
@@ -75,7 +75,8 @@ npm run data:pipeline
    - `STRAVA_CLIENT_SECRET`
    - `STRAVA_REFRESH_TOKEN`
    - `LLM_API_URL` / `LLM_API_KEY` / `LLM_MODEL` (optional)
-   - `MODELS_API_KEY` + repository variable `MODELS_MODEL` (optional GitHub Models alternative)
+   - repository variable `MODELS_MODEL` (optional GitHub Models alternative, example value: `openai/gpt-4.1` or `openai/gpt-4o-mini`)
+   - no extra GitHub Models secret is required in workflow when using `${{ github.token }}` with `permissions: models: read`
 4. Enable GitHub Pages in repository settings.
 5. Let `sync-reconcile.yml` update data daily and `deploy.yml` publish frontend.
 
