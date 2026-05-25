@@ -7,6 +7,7 @@ import {
   type CoachStateData,
   type GoalsData,
   type InsightsData,
+  type RecommendationAdaptationTrace,
   type RecommendationsData,
   defaultActivitiesData,
   defaultAggregatesData,
@@ -82,6 +83,38 @@ function App() {
   const latestWeek = aggregates.weeks.at(-1)
   const latestMonth = aggregates.months.at(-1)
   const activeGoalCount = goals.items.filter((goal) => goal.status !== 'completed').length
+  const weeklyPlanSource = recommendations.trace?.week
+  const weeklyPlan = weeklyPlanSource
+    ? {
+        weekStartDate: weeklyPlanSource.weekStartDate ?? '',
+        weekEndDate: weeklyPlanSource.weekEndDate ?? '',
+        runTargetSessions: weeklyPlanSource.runTargetSessions ?? 4,
+        gymTargetSessions: weeklyPlanSource.gymTargetSessions ?? 2,
+        runCompletedSessions: weeklyPlanSource.runCompletedSessions ?? 0,
+        gymCompletedSessions: weeklyPlanSource.gymCompletedSessions ?? 0,
+      }
+    : {
+        weekStartDate: '',
+        weekEndDate: '',
+        runTargetSessions: 4,
+        gymTargetSessions: 2,
+        runCompletedSessions: 0,
+        gymCompletedSessions: 0,
+      }
+  const totalTargetSessions = weeklyPlan.runTargetSessions + weeklyPlan.gymTargetSessions
+  const totalCompletedSessions = weeklyPlan.runCompletedSessions + weeklyPlan.gymCompletedSessions
+  const weeklyCompletionRatio =
+    totalTargetSessions > 0
+      ? Math.min(totalCompletedSessions / totalTargetSessions, 1)
+      : 0
+  const weeklyProgressMessage = `${Math.round(weeklyCompletionRatio * 100)}% completed · ${weeklyPlan.runCompletedSessions} of ${weeklyPlan.runTargetSessions} run sessions · ${weeklyPlan.gymCompletedSessions} of ${weeklyPlan.gymTargetSessions} gym sessions`
+  const adaptationTrace = recommendations.trace?.adaptation
+  const adaptationSummary = getAdaptationSummary(adaptationTrace)
+  const recommendationSourceLabel = recommendations.trace
+    ? recommendations.trace.source === 'llm'
+      ? 'LLM-assisted'
+      : 'Rule-based'
+    : 'Unknown'
 
   const recentActivities = useMemo(
     () => activities.items.slice().sort((a, b) => b.startDate.localeCompare(a.startDate)),
@@ -208,7 +241,46 @@ function App() {
       </section>
 
       <section className="panel">
+        <h2>This week: planned vs done</h2>
+        <p className="panel-subtitle">
+          {weeklyPlan.weekStartDate && weeklyPlan.weekEndDate
+            ? `${formatDateLabel(weeklyPlan.weekStartDate)} - ${formatDateLabel(weeklyPlan.weekEndDate)}`
+            : 'Current week'}
+        </p>
+        <div className="weekly-progress">
+          <div
+            className="weekly-progress-fill"
+            style={{ width: `${Math.round(weeklyCompletionRatio * 100)}%` }}
+          />
+        </div>
+        <p className="list-meta">{weeklyProgressMessage}</p>
+      </section>
+
+      <section className="panel">
         <h2>Next recommendations</h2>
+        {recommendations.trace ? (
+          <div className="trace-block">
+            <p className="trace-title">
+              {adaptationTrace?.changed ? 'Plan adapted after latest sync' : 'Plan unchanged after latest sync'}
+            </p>
+            <p className="list-meta">{adaptationSummary}</p>
+            <details className="trace-details">
+              <summary>Technical trace</summary>
+              <p className="list-meta">
+                Source: {recommendationSourceLabel}
+                {recommendations.trace.model ? ` · model ${recommendations.trace.model}` : ''}
+              </p>
+              <p className="list-meta">Run: {recommendations.trace.runId}</p>
+              <p className="list-meta">
+                Previous run: {adaptationTrace?.previousRunId ?? 'none'}
+              </p>
+            </details>
+          </div>
+        ) : (
+          <p className="list-meta">
+            No adaptation summary available for this recommendation file.
+          </p>
+        )}
         {recommendations.items.length === 0 ? (
           <p>No recommendations generated yet.</p>
         ) : (
@@ -219,6 +291,9 @@ function App() {
                 <p>{item.description}</p>
                 <p className="list-meta">
                   {item.intensity} intensity · confidence {(item.confidence * 100).toFixed(0)}%
+                  {item.metadata?.rationaleTags?.length
+                    ? ` · ${item.metadata.rationaleTags.join(', ')}`
+                    : ''}
                 </p>
               </li>
             ))}
@@ -419,6 +494,33 @@ function formatRhythm(minutesPerKm: number): string {
   const minutes = Math.floor(totalSeconds / 60)
   const seconds = totalSeconds % 60
   return `${minutes}:${String(seconds).padStart(2, '0')}`
+}
+
+function formatDateLabel(value: string): string {
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) {
+    return value
+  }
+
+  return date.toLocaleDateString(undefined, {
+    month: 'short',
+    day: 'numeric',
+  })
+}
+
+function getAdaptationSummary(adaptation: RecommendationAdaptationTrace | undefined): string {
+  if (!adaptation) {
+    return 'No comparison with a previous run is available.'
+  }
+
+  if (!adaptation.changed) {
+    return 'No recommendation changes were detected versus the previous run.'
+  }
+
+  const added = adaptation.addedRecommendationIds.length
+  const updated = adaptation.updatedRecommendationIds.length
+  const removed = adaptation.removedRecommendationIds.length
+  return `${added} added, ${updated} updated, ${removed} removed versus previous run.`
 }
 
 export default App

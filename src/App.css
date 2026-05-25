@@ -66,6 +66,51 @@ main {
   color: #4b5563;
 }
 
+.panel-subtitle {
+  margin: 0 0 10px;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.weekly-progress {
+  height: 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+  margin: 10px 0 8px;
+}
+
+.weekly-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb 0%, #22c55e 100%);
+}
+
+.trace-block {
+  margin-bottom: 10px;
+  border: 1px solid #dbeafe;
+  background: #f8fbff;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+
+.trace-title {
+  margin: 0;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.trace-details summary {
+  cursor: pointer;
+  color: #2563eb;
+  font-size: 0.88rem;
+}
+
+.trace-details p {
+  margin-top: 4px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

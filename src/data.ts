@@ -21,7 +21,14 @@ export type Goal = {
   targetDate: string
   status: 'on-track' | 'at-risk' | 'completed'
   type: 'race' | 'volume' | 'consistency'
+  targetSessionsPerWeek?: number
   url?: string
+}
+
+export type RecommendationSource = 'rule-based' | 'llm'
+
+export type RecommendationMetadata = {
+  rationaleTags?: string[]
 }
 
 export type Recommendation = {
@@ -30,6 +37,39 @@ export type Recommendation = {
   description: string
   intensity: 'low' | 'moderate' | 'high'
   confidence: number
+  metadata?: RecommendationMetadata
+}
+
+export type WeeklyPlanComparison = {
+  weekStartDate: string
+  weekEndDate: string
+  runTargetSessions: number
+  gymTargetSessions: number
+  runCompletedSessions: number
+  gymCompletedSessions: number
+}
+
+export type RecommendationAdaptationTrace = {
+  previousRunId: string | null
+  changed: boolean
+  addedRecommendationIds: string[]
+  removedRecommendationIds: string[]
+  updatedRecommendationIds: string[]
+}
+
+export type RecommendationTrace = {
+  schemaVersion: number
+  runId: string
+  trigger: 'pipeline'
+  source: RecommendationSource
+  model: string | null
+  generatedFrom: {
+    activitiesUpdatedAt: string
+    coachStateUpdatedAt: string
+    goalsUpdatedAt: string
+  }
+  week: WeeklyPlanComparison
+  adaptation: RecommendationAdaptationTrace
 }
 
 export type ActivitiesData = {
@@ -71,6 +111,7 @@ export type CoachStateData = {
 export type RecommendationsData = {
   updatedAt: string
   items: Recommendation[]
+  trace?: RecommendationTrace
 }
 
 export type InsightsData = {

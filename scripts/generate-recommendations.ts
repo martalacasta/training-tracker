@@ -1,6 +1,10 @@
 import dayjs from 'dayjs'
 import { readDataFile, writeDataFile } from './lib/json'
 import { maybeGenerateRecommendationsWithLlm } from './lib/llm'
+import {
+  buildWeeklyPlanComparison,
+  compareRecommendations,
+} from './lib/recommendation-adaptation'
 import type {
   ActivitiesData,
   CoachStateData,
@@ -24,25 +28,58 @@ const emptyGoals: GoalsData = {
   items: [],
 }
 
+const emptyRecommendations: RecommendationsData = {
+  updatedAt: new Date(0).toISOString(),
+  items: [],
+}
+
 async function main() {
   const activities = await readDataFile<ActivitiesData>('activities.json', emptyActivities)
   const coachState = await readDataFile<CoachStateData>('coach-state.json', emptyCoachState)
   const goals = await readDataFile<GoalsData>('goals.json', emptyGoals)
+  const previousRecommendations = await readDataFile<RecommendationsData>(
+    'next-recommendations.json',
+    emptyRecommendations,
+  )
   const recent = activities.items.slice().sort((a, b) => b.startDate.localeCompare(a.startDate))
 
-  const llmRecommendations = await maybeGenerateRecommendationsWithLlm(
+  const llmResult = await maybeGenerateRecommendationsWithLlm(
     goals.items,
     coachState,
     recent,
   )
-  const recommendations = llmRecommendations ?? generateRuleBasedRecommendations(coachState)
+  const source = llmResult ? 'llm' : 'rule-based'
+  const model = llmResult?.model ?? null
+  const recommendations = normalizeRecommendations(
+    llmResult?.recommendations ?? generateRuleBasedRecommendations(coachState),
+  )
+  const adaptation = compareRecommendations(previousRecommendations.items, recommendations)
+  adaptation.previousRunId = previousRecommendations.trace?.runId ?? null
+  const week = buildWeeklyPlanComparison(recent)
+  const runId = `rec-${new Date().toISOString().replace(/[:.]/g, '-')}`
 
   const output: RecommendationsData = {
     updatedAt: new Date().toISOString(),
     items: recommendations,
+    trace: {
+      schemaVersion: 1,
+      runId,
+      trigger: 'pipeline',
+      source,
+      model,
+      generatedFrom: {
+        activitiesUpdatedAt: activities.updatedAt,
+        coachStateUpdatedAt: coachState.updatedAt,
+        goalsUpdatedAt: goals.updatedAt,
+      },
+      week,
+      adaptation,
+    },
   }
   await writeDataFile('next-recommendations.json', output)
-  console.log(`Generated ${recommendations.length} recommendations.`)
+  console.log(
+    `Generated ${recommendations.length} recommendations (${source}; run ${week.runCompletedSessions}/${week.runTargetSessions}, gym ${week.gymCompletedSessions}/${week.gymTargetSessions}).`,
+  )
 }
 
 function generateRuleBasedRecommendations(coachState: CoachStateData): Recommendation[] {
@@ -59,6 +96,9 @@ function generateRuleBasedRecommendations(coachState: CoachStateData): Recommend
       description: 'Keep one complete rest or easy mobility day to absorb this week load.',
       intensity: 'low',
       confidence: 0.82,
+      metadata: {
+        rationaleTags: ['fatigue', 'recovery'],
+      },
     })
   }
 
@@ -70,6 +110,9 @@ function generateRuleBasedRecommendations(coachState: CoachStateData): Recommend
         'Schedule 3 shorter sessions this week instead of one long workout to recover routine.',
       intensity: 'moderate',
       confidence: 0.78,
+      metadata: {
+        rationaleTags: ['adherence', 'consistency'],
+      },
     })
   } else {
     recommendations.push({
@@ -78,6 +121,9 @@ function generateRuleBasedRecommendations(coachState: CoachStateData): Recommend
       description: 'Include one threshold or interval workout and keep easy days truly easy.',
       intensity: 'high',
       confidence: 0.74,
+      metadata: {
+        rationaleTags: ['quality', 'progression'],
+      },
     })
   }
 
@@ -87,9 +133,35 @@ function generateRuleBasedRecommendations(coachState: CoachStateData): Recommend
     description: 'Maintain one longer low-intensity run this week for race-specific endurance.',
     intensity: 'moderate',
     confidence: 0.76,
+    metadata: {
+      rationaleTags: ['endurance'],
+    },
   })
 
   return recommendations
+}
+
+function normalizeRecommendations(recommendations: Recommendation[]): Recommendation[] {
+  return recommendations.map((recommendation) => {
+    const rationaleTags = (recommendation.metadata?.rationaleTags ?? []).filter(
+      (tag): tag is string => Boolean(tag),
+    )
+    if (rationaleTags.length === 0) {
+      if (!recommendation.metadata) {
+        return recommendation
+      }
+
+      return {
+        ...recommendation,
+        metadata: undefined,
+      }
+    }
+
+    return {
+      ...recommendation,
+      metadata: { rationaleTags },
+    }
+  })
 }
 
 await main()

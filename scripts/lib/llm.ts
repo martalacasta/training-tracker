@@ -121,14 +121,29 @@ export async function maybeGenerateRecommendationsWithLlm(
   goals: Goal[],
   coachState: CoachStateData,
   recentActivities: Activity[],
-): Promise<Recommendation[] | null> {
-  const systemPrompt =
-    'You are a running and endurance training assistant. Return only valid JSON with a recommendations array.'
+): Promise<{ recommendations: Recommendation[]; model: string } | null> {
+  const config = resolveLlmConfig()
+  if (!config) {
+    return null
+  }
+
+  const systemPrompt = [
+    'You are a running and endurance training assistant.',
+    'Return only valid JSON with a recommendations array.',
+    'Recommendations must be specific and actionable for the next sessions:',
+    '- Include concrete workout details in description: distance, sets/reps, and recoveries when relevant.',
+    '- For run sessions include explicit pace guidance in min/km.',
+    '- Include heart-rate guidance (zone or bpm range) whenever possible.',
+    '- Tailor recommendations to the active goal, coach state, and recent training progression.',
+    '- Keep recommendations realistic for current fitness and recent sessions.',
+  ].join(' ')
+  const recentRunInsights = buildRecentRunInsights(recentActivities)
   const userPrompt = JSON.stringify(
     {
       goals,
       coachState,
       recentActivities: recentActivities.slice(0, 14),
+      recentRunInsights,
       outputSchema: {
         recommendations: [
           {
@@ -148,10 +163,53 @@ export async function maybeGenerateRecommendationsWithLlm(
   const parsed = await maybeGenerateJsonWithLlm<LlmResponse>({
     systemPrompt,
     userPrompt,
+    config,
   })
   if (!parsed) {
     return null
   }
 
-  return parsed.recommendations
+  return {
+    recommendations: parsed.recommendations,
+    model: config.model,
+  }
+}
+
+function buildRecentRunInsights(recentActivities: Activity[]): {
+  recentRunCount: number
+  avgRunDistanceKm: number | null
+  avgRunPaceMinPerKm: number | null
+  avgRunHeartRate: number | null
+} {
+  const recentRuns = recentActivities.filter((activity) => activity.sportType === 'Run').slice(0, 8)
+  const paceValues = recentRuns
+    .map((activity) => activity.averageRhythm)
+    .filter((value): value is number => typeof value === 'number' && Number.isFinite(value))
+  const heartRateValues = recentRuns
+    .map((activity) => activity.averageHeartRate)
+    .filter((value): value is number => typeof value === 'number' && Number.isFinite(value))
+  const avgDistance =
+    recentRuns.length > 0
+      ? round(recentRuns.reduce((total, activity) => total + activity.distanceKm, 0) / recentRuns.length, 2)
+      : null
+  const avgPace =
+    paceValues.length > 0
+      ? round(paceValues.reduce((total, value) => total + value, 0) / paceValues.length, 2)
+      : null
+  const avgHeartRate =
+    heartRateValues.length > 0
+      ? round(heartRateValues.reduce((total, value) => total + value, 0) / heartRateValues.length, 0)
+      : null
+
+  return {
+    recentRunCount: recentRuns.length,
+    avgRunDistanceKm: avgDistance,
+    avgRunPaceMinPerKm: avgPace,
+    avgRunHeartRate: avgHeartRate,
+  }
+}
+
+function round(value: number, decimals: number): number {
+  const factor = 10 ** decimals
+  return Math.round(value * factor) / factor
 }
