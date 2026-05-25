@@ -72,33 +72,6 @@ main {
   font-size: 0.9rem;
 }
 
-.weekly-stats-grid {
-  display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  margin-bottom: 10px;
-}
-
-.weekly-stat-card {
-  border: 1px solid #dbeafe;
-  background: linear-gradient(180deg, #f8fbff 0%, #eff6ff 100%);
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.weekly-stat-label {
-  margin: 0;
-  color: #475569;
-  font-size: 0.82rem;
-}
-
-.weekly-stat-value {
-  margin: 4px 0 0;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #1d4ed8;
-}
-
 .weekly-progress {
   height: 8px;
   border-radius: 999px;
@@ -110,17 +83,6 @@ main {
 .weekly-progress-fill {
   height: 100%;
   background: linear-gradient(90deg, #2563eb 0%, #22c55e 100%);
-}
-
-.weekly-definitions {
-  display: grid;
-  gap: 3px;
-  margin-top: 8px;
-}
-
-.weekly-definitions p {
-  margin: 0;
-  font-size: 0.88rem;
 }
 
 .trace-block {

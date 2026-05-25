@@ -5,12 +5,12 @@ import {
   compareRecommendations,
   computePlannedSessions,
 } from './recommendation-adaptation'
-import type { Activity, Goal, Recommendation } from './types'
+import type { Activity, Recommendation } from './types'
 
-function makeActivity(id: string, startDate: string): Activity {
+function makeActivity(id: string, startDate: string, sportType: Activity['sportType'] = 'Run'): Activity {
   return {
     id,
-    sportType: 'Run',
+    sportType,
     startDate,
     title: `Run ${id}`,
     description: null,
@@ -23,60 +23,22 @@ function makeActivity(id: string, startDate: string): Activity {
   }
 }
 
-test('buildWeeklyPlanComparison computes target, done, remaining and next suggestions', () => {
-  const goals: Goal[] = [
-    {
-      id: 'goal-1',
-      name: 'Half Marathon',
-      targetDate: '2026-11-01',
-      type: 'race',
-      status: 'on-track',
-      targetSessionsPerWeek: 4,
-    },
-  ]
-  const recommendations: Recommendation[] = [
-    {
-      id: 'r1',
-      title: 'Quality run',
-      description: 'Threshold workout.',
-      intensity: 'high',
-      confidence: 0.8,
-      metadata: { plannedSessions: 2 },
-    },
-    {
-      id: 'r2',
-      title: 'Long run',
-      description: 'Endurance session.',
-      intensity: 'moderate',
-      confidence: 0.75,
-      metadata: { plannedSessions: 1 },
-    },
-    {
-      id: 'r3',
-      title: 'Recovery day',
-      description: 'Easy mobility.',
-      intensity: 'low',
-      confidence: 0.9,
-    },
-  ]
+test('buildWeeklyPlanComparison computes run and gym progress for the current week', () => {
   const activities = [
     makeActivity('a1', '2026-05-25T08:00:00Z'),
-    makeActivity('a2', '2026-05-27T08:00:00Z'),
+    makeActivity('a2', '2026-05-27T08:00:00Z', 'WeightTraining'),
+    makeActivity('a4', '2026-05-28T08:00:00Z', 'HighIntensityIntervalTraining'),
     makeActivity('a3', '2026-05-12T08:00:00Z'),
   ]
 
-  const weekly = buildWeeklyPlanComparison(
-    goals,
-    recommendations,
-    activities,
-    new Date('2026-05-28T12:00:00Z'),
-  )
+  const weekly = buildWeeklyPlanComparison(activities, new Date('2026-05-28T12:00:00Z'))
 
-  assert.equal(weekly.isoWeek, '2026-W22')
-  assert.equal(weekly.targetSessions, 4)
-  assert.equal(weekly.completedSessions, 2)
-  assert.equal(weekly.remainingToTargetSessions, 2)
-  assert.equal(weekly.recommendedNextSessions, 4)
+  assert.equal(weekly.weekStartDate, '2026-05-25')
+  assert.equal(weekly.weekEndDate, '2026-05-31')
+  assert.equal(weekly.runTargetSessions, 4)
+  assert.equal(weekly.gymTargetSessions, 2)
+  assert.equal(weekly.runCompletedSessions, 1)
+  assert.equal(weekly.gymCompletedSessions, 2)
 })
 
 test('compareRecommendations detects added, removed and updated items', () => {

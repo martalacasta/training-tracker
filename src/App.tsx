@@ -83,36 +83,31 @@ function App() {
   const latestWeek = aggregates.weeks.at(-1)
   const latestMonth = aggregates.months.at(-1)
   const activeGoalCount = goals.items.filter((goal) => goal.status !== 'completed').length
-  const activeGoal = goals.items.find((goal) => goal.status !== 'completed')
-  const fallbackTargetSessions = activeGoal?.targetSessionsPerWeek ?? 4
-  const fallbackPlannedSessions = recommendations.items.reduce(
-    (total, item) => total + (item.metadata?.plannedSessions ?? 1),
-    0,
-  )
-  const fallbackCompletedSessions = latestWeek?.sessions ?? 0
   const weeklyPlanSource = recommendations.trace?.week
   const weeklyPlan = weeklyPlanSource
     ? {
-        isoWeek: weeklyPlanSource.isoWeek,
-        targetSessions: weeklyPlanSource.targetSessions,
-        completedSessions: weeklyPlanSource.completedSessions,
-        remainingToTargetSessions:
-          weeklyPlanSource.remainingToTargetSessions ??
-          Math.max(weeklyPlanSource.targetSessions - weeklyPlanSource.completedSessions, 0),
-        recommendedNextSessions:
-          weeklyPlanSource.recommendedNextSessions ?? fallbackPlannedSessions,
+        weekStartDate: weeklyPlanSource.weekStartDate ?? '',
+        weekEndDate: weeklyPlanSource.weekEndDate ?? '',
+        runTargetSessions: weeklyPlanSource.runTargetSessions ?? 4,
+        gymTargetSessions: weeklyPlanSource.gymTargetSessions ?? 2,
+        runCompletedSessions: weeklyPlanSource.runCompletedSessions ?? 0,
+        gymCompletedSessions: weeklyPlanSource.gymCompletedSessions ?? 0,
       }
     : {
-        isoWeek: latestWeek?.isoWeek ?? 'N/A',
-        targetSessions: fallbackTargetSessions,
-        completedSessions: fallbackCompletedSessions,
-        remainingToTargetSessions: Math.max(fallbackTargetSessions - fallbackCompletedSessions, 0),
-        recommendedNextSessions: fallbackPlannedSessions,
+        weekStartDate: '',
+        weekEndDate: '',
+        runTargetSessions: 4,
+        gymTargetSessions: 2,
+        runCompletedSessions: 0,
+        gymCompletedSessions: 0,
       }
+  const totalTargetSessions = weeklyPlan.runTargetSessions + weeklyPlan.gymTargetSessions
+  const totalCompletedSessions = weeklyPlan.runCompletedSessions + weeklyPlan.gymCompletedSessions
   const weeklyCompletionRatio =
-    weeklyPlan.targetSessions > 0
-      ? Math.min(weeklyPlan.completedSessions / weeklyPlan.targetSessions, 1)
+    totalTargetSessions > 0
+      ? Math.min(totalCompletedSessions / totalTargetSessions, 1)
       : 0
+  const weeklyProgressMessage = `${Math.round(weeklyCompletionRatio * 100)}% completed · ${weeklyPlan.runCompletedSessions} of ${weeklyPlan.runTargetSessions} run sessions · ${weeklyPlan.gymCompletedSessions} of ${weeklyPlan.gymTargetSessions} gym sessions`
   const adaptationTrace = recommendations.trace?.adaptation
   const adaptationSummary = getAdaptationSummary(adaptationTrace)
   const recommendationSourceLabel = recommendations.trace
@@ -120,7 +115,6 @@ function App() {
       ? 'LLM-assisted'
       : 'Rule-based'
     : 'Unknown'
-  const weeklyScopeLabel = 'Counts all activity types synced this week.'
 
   const recentActivities = useMemo(
     () => activities.items.slice().sort((a, b) => b.startDate.localeCompare(a.startDate)),
@@ -248,48 +242,18 @@ function App() {
 
       <section className="panel">
         <h2>This week: planned vs done</h2>
-        <p className="panel-subtitle">Week {weeklyPlan.isoWeek}</p>
-        <div className="weekly-stats-grid">
-          <article className="weekly-stat-card">
-            <p className="weekly-stat-label">Weekly target</p>
-            <p className="weekly-stat-value">{weeklyPlan.targetSessions}</p>
-          </article>
-          <article className="weekly-stat-card">
-            <p className="weekly-stat-label">Done</p>
-            <p className="weekly-stat-value">{weeklyPlan.completedSessions}</p>
-          </article>
-          <article className="weekly-stat-card">
-            <p className="weekly-stat-label">Remaining to target</p>
-            <p className="weekly-stat-value">{weeklyPlan.remainingToTargetSessions}</p>
-          </article>
-          <article className="weekly-stat-card">
-            <p className="weekly-stat-label">Next sessions suggested</p>
-            <p className="weekly-stat-value">{weeklyPlan.recommendedNextSessions}</p>
-          </article>
-        </div>
+        <p className="panel-subtitle">
+          {weeklyPlan.weekStartDate && weeklyPlan.weekEndDate
+            ? `${formatDateLabel(weeklyPlan.weekStartDate)} - ${formatDateLabel(weeklyPlan.weekEndDate)}`
+            : 'Current week'}
+        </p>
         <div className="weekly-progress">
           <div
             className="weekly-progress-fill"
             style={{ width: `${Math.round(weeklyCompletionRatio * 100)}%` }}
           />
         </div>
-        <p className="list-meta">
-          {Math.round(weeklyCompletionRatio * 100)}% of weekly target completed. {weeklyScopeLabel}
-        </p>
-        <div className="weekly-definitions">
-          <p>
-            <strong>Target</strong> = goal sessions for this week.
-          </p>
-          <p>
-            <strong>Done</strong> = completed activities this week.
-          </p>
-          <p>
-            <strong>Remaining</strong> = target minus done.
-          </p>
-          <p>
-            <strong>Suggested</strong> = upcoming sessions suggested by current recommendations.
-          </p>
-        </div>
+        <p className="list-meta">{weeklyProgressMessage}</p>
       </section>
 
       <section className="panel">
@@ -326,9 +290,7 @@ function App() {
                 <p className="list-title">{item.title}</p>
                 <p>{item.description}</p>
                 <p className="list-meta">
-                  {item.intensity} intensity · confidence {(item.confidence * 100).toFixed(0)}% ·
-                  planned {item.metadata?.plannedSessions ?? 1} session
-                  {(item.metadata?.plannedSessions ?? 1) === 1 ? '' : 's'}
+                  {item.intensity} intensity · confidence {(item.confidence * 100).toFixed(0)}%
                   {item.metadata?.rationaleTags?.length
                     ? ` · ${item.metadata.rationaleTags.join(', ')}`
                     : ''}
@@ -532,6 +494,18 @@ function formatRhythm(minutesPerKm: number): string {
   const minutes = Math.floor(totalSeconds / 60)
   const seconds = totalSeconds % 60
   return `${minutes}:${String(seconds).padStart(2, '0')}`
+}
+
+function formatDateLabel(value: string): string {
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) {
+    return value
+  }
+
+  return date.toLocaleDateString(undefined, {
+    month: 'short',
+    day: 'numeric',
+  })
 }
 
 function getAdaptationSummary(adaptation: RecommendationAdaptationTrace | undefined): string {

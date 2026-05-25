@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-25T15:01:38.433Z",
+  "updatedAt": "2026-05-25T15:11:53.202Z",
   "items": [
     {
       "id": "20260525-quality",
@@ -31,7 +31,7 @@
   ],
   "trace": {
     "schemaVersion": 1,
-    "runId": "rec-2026-05-25T15-01-38-433Z",
+    "runId": "rec-2026-05-25T15-11-53-202Z",
     "trigger": "pipeline",
     "source": "rule-based",
     "model": null,
@@ -41,14 +41,15 @@
       "goalsUpdatedAt": "2026-05-24T00:00:00.000Z"
     },
     "week": {
-      "isoWeek": "2026-W22",
-      "targetSessions": 4,
-      "completedSessions": 1,
-      "remainingToTargetSessions": 3,
-      "recommendedNextSessions": 2
+      "weekStartDate": "2026-05-25",
+      "weekEndDate": "2026-05-31",
+      "runTargetSessions": 4,
+      "gymTargetSessions": 2,
+      "runCompletedSessions": 1,
+      "gymCompletedSessions": 0
     },
     "adaptation": {
-      "previousRunId": "rec-2026-05-25T14-56-01-203Z",
+      "previousRunId": "rec-2026-05-25T15-01-38-433Z",
       "changed": false,
       "addedRecommendationIds": [],
       "removedRecommendationIds": [],

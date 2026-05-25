@@ -2,7 +2,6 @@ import dayjs from 'dayjs'
 import isoWeek from 'dayjs/plugin/isoWeek'
 import type {
   Activity,
-  Goal,
   Recommendation,
   RecommendationAdaptationTrace,
   WeeklyPlanComparison,
@@ -10,28 +9,30 @@ import type {
 
 dayjs.extend(isoWeek)
 
-const DEFAULT_TARGET_SESSIONS = 4
+const RUN_TARGET_SESSIONS = 4
+const GYM_TARGET_SESSIONS = 2
 
 export function buildWeeklyPlanComparison(
-  goals: Goal[],
-  recommendations: Recommendation[],
   activities: Activity[],
   now: Date = new Date(),
 ): WeeklyPlanComparison {
   const nowDate = dayjs(now)
-  const isoWeekKey = `${nowDate.isoWeekYear()}-W${String(nowDate.isoWeek()).padStart(2, '0')}`
-  const activeGoal = goals.find((goal) => goal.status !== 'completed')
-
-  const targetSessions = activeGoal?.targetSessionsPerWeek ?? DEFAULT_TARGET_SESSIONS
-  const recommendedNextSessions = computePlannedSessions(recommendations)
-  const completedSessions = activities.filter((activity) => isInIsoWeek(activity.startDate, isoWeekKey)).length
+  const weekStartDate = nowDate.startOf('isoWeek')
+  const weekEndDate = nowDate.endOf('isoWeek')
+  const runCompletedSessions = activities.filter((activity) =>
+    isInWeekRange(activity.startDate, weekStartDate, weekEndDate) && activity.sportType === 'Run',
+  ).length
+  const gymCompletedSessions = activities.filter((activity) =>
+    isInWeekRange(activity.startDate, weekStartDate, weekEndDate) && isGymSportType(activity.sportType),
+  ).length
 
   return {
-    isoWeek: isoWeekKey,
-    targetSessions,
-    completedSessions,
-    remainingToTargetSessions: Math.max(targetSessions - completedSessions, 0),
-    recommendedNextSessions,
+    weekStartDate: weekStartDate.format('YYYY-MM-DD'),
+    weekEndDate: weekEndDate.format('YYYY-MM-DD'),
+    runTargetSessions: RUN_TARGET_SESSIONS,
+    gymTargetSessions: GYM_TARGET_SESSIONS,
+    runCompletedSessions,
+    gymCompletedSessions,
   }
 }
 
@@ -78,10 +79,16 @@ export function computePlannedSessions(recommendations: Recommendation[]): numbe
   }, 0)
 }
 
-function isInIsoWeek(startDate: string, isoWeekKey: string): boolean {
+function isInWeekRange(startDate: string, weekStartDate: dayjs.Dayjs, weekEndDate: dayjs.Dayjs): boolean {
   const date = dayjs(startDate)
-  const activityIsoWeek = `${date.isoWeekYear()}-W${String(date.isoWeek()).padStart(2, '0')}`
-  return activityIsoWeek === isoWeekKey
+  return (
+    (date.isAfter(weekStartDate) || date.isSame(weekStartDate)) &&
+    (date.isBefore(weekEndDate) || date.isSame(weekEndDate))
+  )
+}
+
+function isGymSportType(sportType: string): boolean {
+  return sportType === 'WeightTraining' || sportType === 'HighIntensityIntervalTraining'
 }
 
 function fingerprintRecommendation(item: Recommendation): string {

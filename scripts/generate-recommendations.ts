@@ -56,7 +56,7 @@ async function main() {
   )
   const adaptation = compareRecommendations(previousRecommendations.items, recommendations)
   adaptation.previousRunId = previousRecommendations.trace?.runId ?? null
-  const week = buildWeeklyPlanComparison(goals.items, recommendations, recent)
+  const week = buildWeeklyPlanComparison(recent)
   const runId = `rec-${new Date().toISOString().replace(/[:.]/g, '-')}`
 
   const output: RecommendationsData = {
@@ -79,7 +79,7 @@ async function main() {
   }
   await writeDataFile('next-recommendations.json', output)
   console.log(
-    `Generated ${recommendations.length} recommendations (${source}; planned ${computePlannedSessions(recommendations)} sessions, completed ${week.completedSessions}).`,
+    `Generated ${recommendations.length} recommendations (${source}; planned ${computePlannedSessions(recommendations)} sessions, run ${week.runCompletedSessions}/${week.runTargetSessions}, gym ${week.gymCompletedSessions}/${week.gymTargetSessions}).`,
   )
 }
 
