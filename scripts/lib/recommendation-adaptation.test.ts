@@ -23,7 +23,7 @@ function makeActivity(id: string, startDate: string): Activity {
   }
 }
 
-test('buildWeeklyPlanComparison computes planned versus done for current week', () => {
+test('buildWeeklyPlanComparison computes target, done, remaining and next suggestions', () => {
   const goals: Goal[] = [
     {
       id: 'goal-1',
@@ -74,9 +74,9 @@ test('buildWeeklyPlanComparison computes planned versus done for current week', 
 
   assert.equal(weekly.isoWeek, '2026-W22')
   assert.equal(weekly.targetSessions, 4)
-  assert.equal(weekly.plannedSessions, 4)
   assert.equal(weekly.completedSessions, 2)
-  assert.equal(weekly.remainingSessions, 2)
+  assert.equal(weekly.remainingToTargetSessions, 2)
+  assert.equal(weekly.recommendedNextSessions, 4)
 })
 
 test('compareRecommendations detects added, removed and updated items', () => {

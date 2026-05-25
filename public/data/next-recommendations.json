@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-25T14:52:20.191Z",
+  "updatedAt": "2026-05-25T15:01:38.433Z",
   "items": [
     {
       "id": "20260525-quality",
@@ -31,7 +31,7 @@
   ],
   "trace": {
     "schemaVersion": 1,
-    "runId": "rec-2026-05-25T14-52-20-191Z",
+    "runId": "rec-2026-05-25T15-01-38-433Z",
     "trigger": "pipeline",
     "source": "rule-based",
     "model": null,
@@ -43,24 +43,15 @@
     "week": {
       "isoWeek": "2026-W22",
       "targetSessions": 4,
-      "plannedSessions": 2,
       "completedSessions": 1,
-      "remainingSessions": 1
+      "remainingToTargetSessions": 3,
+      "recommendedNextSessions": 2
     },
     "adaptation": {
-      "previousRunId": null,
-      "changed": true,
-      "addedRecommendationIds": [
-        "20260525-quality",
-        "20260525-long-run"
-      ],
-      "removedRecommendationIds": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
+      "previousRunId": "rec-2026-05-25T14-56-01-203Z",
+      "changed": false,
+      "addedRecommendationIds": [],
+      "removedRecommendationIds": [],
       "updatedRecommendationIds": []
     }
   }

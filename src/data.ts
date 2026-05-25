@@ -44,9 +44,9 @@ export type Recommendation = {
 export type WeeklyPlanComparison = {
   isoWeek: string
   targetSessions: number
-  plannedSessions: number
   completedSessions: number
-  remainingSessions: number
+  remainingToTargetSessions: number
+  recommendedNextSessions: number
 }
 
 export type RecommendationAdaptationTrace = {

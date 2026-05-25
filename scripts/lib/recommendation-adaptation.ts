@@ -23,15 +23,15 @@ export function buildWeeklyPlanComparison(
   const activeGoal = goals.find((goal) => goal.status !== 'completed')
 
   const targetSessions = activeGoal?.targetSessionsPerWeek ?? DEFAULT_TARGET_SESSIONS
-  const plannedSessions = computePlannedSessions(recommendations)
+  const recommendedNextSessions = computePlannedSessions(recommendations)
   const completedSessions = activities.filter((activity) => isInIsoWeek(activity.startDate, isoWeekKey)).length
 
   return {
     isoWeek: isoWeekKey,
     targetSessions,
-    plannedSessions,
     completedSessions,
-    remainingSessions: Math.max(plannedSessions - completedSessions, 0),
+    remainingToTargetSessions: Math.max(targetSessions - completedSessions, 0),
+    recommendedNextSessions,
   }
 }
 
