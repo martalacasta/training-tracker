@@ -68,17 +68,6 @@ export function compareRecommendations(
   }
 }
 
-export function computePlannedSessions(recommendations: Recommendation[]): number {
-  return recommendations.reduce((total, recommendation) => {
-    const plannedSessions = recommendation.metadata?.plannedSessions ?? 1
-    if (!Number.isFinite(plannedSessions)) {
-      return total + 1
-    }
-
-    return total + Math.max(0, Math.round(plannedSessions))
-  }, 0)
-}
-
 function isInWeekRange(startDate: string, weekStartDate: dayjs.Dayjs, weekEndDate: dayjs.Dayjs): boolean {
   const date = dayjs(startDate)
   return (
@@ -97,7 +86,6 @@ function fingerprintRecommendation(item: Recommendation): string {
     description: item.description,
     intensity: item.intensity,
     confidence: item.confidence,
-    plannedSessions: item.metadata?.plannedSessions ?? 1,
     rationaleTags: (item.metadata?.rationaleTags ?? []).slice().sort(),
   })
 }

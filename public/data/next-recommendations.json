@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-25T15:11:53.202Z",
+  "updatedAt": "2026-05-25T15:15:31.533Z",
   "items": [
     {
       "id": "20260525-quality",
@@ -8,7 +8,6 @@
       "intensity": "high",
       "confidence": 0.74,
       "metadata": {
-        "plannedSessions": 1,
         "rationaleTags": [
           "quality",
           "progression"
@@ -22,7 +21,6 @@
       "intensity": "moderate",
       "confidence": 0.76,
       "metadata": {
-        "plannedSessions": 1,
         "rationaleTags": [
           "endurance"
         ]
@@ -31,7 +29,7 @@
   ],
   "trace": {
     "schemaVersion": 1,
-    "runId": "rec-2026-05-25T15-11-53-202Z",
+    "runId": "rec-2026-05-25T15-15-31-533Z",
     "trigger": "pipeline",
     "source": "rule-based",
     "model": null,
@@ -49,7 +47,7 @@
       "gymCompletedSessions": 0
     },
     "adaptation": {
-      "previousRunId": "rec-2026-05-25T15-01-38-433Z",
+      "previousRunId": "rec-2026-05-25T15-11-53-202Z",
       "changed": false,
       "addedRecommendationIds": [],
       "removedRecommendationIds": [],

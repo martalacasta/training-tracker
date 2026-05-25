@@ -28,7 +28,6 @@ export type Goal = {
 export type RecommendationSource = 'rule-based' | 'llm'
 
 export type RecommendationMetadata = {
-  plannedSessions?: number
   rationaleTags?: string[]
 }
 

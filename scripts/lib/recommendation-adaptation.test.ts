@@ -3,7 +3,6 @@ import test from 'node:test'
 import {
   buildWeeklyPlanComparison,
   compareRecommendations,
-  computePlannedSessions,
 } from './recommendation-adaptation'
 import type { Activity, Recommendation } from './types'
 
@@ -81,26 +80,4 @@ test('compareRecommendations detects added, removed and updated items', () => {
   assert.deepEqual(adaptation.addedRecommendationIds, ['recovery'])
   assert.deepEqual(adaptation.removedRecommendationIds, ['long'])
   assert.deepEqual(adaptation.updatedRecommendationIds, ['quality'])
-})
-
-test('computePlannedSessions defaults to one when metadata is absent', () => {
-  const planned = computePlannedSessions([
-    {
-      id: 'r1',
-      title: 'One',
-      description: 'No metadata',
-      intensity: 'moderate',
-      confidence: 0.8,
-    },
-    {
-      id: 'r2',
-      title: 'Two',
-      description: 'Two sessions',
-      intensity: 'high',
-      confidence: 0.7,
-      metadata: { plannedSessions: 2 },
-    },
-  ])
-
-  assert.equal(planned, 3)
 })

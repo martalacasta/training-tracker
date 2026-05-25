@@ -4,7 +4,6 @@ import { maybeGenerateRecommendationsWithLlm } from './lib/llm'
 import {
   buildWeeklyPlanComparison,
   compareRecommendations,
-  computePlannedSessions,
 } from './lib/recommendation-adaptation'
 import type {
   ActivitiesData,
@@ -79,7 +78,7 @@ async function main() {
   }
   await writeDataFile('next-recommendations.json', output)
   console.log(
-    `Generated ${recommendations.length} recommendations (${source}; planned ${computePlannedSessions(recommendations)} sessions, run ${week.runCompletedSessions}/${week.runTargetSessions}, gym ${week.gymCompletedSessions}/${week.gymTargetSessions}).`,
+    `Generated ${recommendations.length} recommendations (${source}; run ${week.runCompletedSessions}/${week.runTargetSessions}, gym ${week.gymCompletedSessions}/${week.gymTargetSessions}).`,
   )
 }
 
@@ -98,7 +97,6 @@ function generateRuleBasedRecommendations(coachState: CoachStateData): Recommend
       intensity: 'low',
       confidence: 0.82,
       metadata: {
-        plannedSessions: 1,
         rationaleTags: ['fatigue', 'recovery'],
       },
     })
@@ -113,7 +111,6 @@ function generateRuleBasedRecommendations(coachState: CoachStateData): Recommend
       intensity: 'moderate',
       confidence: 0.78,
       metadata: {
-        plannedSessions: 3,
         rationaleTags: ['adherence', 'consistency'],
       },
     })
@@ -125,7 +122,6 @@ function generateRuleBasedRecommendations(coachState: CoachStateData): Recommend
       intensity: 'high',
       confidence: 0.74,
       metadata: {
-        plannedSessions: 1,
         rationaleTags: ['quality', 'progression'],
       },
     })
@@ -138,7 +134,6 @@ function generateRuleBasedRecommendations(coachState: CoachStateData): Recommend
     intensity: 'moderate',
     confidence: 0.76,
     metadata: {
-      plannedSessions: 1,
       rationaleTags: ['endurance'],
     },
   })
@@ -148,22 +143,23 @@ function generateRuleBasedRecommendations(coachState: CoachStateData): Recommend
 
 function normalizeRecommendations(recommendations: Recommendation[]): Recommendation[] {
   return recommendations.map((recommendation) => {
-    const plannedSessions = recommendation.metadata?.plannedSessions
-    const normalizedPlannedSessions =
-      typeof plannedSessions === 'number' && Number.isFinite(plannedSessions)
-        ? Math.max(0, Math.round(plannedSessions))
-        : 1
     const rationaleTags = (recommendation.metadata?.rationaleTags ?? []).filter(
       (tag): tag is string => Boolean(tag),
     )
+    if (rationaleTags.length === 0) {
+      if (!recommendation.metadata) {
+        return recommendation
+      }
+
+      return {
+        ...recommendation,
+        metadata: undefined,
+      }
+    }
 
     return {
       ...recommendation,
-      metadata: {
-        ...recommendation.metadata,
-        plannedSessions: normalizedPlannedSessions,
-        ...(rationaleTags.length > 0 ? { rationaleTags } : {}),
-      },
+      metadata: { rationaleTags },
     }
   })
 }
