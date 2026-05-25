@@ -24,14 +24,14 @@ test('resolveLlmConfig prefers explicit LLM_* settings', () => {
 
 test('resolveLlmConfig supports GitHub Models settings', () => {
   const config = resolveLlmConfig({
-    GITHUB_MODELS_MODEL: 'gpt-4.1',
+    GITHUB_MODELS_MODEL: 'openai/gpt-4.1',
     GITHUB_TOKEN: 'token',
   })
 
   assert.deepEqual(config, {
     apiUrl: DEFAULT_GITHUB_MODELS_API_URL,
     apiKey: 'token',
-    model: 'gpt-4.1',
+    model: 'openai/gpt-4.1',
   })
 })
 
