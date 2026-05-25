@@ -66,6 +66,24 @@ main {
   color: #4b5563;
 }
 
+.weekly-plan-grid {
+  display: grid;
+  gap: 6px;
+}
+
+.weekly-plan-grid p {
+  margin: 0;
+}
+
+.trace-block {
+  margin-bottom: 10px;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+  padding: 8px;
+  display: grid;
+  gap: 2px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

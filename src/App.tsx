@@ -82,6 +82,21 @@ function App() {
   const latestWeek = aggregates.weeks.at(-1)
   const latestMonth = aggregates.months.at(-1)
   const activeGoalCount = goals.items.filter((goal) => goal.status !== 'completed').length
+  const activeGoal = goals.items.find((goal) => goal.status !== 'completed')
+  const fallbackTargetSessions = activeGoal?.targetSessionsPerWeek ?? 4
+  const fallbackPlannedSessions = recommendations.items.reduce(
+    (total, item) => total + (item.metadata?.plannedSessions ?? 1),
+    0,
+  )
+  const fallbackCompletedSessions = latestWeek?.sessions ?? 0
+  const weeklyPlan = recommendations.trace?.week ?? {
+    isoWeek: latestWeek?.isoWeek ?? 'N/A',
+    targetSessions: fallbackTargetSessions,
+    plannedSessions: fallbackPlannedSessions,
+    completedSessions: fallbackCompletedSessions,
+    remainingSessions: Math.max(fallbackPlannedSessions - fallbackCompletedSessions, 0),
+  }
+  const adaptationTrace = recommendations.trace?.adaptation
 
   const recentActivities = useMemo(
     () => activities.items.slice().sort((a, b) => b.startDate.localeCompare(a.startDate)),
@@ -208,7 +223,47 @@ function App() {
       </section>
 
       <section className="panel">
+        <h2>This week: planned vs done</h2>
+        <div className="weekly-plan-grid">
+          <p>
+            <strong>Week:</strong> {weeklyPlan.isoWeek}
+          </p>
+          <p>
+            <strong>Planned:</strong> {weeklyPlan.plannedSessions}
+          </p>
+          <p>
+            <strong>Done:</strong> {weeklyPlan.completedSessions}
+          </p>
+          <p>
+            <strong>Remaining:</strong> {weeklyPlan.remainingSessions}
+          </p>
+          <p>
+            <strong>Goal target:</strong> {weeklyPlan.targetSessions} sessions
+          </p>
+        </div>
+      </section>
+
+      <section className="panel">
         <h2>Next recommendations</h2>
+        {recommendations.trace ? (
+          <div className="trace-block">
+            <p className="list-meta">
+              Run {recommendations.trace.runId} · source {recommendations.trace.source}
+              {recommendations.trace.model ? ` · model ${recommendations.trace.model}` : ''}
+            </p>
+            <p className="list-meta">
+              Adaptation {adaptationTrace?.changed ? 'updated plan' : 'no changes'} vs previous run
+              {adaptationTrace?.previousRunId ? ` (${adaptationTrace.previousRunId})` : ''}
+            </p>
+            <p className="list-meta">
+              Added: {formatIdList(adaptationTrace?.addedRecommendationIds ?? [])} · Updated:{' '}
+              {formatIdList(adaptationTrace?.updatedRecommendationIds ?? [])} · Removed:{' '}
+              {formatIdList(adaptationTrace?.removedRecommendationIds ?? [])}
+            </p>
+          </div>
+        ) : (
+          <p className="list-meta">No adaptation trace metadata available for this recommendation file.</p>
+        )}
         {recommendations.items.length === 0 ? (
           <p>No recommendations generated yet.</p>
         ) : (
@@ -218,7 +273,12 @@ function App() {
                 <p className="list-title">{item.title}</p>
                 <p>{item.description}</p>
                 <p className="list-meta">
-                  {item.intensity} intensity · confidence {(item.confidence * 100).toFixed(0)}%
+                  {item.intensity} intensity · confidence {(item.confidence * 100).toFixed(0)}% ·
+                  planned {item.metadata?.plannedSessions ?? 1} session
+                  {(item.metadata?.plannedSessions ?? 1) === 1 ? '' : 's'}
+                  {item.metadata?.rationaleTags?.length
+                    ? ` · ${item.metadata.rationaleTags.join(', ')}`
+                    : ''}
                 </p>
               </li>
             ))}
@@ -419,6 +479,10 @@ function formatRhythm(minutesPerKm: number): string {
   const minutes = Math.floor(totalSeconds / 60)
   const seconds = totalSeconds % 60
   return `${minutes}:${String(seconds).padStart(2, '0')}`
+}
+
+function formatIdList(ids: string[]): string {
+  return ids.length > 0 ? ids.join(', ') : 'none'
 }
 
 export default App

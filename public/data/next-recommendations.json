@@ -1,40 +1,67 @@
 {
-  "updatedAt": "2026-05-25T14:27:07.410Z",
+  "updatedAt": "2026-05-25T14:52:20.191Z",
   "items": [
     {
-      "id": "1",
-      "title": "Increase Long Run Distance",
-      "description": "Gradually increase your long run distance by 10% each week to build endurance for the half marathon.",
-      "intensity": "moderate",
-      "confidence": 0.9
-    },
-    {
-      "id": "2",
-      "title": "Incorporate Speed Work",
-      "description": "Add one speed workout per week, such as intervals or tempo runs, to improve your pace.",
+      "id": "20260525-quality",
+      "title": "Add one quality running session",
+      "description": "Include one threshold or interval workout and keep easy days truly easy.",
       "intensity": "high",
-      "confidence": 0.85
+      "confidence": 0.74,
+      "metadata": {
+        "plannedSessions": 1,
+        "rationaleTags": [
+          "quality",
+          "progression"
+        ]
+      }
     },
     {
-      "id": "3",
-      "title": "Cross-Training Sessions",
-      "description": "Include cross-training activities like cycling or swimming to enhance overall fitness and reduce injury risk.",
-      "intensity": "low",
-      "confidence": 0.8
-    },
-    {
-      "id": "4",
-      "title": "Rest and Recovery",
-      "description": "Ensure you have at least one full rest day each week to allow your body to recover and adapt.",
-      "intensity": "low",
-      "confidence": 0.95
-    },
-    {
-      "id": "5",
-      "title": "Nutrition Focus",
-      "description": "Pay attention to your nutrition, focusing on carbohydrates for energy and protein for recovery.",
-      "intensity": "low",
-      "confidence": 0.9
+      "id": "20260525-long-run",
+      "title": "Keep long aerobic run",
+      "description": "Maintain one longer low-intensity run this week for race-specific endurance.",
+      "intensity": "moderate",
+      "confidence": 0.76,
+      "metadata": {
+        "plannedSessions": 1,
+        "rationaleTags": [
+          "endurance"
+        ]
+      }
     }
-  ]
+  ],
+  "trace": {
+    "schemaVersion": 1,
+    "runId": "rec-2026-05-25T14-52-20-191Z",
+    "trigger": "pipeline",
+    "source": "rule-based",
+    "model": null,
+    "generatedFrom": {
+      "activitiesUpdatedAt": "2026-05-25T14:26:57.481Z",
+      "coachStateUpdatedAt": "2026-05-25T14:26:58.146Z",
+      "goalsUpdatedAt": "2026-05-24T00:00:00.000Z"
+    },
+    "week": {
+      "isoWeek": "2026-W22",
+      "targetSessions": 4,
+      "plannedSessions": 2,
+      "completedSessions": 1,
+      "remainingSessions": 1
+    },
+    "adaptation": {
+      "previousRunId": null,
+      "changed": true,
+      "addedRecommendationIds": [
+        "20260525-quality",
+        "20260525-long-run"
+      ],
+      "removedRecommendationIds": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "updatedRecommendationIds": []
+    }
+  }
 }

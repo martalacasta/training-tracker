@@ -121,7 +121,12 @@ export async function maybeGenerateRecommendationsWithLlm(
   goals: Goal[],
   coachState: CoachStateData,
   recentActivities: Activity[],
-): Promise<Recommendation[] | null> {
+): Promise<{ recommendations: Recommendation[]; model: string } | null> {
+  const config = resolveLlmConfig()
+  if (!config) {
+    return null
+  }
+
   const systemPrompt =
     'You are a running and endurance training assistant. Return only valid JSON with a recommendations array.'
   const userPrompt = JSON.stringify(
@@ -148,10 +153,14 @@ export async function maybeGenerateRecommendationsWithLlm(
   const parsed = await maybeGenerateJsonWithLlm<LlmResponse>({
     systemPrompt,
     userPrompt,
+    config,
   })
   if (!parsed) {
     return null
   }
 
-  return parsed.recommendations
+  return {
+    recommendations: parsed.recommendations,
+    model: config.model,
+  }
 }
