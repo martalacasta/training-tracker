@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18646926147",
+  "generatedAt": "2026-05-25T14:27:11.871Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18646926147\",\"sportType\":\"Run\",\"startDate\":\"2026-05-25T08:48:46Z\",\"title\":\"easy run\",\"description\":\"\",\"distanceKm\":8.2,\"movingTimeSeconds\":3616,\"calories\":528,\"averageRhythm\":7.35,\"averageHeartRate\":163.4,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You completed an easy run of 8.2 km with a steady average heart rate. Your training is on track for the Rome Half Marathon in October.",
+    "focus": "Continue to build endurance with consistent easy runs while incorporating one quality workout each week.",
+    "nextSession": "Plan for a quality workout session, such as intervals or tempo runs, in your next training day.",
+    "caution": null
+  }
+}

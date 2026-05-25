@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18617842934",
+  "generatedAt": "2026-05-25T14:27:25.098Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18617842934\",\"sportType\":\"Run\",\"startDate\":\"2026-05-23T08:38:32Z\",\"title\":\"calentamiento\",\"description\":\"\",\"distanceKm\":1.19,\"movingTimeSeconds\":485,\"calories\":79,\"averageRhythm\":6.78,\"averageHeartRate\":163.1,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You are currently in the base training phase, focusing on building endurance. Your recent sessions indicate a good mix of easy runs and quality workouts.",
+    "focus": "Continue to incorporate easy aerobic runs while gradually increasing the intensity of your quality workouts.",
+    "nextSession": "Plan for an easy run of about 6-8 km at a comfortable pace to maintain aerobic fitness.",
+    "caution": "Monitor your heart rate during workouts to avoid excessive fatigue."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18593128860",
+  "generatedAt": "2026-05-25T14:27:38.586Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18593128860\",\"sportType\":\"Run\",\"startDate\":\"2026-05-21T09:53:33Z\",\"title\":\"intervals\",\"description\":\"8mins warm up\\n5x600m 5:25km\\n10mins cool down\",\"distanceKm\":5.07,\"movingTimeSeconds\":1803,\"calories\":317,\"averageRhythm\":5.93,\"averageHeartRate\":170.9,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You are progressing well with your interval training and maintaining a consistent training schedule. Keep focusing on building endurance while managing fatigue levels.",
+    "focus": "Incorporate more variety in your easy runs to enhance recovery and prevent monotony.",
+    "nextSession": "Plan for an easy run of about 6-8 km at a comfortable pace, focusing on form and breathing.",
+    "caution": "Monitor heart rate during workouts to avoid overtraining, especially with high-intensity sessions."
+  }
+}

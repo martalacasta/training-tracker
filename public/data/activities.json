@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-24T20:46:18.715Z",
+  "updatedAt": "2026-05-25T14:26:57.481Z",
   "items": [
     {
       "id": "8997857366",
@@ -5437,6 +5437,22 @@
       "detailsFetchAttempts": 1,
       "detailsBackfillDone": true,
       "detailsFetchedAt": "2026-05-24T19:41:42.227Z"
+    },
+    {
+      "id": "18646926147",
+      "sportType": "Run",
+      "startDate": "2026-05-25T08:48:46Z",
+      "title": "easy run",
+      "description": "",
+      "distanceKm": 8.2,
+      "movingTimeSeconds": 3616,
+      "calories": 528,
+      "averageRhythm": 7.35,
+      "averageHeartRate": 163.4,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-05-25T14:26:56.941Z"
     }
   ]
 }

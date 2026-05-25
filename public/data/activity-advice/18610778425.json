@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18610778425",
+  "generatedAt": "2026-05-25T14:27:34.299Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18610778425\",\"sportType\":\"WeightTraining\",\"startDate\":\"2026-05-22T16:10:18Z\",\"title\":\"Evening Weight Training\",\"description\":null,\"distanceKm\":0,\"movingTimeSeconds\":2998,\"calories\":175,\"averageRhythm\":null,\"averageHeartRate\":99.7,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You are maintaining a balanced training routine with a mix of running and weight training. Your recent sessions show good adherence to your training plan.",
+    "focus": "Continue to incorporate both aerobic runs and strength training to build endurance and strength.",
+    "nextSession": "Plan for an easy aerobic run of about 8-10 km to maintain your endurance.",
+    "caution": "Monitor your heart rate during workouts to ensure you are not overexerting, especially during high-intensity sessions."
+  }
+}

@@ -1,19 +1,40 @@
 {
-  "updatedAt": "2026-05-24T20:46:19.730Z",
+  "updatedAt": "2026-05-25T14:27:07.410Z",
   "items": [
     {
-      "id": "20260524-quality",
-      "title": "Add one quality running session",
-      "description": "Include one threshold or interval workout and keep easy days truly easy.",
-      "intensity": "high",
-      "confidence": 0.74
+      "id": "1",
+      "title": "Increase Long Run Distance",
+      "description": "Gradually increase your long run distance by 10% each week to build endurance for the half marathon.",
+      "intensity": "moderate",
+      "confidence": 0.9
     },
     {
-      "id": "20260524-long-run",
-      "title": "Keep long aerobic run",
-      "description": "Maintain one longer low-intensity run this week for race-specific endurance.",
-      "intensity": "moderate",
-      "confidence": 0.76
+      "id": "2",
+      "title": "Incorporate Speed Work",
+      "description": "Add one speed workout per week, such as intervals or tempo runs, to improve your pace.",
+      "intensity": "high",
+      "confidence": 0.85
+    },
+    {
+      "id": "3",
+      "title": "Cross-Training Sessions",
+      "description": "Include cross-training activities like cycling or swimming to enhance overall fitness and reduce injury risk.",
+      "intensity": "low",
+      "confidence": 0.8
+    },
+    {
+      "id": "4",
+      "title": "Rest and Recovery",
+      "description": "Ensure you have at least one full rest day each week to allow your body to recover and adapt.",
+      "intensity": "low",
+      "confidence": 0.95
+    },
+    {
+      "id": "5",
+      "title": "Nutrition Focus",
+      "description": "Pay attention to your nutrition, focusing on carbohydrates for energy and protein for recovery.",
+      "intensity": "low",
+      "confidence": 0.9
     }
   ]
 }

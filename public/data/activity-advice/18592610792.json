@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18592610792",
+  "generatedAt": "2026-05-25T14:27:43.125Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18592610792\",\"sportType\":\"WeightTraining\",\"startDate\":\"2026-05-20T06:04:17Z\",\"title\":\"Morning Weight Training\",\"description\":null,\"distanceKm\":0,\"movingTimeSeconds\":2928,\"calories\":302,\"averageRhythm\":null,\"averageHeartRate\":132.9,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You are currently in the base training phase, focusing on building endurance and strength. Your recent sessions indicate a good mix of running and weight training.",
+    "focus": "Incorporate more easy aerobic runs to enhance your endurance while maintaining strength training.",
+    "nextSession": "Plan for an easy run of about 8-10 km at a comfortable pace to recover and build aerobic capacity.",
+    "caution": "Monitor your heart rate during workouts to avoid overtraining, especially after high-intensity sessions."
+  }
+}

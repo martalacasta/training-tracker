@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18618406480",
+  "generatedAt": "2026-05-25T14:27:19.400Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18618406480\",\"sportType\":\"Run\",\"startDate\":\"2026-05-23T08:48:25Z\",\"title\":\"tempo\",\"description\":\"\",\"distanceKm\":4.66,\"movingTimeSeconds\":1798,\"calories\":317,\"averageRhythm\":6.43,\"averageHeartRate\":175.8,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You completed a tempo run of 4.66 km with a strong average heart rate. Keep building your endurance with a mix of easy runs and quality workouts.",
+    "focus": "Incorporate more tempo runs to improve speed and endurance.",
+    "nextSession": "Plan for an easy run of 6-8 km at a comfortable pace to recover and maintain aerobic fitness.",
+    "caution": null
+  }
+}
