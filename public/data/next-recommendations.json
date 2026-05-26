@@ -1,41 +1,44 @@
 {
-  "updatedAt": "2026-05-25T15:15:31.533Z",
+  "updatedAt": "2026-05-26T08:01:22.939Z",
   "items": [
     {
-      "id": "20260525-quality",
-      "title": "Add one quality running session",
-      "description": "Include one threshold or interval workout and keep easy days truly easy.",
-      "intensity": "high",
-      "confidence": 0.74,
-      "metadata": {
-        "rationaleTags": [
-          "quality",
-          "progression"
-        ]
-      }
+      "id": "1",
+      "title": "Long Easy Run",
+      "description": "Run 12 km at an easy pace of 7:30 min/km. Maintain a heart rate in Zone 2 (130-150 bpm).",
+      "intensity": "low",
+      "confidence": 0.9
     },
     {
-      "id": "20260525-long-run",
-      "title": "Keep long aerobic run",
-      "description": "Maintain one longer low-intensity run this week for race-specific endurance.",
+      "id": "2",
+      "title": "Interval Training",
+      "description": "Warm up for 10 minutes, then perform 6x400m intervals at 5:15 min/km pace with 2 minutes recovery jog between each. Cool down for 10 minutes.",
+      "intensity": "high",
+      "confidence": 0.85
+    },
+    {
+      "id": "3",
+      "title": "Tempo Run",
+      "description": "Run 8 km with the middle 4 km at a tempo pace of 6:00 min/km. Keep your heart rate in Zone 3 (150-170 bpm) during the tempo segment.",
       "intensity": "moderate",
-      "confidence": 0.76,
-      "metadata": {
-        "rationaleTags": [
-          "endurance"
-        ]
-      }
+      "confidence": 0.8
+    },
+    {
+      "id": "4",
+      "title": "Strength Training",
+      "description": "Focus on full-body strength training for 45 minutes, including squats, lunges, and core exercises. Aim for 3 sets of 12-15 reps for each exercise.",
+      "intensity": "moderate",
+      "confidence": 0.75
     }
   ],
   "trace": {
     "schemaVersion": 1,
-    "runId": "rec-2026-05-25T15-15-31-533Z",
+    "runId": "rec-2026-05-26T08-01-22-939Z",
     "trigger": "pipeline",
-    "source": "rule-based",
-    "model": null,
+    "source": "llm",
+    "model": "openai/gpt-4o-mini",
     "generatedFrom": {
-      "activitiesUpdatedAt": "2026-05-25T14:26:57.481Z",
-      "coachStateUpdatedAt": "2026-05-25T14:26:58.146Z",
+      "activitiesUpdatedAt": "2026-05-26T08:01:06.481Z",
+      "coachStateUpdatedAt": "2026-05-26T08:01:07.158Z",
       "goalsUpdatedAt": "2026-05-24T00:00:00.000Z"
     },
     "week": {
@@ -47,10 +50,18 @@
       "gymCompletedSessions": 0
     },
     "adaptation": {
-      "previousRunId": "rec-2026-05-25T15-11-53-202Z",
-      "changed": false,
-      "addedRecommendationIds": [],
-      "removedRecommendationIds": [],
+      "previousRunId": "rec-2026-05-25T15-15-31-533Z",
+      "changed": true,
+      "addedRecommendationIds": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "removedRecommendationIds": [
+        "20260525-quality",
+        "20260525-long-run"
+      ],
       "updatedRecommendationIds": []
     }
   }
