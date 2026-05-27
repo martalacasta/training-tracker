@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-26T08:01:06.481Z",
+  "updatedAt": "2026-05-27T08:13:03.155Z",
   "items": [
     {
       "id": "8997857366",
@@ -5453,6 +5453,38 @@
       "detailsBackfillDone": true,
       "detailsFetchAttempts": 1,
       "detailsFetchedAt": "2026-05-25T14:26:56.941Z"
+    },
+    {
+      "id": "18663995254",
+      "sportType": "WeightTraining",
+      "startDate": "2026-05-26T16:58:58Z",
+      "title": "Evening Weight Training",
+      "description": null,
+      "distanceKm": 0,
+      "movingTimeSeconds": 2003,
+      "calories": 144,
+      "averageRhythm": null,
+      "averageHeartRate": 109.3,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-05-27T08:13:02.875Z"
+    },
+    {
+      "id": "18664274578",
+      "sportType": "Ride",
+      "startDate": "2026-05-26T17:34:12Z",
+      "title": "Evening Ride",
+      "description": null,
+      "distanceKm": 0,
+      "movingTimeSeconds": 1082,
+      "calories": 94,
+      "averageRhythm": null,
+      "averageHeartRate": 116.3,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-05-27T08:13:02.875Z"
     }
   ]
 }

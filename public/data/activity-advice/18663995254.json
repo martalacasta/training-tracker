@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18663995254",
+  "generatedAt": "2026-05-27T08:13:29.616Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18663995254\",\"sportType\":\"WeightTraining\",\"startDate\":\"2026-05-26T16:58:58Z\",\"title\":\"Evening Weight Training\",\"description\":null,\"distanceKm\":0,\"movingTimeSeconds\":2003,\"calories\":144,\"averageRhythm\":null,\"averageHeartRate\":109.3,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You had a solid weight training session focusing on strength. Continue to balance your workouts with aerobic runs to build endurance.",
+    "focus": "Incorporate more aerobic sessions to enhance your endurance for the upcoming half marathon.",
+    "nextSession": "Plan for an easy aerobic run of around 8-10 km to maintain your base.",
+    "caution": "Monitor your heart rate during workouts to avoid overtraining."
+  }
+}

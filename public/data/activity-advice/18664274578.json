@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18664274578",
+  "generatedAt": "2026-05-27T08:13:25.597Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18664274578\",\"sportType\":\"Ride\",\"startDate\":\"2026-05-26T17:34:12Z\",\"title\":\"Evening Ride\",\"description\":null,\"distanceKm\":0,\"movingTimeSeconds\":1082,\"calories\":94,\"averageRhythm\":null,\"averageHeartRate\":116.3,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You are currently in the base training phase, focusing on building endurance. Your recent activities show a good mix of running and strength training.",
+    "focus": "Incorporate more aerobic runs to enhance your endurance for the upcoming Rome Half Marathon.",
+    "nextSession": "Plan for an easy aerobic run of at least 10 km to maintain consistency.",
+    "caution": "Monitor your heart rate during runs to avoid overexertion, especially after high-intensity workouts."
+  }
+}

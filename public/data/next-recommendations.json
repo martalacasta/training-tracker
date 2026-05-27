@@ -1,44 +1,44 @@
 {
-  "updatedAt": "2026-05-26T08:01:22.939Z",
+  "updatedAt": "2026-05-27T08:13:19.280Z",
   "items": [
     {
       "id": "1",
       "title": "Long Easy Run",
-      "description": "Run 12 km at an easy pace of 7:30 min/km. Maintain a heart rate in Zone 2 (130-150 bpm).",
+      "description": "Run 12 km at an easy pace of 6:30-7:00 min/km. Maintain a heart rate in Zone 2 (130-150 bpm).",
       "intensity": "low",
       "confidence": 0.9
     },
     {
       "id": "2",
-      "title": "Interval Training",
-      "description": "Warm up for 10 minutes, then perform 6x400m intervals at 5:15 min/km pace with 2 minutes recovery jog between each. Cool down for 10 minutes.",
-      "intensity": "high",
+      "title": "Tempo Run",
+      "description": "Run 6 km with 4 km at a tempo pace of 5:30-5:45 min/km. Start with 2 km easy (7:00 min/km) and finish with 1 km cool down. Aim for a heart rate of 160-175 bpm during the tempo segment.",
+      "intensity": "moderate",
       "confidence": 0.85
     },
     {
       "id": "3",
-      "title": "Tempo Run",
-      "description": "Run 8 km with the middle 4 km at a tempo pace of 6:00 min/km. Keep your heart rate in Zone 3 (150-170 bpm) during the tempo segment.",
-      "intensity": "moderate",
+      "title": "Interval Training",
+      "description": "Warm up for 10 minutes, then perform 6x400m intervals at 4:45 min/km pace with 2 minutes recovery jog between each. Cool down for 10 minutes. Target heart rate during intervals should be 170-180 bpm.",
+      "intensity": "high",
       "confidence": 0.8
     },
     {
       "id": "4",
-      "title": "Strength Training",
-      "description": "Focus on full-body strength training for 45 minutes, including squats, lunges, and core exercises. Aim for 3 sets of 12-15 reps for each exercise.",
-      "intensity": "moderate",
-      "confidence": 0.75
+      "title": "Recovery Run",
+      "description": "Run 5 km at a very easy pace of 7:30-8:00 min/km. Keep your heart rate below 140 bpm to aid recovery.",
+      "intensity": "low",
+      "confidence": 0.9
     }
   ],
   "trace": {
     "schemaVersion": 1,
-    "runId": "rec-2026-05-26T08-01-22-939Z",
+    "runId": "rec-2026-05-27T08-13-19-280Z",
     "trigger": "pipeline",
     "source": "llm",
     "model": "openai/gpt-4o-mini",
     "generatedFrom": {
-      "activitiesUpdatedAt": "2026-05-26T08:01:06.481Z",
-      "coachStateUpdatedAt": "2026-05-26T08:01:07.158Z",
+      "activitiesUpdatedAt": "2026-05-27T08:13:03.155Z",
+      "coachStateUpdatedAt": "2026-05-27T08:13:03.769Z",
       "goalsUpdatedAt": "2026-05-24T00:00:00.000Z"
     },
     "week": {
@@ -47,22 +47,19 @@
       "runTargetSessions": 4,
       "gymTargetSessions": 2,
       "runCompletedSessions": 1,
-      "gymCompletedSessions": 0
+      "gymCompletedSessions": 1
     },
     "adaptation": {
-      "previousRunId": "rec-2026-05-25T15-15-31-533Z",
+      "previousRunId": "rec-2026-05-26T08-01-22-939Z",
       "changed": true,
-      "addedRecommendationIds": [
+      "addedRecommendationIds": [],
+      "removedRecommendationIds": [],
+      "updatedRecommendationIds": [
         "1",
         "2",
         "3",
         "4"
-      ],
-      "removedRecommendationIds": [
-        "20260525-quality",
-        "20260525-long-run"
-      ],
-      "updatedRecommendationIds": []
+      ]
     }
   }
 }
