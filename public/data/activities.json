@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T08:13:03.155Z",
+  "updatedAt": "2026-05-28T08:12:02.621Z",
   "items": [
     {
       "id": "8997857366",
@@ -5485,6 +5485,38 @@
       "detailsBackfillDone": true,
       "detailsFetchAttempts": 1,
       "detailsFetchedAt": "2026-05-27T08:13:02.875Z"
+    },
+    {
+      "id": "18673544445",
+      "sportType": "Run",
+      "startDate": "2026-05-27T10:28:06Z",
+      "title": "intervals",
+      "description": "8mins warm up\n6x400m @ 5:15\n6 mins cool down",
+      "distanceKm": 4.75,
+      "movingTimeSeconds": 1657,
+      "calories": 290,
+      "averageRhythm": 5.82,
+      "averageHeartRate": 165.1,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-05-28T08:12:02.195Z"
+    },
+    {
+      "id": "18685159365",
+      "sportType": "WeightTraining",
+      "startDate": "2026-05-28T06:04:23Z",
+      "title": "Entrenamiento con pesas matutino",
+      "description": null,
+      "distanceKm": 0,
+      "movingTimeSeconds": 2652,
+      "calories": 215,
+      "averageRhythm": null,
+      "averageHeartRate": 117,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-05-28T08:12:02.195Z"
     }
   ]
 }

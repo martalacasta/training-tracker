@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18673544445",
+  "generatedAt": "2026-05-28T08:12:14.954Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18673544445\",\"sportType\":\"Run\",\"startDate\":\"2026-05-27T10:28:06Z\",\"title\":\"intervals\",\"description\":\"8mins warm up\\n6x400m @ 5:15\\n6 mins cool down\",\"distanceKm\":4.75,\"movingTimeSeconds\":1657,\"calories\":290,\"averageRhythm\":5.82,\"averageHeartRate\":165.1,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You completed a solid interval session with 6x400m at a strong pace. Your training is on track for the Rome Half Marathon.",
+    "focus": "Continue to build speed with interval sessions while maintaining your aerobic base.",
+    "nextSession": "Plan for an easy aerobic run of 6-8 km to recover and maintain endurance.",
+    "caution": null
+  }
+}
