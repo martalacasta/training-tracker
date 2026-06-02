@@ -1,44 +1,44 @@
 {
-  "updatedAt": "2026-06-01T09:36:16.389Z",
+  "updatedAt": "2026-06-02T08:46:36.366Z",
   "items": [
     {
       "id": "1",
-      "title": "Long Run",
-      "description": "Run 12 km at an easy pace of 6:30-7:00 min/km. Maintain a heart rate in Zone 2 (about 130-145 bpm).",
+      "title": "Long Easy Run",
+      "description": "Run 10 km at an easy pace of 6:45-7:15 min/km. Focus on maintaining a heart rate in Zone 2 (130-150 bpm).",
       "intensity": "low",
       "confidence": 0.9
     },
     {
       "id": "2",
       "title": "Interval Training",
-      "description": "After a 10-minute warm-up, perform 5x800m intervals at 5:10 min/km pace with 2 minutes recovery jog between each interval. Cool down for 10 minutes.",
+      "description": "8 minutes warm-up, followed by 5x800m intervals at 5:20 min/km pace with 3 minutes recovery jog between each interval. Cool down for 10 minutes.",
       "intensity": "high",
       "confidence": 0.85
     },
     {
       "id": "3",
-      "title": "Strength Training",
-      "description": "Focus on lower body strength with 3 sets of 10-12 reps of squats, lunges, and deadlifts. Include core exercises like planks (3 sets of 30 seconds).",
+      "title": "Strength Training Session",
+      "description": "Focus on lower body and core. Perform 3 sets of 10-12 reps for squats, lunges, and deadlifts, with 1 minute rest between sets.",
       "intensity": "moderate",
       "confidence": 0.8
     },
     {
       "id": "4",
-      "title": "Recovery Run",
-      "description": "Run 5 km at a relaxed pace of 7:30-8:00 min/km. Keep your heart rate in Zone 1 (below 130 bpm) to aid recovery.",
-      "intensity": "low",
-      "confidence": 0.9
+      "title": "Tempo Run",
+      "description": "Run 6 km at a tempo pace of 5:50-6:00 min/km. Start with a 10-minute warm-up and finish with a 10-minute cool down. Aim for a heart rate in Zone 3 (150-165 bpm).",
+      "intensity": "moderate",
+      "confidence": 0.75
     }
   ],
   "trace": {
     "schemaVersion": 1,
-    "runId": "rec-2026-06-01T09-36-16-389Z",
+    "runId": "rec-2026-06-02T08-46-36-366Z",
     "trigger": "pipeline",
     "source": "llm",
     "model": "openai/gpt-4o-mini",
     "generatedFrom": {
-      "activitiesUpdatedAt": "2026-06-01T09:36:07.613Z",
-      "coachStateUpdatedAt": "2026-06-01T09:36:08.247Z",
+      "activitiesUpdatedAt": "2026-06-02T08:46:29.154Z",
+      "coachStateUpdatedAt": "2026-06-02T08:46:29.755Z",
       "goalsUpdatedAt": "2026-05-24T00:00:00.000Z"
     },
     "week": {
@@ -46,11 +46,11 @@
       "weekEndDate": "2026-06-07",
       "runTargetSessions": 4,
       "gymTargetSessions": 2,
-      "runCompletedSessions": 0,
+      "runCompletedSessions": 1,
       "gymCompletedSessions": 0
     },
     "adaptation": {
-      "previousRunId": "rec-2026-05-31T07-52-36-215Z",
+      "previousRunId": "rec-2026-06-01T09-36-16-389Z",
       "changed": true,
       "addedRecommendationIds": [],
       "removedRecommendationIds": [],
