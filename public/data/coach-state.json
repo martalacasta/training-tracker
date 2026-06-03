@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-06-02T08:46:29.755Z",
+  "updatedAt": "2026-06-03T09:04:16.850Z",
   "state": {
     "trainingPhase": "base",
-    "adherence": 1,
+    "adherence": 0.75,
     "fatigueFlags": []
   }
 }
