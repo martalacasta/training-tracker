@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18780112925",
+  "generatedAt": "2026-06-04T08:34:47.887Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18780112925\",\"sportType\":\"Ride\",\"startDate\":\"2026-06-03T10:37:34Z\",\"title\":\"first cycle\",\"description\":\"\",\"distanceKm\":5.31,\"movingTimeSeconds\":1226,\"calories\":158,\"averageRhythm\":null,\"averageHeartRate\":129.1,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":0.75,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You completed a short ride of 5.31 km with an average heart rate of 129.1 bpm. Your recent training includes a mix of running and weight training, indicating a balanced approach to endurance and strength.",
+    "focus": "Continue to build your cycling endurance while maintaining your running routine.",
+    "nextSession": "Plan a longer ride of at least 10 km at an easy pace to enhance your cycling stamina.",
+    "caution": "Monitor your heart rate during rides to avoid overexertion, especially as you increase distance."
+  }
+}

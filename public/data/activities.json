@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-03T09:04:16.266Z",
+  "updatedAt": "2026-06-04T08:34:35.925Z",
   "items": [
     {
       "id": "8997857366",
@@ -5533,6 +5533,38 @@
       "detailsBackfillDone": true,
       "detailsFetchAttempts": 1,
       "detailsFetchedAt": "2026-06-02T08:46:28.717Z"
+    },
+    {
+      "id": "18780112925",
+      "sportType": "Ride",
+      "startDate": "2026-06-03T10:37:34Z",
+      "title": "first cycle",
+      "description": "",
+      "distanceKm": 5.31,
+      "movingTimeSeconds": 1226,
+      "calories": 158,
+      "averageRhythm": null,
+      "averageHeartRate": 129.1,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-06-04T08:34:35.579Z"
+    },
+    {
+      "id": "18780112914",
+      "sportType": "WeightTraining",
+      "startDate": "2026-06-03T16:27:47Z",
+      "title": "fullbody training",
+      "description": "",
+      "distanceKm": 0,
+      "movingTimeSeconds": 3549,
+      "calories": 242,
+      "averageRhythm": null,
+      "averageHeartRate": 109.9,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-06-04T08:34:35.579Z"
     }
   ]
 }
