@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-04T08:34:35.925Z",
+  "updatedAt": "2026-06-05T08:16:42.402Z",
   "items": [
     {
       "id": "8997857366",
@@ -5565,6 +5565,22 @@
       "detailsBackfillDone": true,
       "detailsFetchAttempts": 1,
       "detailsFetchedAt": "2026-06-04T08:34:35.579Z"
+    },
+    {
+      "id": "18786698057",
+      "sportType": "Ride",
+      "startDate": "2026-06-04T16:22:45Z",
+      "title": "poco a poco nuevo deporte",
+      "description": "",
+      "distanceKm": 15.58,
+      "movingTimeSeconds": 3039,
+      "calories": 333,
+      "averageRhythm": null,
+      "averageHeartRate": 132.9,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-06-05T08:16:41.906Z"
     }
   ]
 }
