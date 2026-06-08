@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-07T08:01:44.541Z",
+  "updatedAt": "2026-06-08T09:03:35.841Z",
   "items": [
     {
       "id": "8997857366",
@@ -5581,6 +5581,22 @@
       "detailsBackfillDone": true,
       "detailsFetchAttempts": 1,
       "detailsFetchedAt": "2026-06-05T08:16:41.906Z"
+    },
+    {
+      "id": "18824082889",
+      "sportType": "Ride",
+      "startDate": "2026-06-07T09:15:40Z",
+      "title": "ida y vuelta a Delft",
+      "description": "",
+      "distanceKm": 33.69,
+      "movingTimeSeconds": 6836,
+      "calories": 660,
+      "averageRhythm": null,
+      "averageHeartRate": 131.2,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-06-08T09:03:35.286Z"
     }
   ]
 }

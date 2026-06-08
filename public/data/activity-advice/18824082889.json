@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18824082889",
+  "generatedAt": "2026-06-08T09:03:47.021Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18824082889\",\"sportType\":\"Ride\",\"startDate\":\"2026-06-07T09:15:40Z\",\"title\":\"ida y vuelta a Delft\",\"description\":\"\",\"distanceKm\":33.69,\"movingTimeSeconds\":6836,\"calories\":660,\"averageRhythm\":null,\"averageHeartRate\":131.2,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[\"acute-load-spike\"]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You completed a solid ride of 33.69 km with a good average heart rate. Your training is on track for the Rome Half Marathon.",
+    "focus": "Maintain a balanced training load to avoid acute fatigue.",
+    "nextSession": "Plan for an easy run of 5-6 km to recover and keep your aerobic base strong.",
+    "caution": "Monitor for signs of fatigue due to recent acute load spikes."
+  }
+}
