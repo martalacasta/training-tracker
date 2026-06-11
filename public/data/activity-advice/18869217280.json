@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18869217280",
+  "generatedAt": "2026-06-11T08:55:07.872Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18869217280\",\"sportType\":\"Ride\",\"startDate\":\"2026-06-10T16:01:20Z\",\"title\":\"Evening Ride\",\"description\":null,\"distanceKm\":14.35,\"movingTimeSeconds\":3145,\"calories\":250,\"averageRhythm\":null,\"averageHeartRate\":118,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[\"acute-load-spike\"]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You completed a 14.35 km ride with an average heart rate of 118. Your training is on track for the Rome Half Marathon in October.",
+    "focus": "Prioritize recovery and manage fatigue from recent training spikes.",
+    "nextSession": "Plan an easy recovery run of 5 km at a comfortable pace.",
+    "caution": "Watch for signs of overtraining due to acute load spikes."
+  }
+}

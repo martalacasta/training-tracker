@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18869217185",
+  "generatedAt": "2026-06-11T08:55:09.804Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18869217185\",\"sportType\":\"WeightTraining\",\"startDate\":\"2026-06-10T10:15:25Z\",\"title\":\"Lunch Weight Training\",\"description\":null,\"distanceKm\":0,\"movingTimeSeconds\":3047,\"calories\":178,\"averageRhythm\":null,\"averageHeartRate\":100,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[\"acute-load-spike\"]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You are currently in the base training phase, focusing on building endurance and strength. Maintain consistency in your workouts to prepare for the upcoming Rome Half Marathon.",
+    "focus": "Incorporate more aerobic runs into your weekly routine to enhance endurance.",
+    "nextSession": "Plan for an easy aerobic run of 5-7 km at a comfortable pace.",
+    "caution": "Watch for signs of fatigue due to recent acute load spikes."
+  }
+}
