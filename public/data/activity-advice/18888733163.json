@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18888733163",
+  "generatedAt": "2026-06-13T07:57:11.072Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18888733163\",\"sportType\":\"WeightTraining\",\"startDate\":\"2026-06-12T09:52:24Z\",\"title\":\"Entrenamiento con pesas a la hora del almuerzo\",\"description\":null,\"distanceKm\":0,\"movingTimeSeconds\":2866,\"calories\":176,\"averageRhythm\":null,\"averageHeartRate\":103,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[\"acute-load-spike\"]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You are currently in the base training phase, focusing on building consistency and strength. Your recent weight training sessions have been effective, but be mindful of your acute load spike.",
+    "focus": "Incorporate more aerobic runs to balance your training and reduce fatigue.",
+    "nextSession": "Plan a light aerobic run for your next session to aid recovery and maintain endurance.",
+    "caution": "Monitor fatigue levels closely to avoid overtraining."
+  }
+}
