@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-13T07:57:01.753Z",
+  "updatedAt": "2026-06-14T08:24:47.437Z",
   "items": [
     {
       "id": "8997857366",
@@ -5645,6 +5645,22 @@
       "detailsBackfillDone": true,
       "detailsFetchAttempts": 1,
       "detailsFetchedAt": "2026-06-13T07:57:01.474Z"
+    },
+    {
+      "id": "18906024024",
+      "sportType": "Ride",
+      "startDate": "2026-06-13T09:01:43Z",
+      "title": "bicicleteando a la Haya",
+      "description": "",
+      "distanceKm": 50.99,
+      "movingTimeSeconds": 10732,
+      "calories": 975,
+      "averageRhythm": null,
+      "averageHeartRate": 131.3,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-06-14T08:24:46.957Z"
     }
   ]
 }

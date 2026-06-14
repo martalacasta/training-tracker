@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18906024024",
+  "generatedAt": "2026-06-14T08:24:57.777Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18906024024\",\"sportType\":\"Ride\",\"startDate\":\"2026-06-13T09:01:43Z\",\"title\":\"bicicleteando a la Haya\",\"description\":\"\",\"distanceKm\":50.99,\"movingTimeSeconds\":10732,\"calories\":975,\"averageRhythm\":null,\"averageHeartRate\":131.3,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[\"acute-load-spike\"]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You completed a 51 km ride with an average heart rate of 131.3 bpm. Ensure to manage your training load to avoid fatigue.",
+    "focus": "Prioritize recovery and maintain a balanced training load to prevent injury.",
+    "nextSession": "Plan a light recovery ride or an easy run to keep your legs moving without adding stress.",
+    "caution": "Watch for signs of fatigue due to recent acute load spikes."
+  }
+}

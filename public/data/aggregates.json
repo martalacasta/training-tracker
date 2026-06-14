@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-13T07:57:01.782Z",
+  "updatedAt": "2026-06-14T08:24:47.467Z",
   "weeks": [
     {
       "isoWeek": "2023-W18",
@@ -605,10 +605,10 @@
     },
     {
       "isoWeek": "2026-W24",
-      "distanceKm": 14.35,
-      "movingTimeHours": 2.52,
-      "sessions": 3,
-      "avgHeartRate": 107
+      "distanceKm": 65.34,
+      "movingTimeHours": 5.5,
+      "sessions": 4,
+      "avgHeartRate": 113.08
     }
   ],
   "months": [
@@ -740,9 +740,9 @@
     },
     {
       "month": "2026-06",
-      "distanceKm": 73.93,
-      "movingTimeHours": 7.14,
-      "sessions": 8
+      "distanceKm": 124.92,
+      "movingTimeHours": 10.12,
+      "sessions": 9
     }
   ]
 }
