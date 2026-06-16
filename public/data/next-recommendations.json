@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-15T10:33:35.904Z",
+  "updatedAt": "2026-06-16T09:36:20.778Z",
   "items": [
     {
       "id": "1",
@@ -11,34 +11,34 @@
     {
       "id": "2",
       "title": "Strength Training Session",
-      "description": "Perform a full-body weight training session focusing on compound movements. Include 3 sets of 10-12 reps for squats, deadlifts, and bench press, with 60 seconds rest between sets.",
+      "description": "Perform a full-body weight training session including 3 sets of 10-12 reps for each exercise: squats, lunges, bench press, and rows. Rest 60 seconds between sets.",
       "intensity": "moderate",
-      "confidence": 0.85
+      "confidence": 0.8
     },
     {
       "id": "3",
       "title": "Interval Training",
       "description": "After a 10-minute warm-up, complete 5x600m intervals at a pace of 5:00 min/km with 2 minutes of recovery jog between each interval. Cool down for 10 minutes.",
       "intensity": "high",
-      "confidence": 0.8
+      "confidence": 0.7
     },
     {
       "id": "4",
       "title": "Recovery Run",
-      "description": "Run 5 km at a very easy pace of 7:30-8:00 min/km. Keep your heart rate below 130 bpm to aid recovery.",
+      "description": "Run 5 km at a very easy pace of 7:30-8:00 min/km to aid recovery. Keep heart rate below 135 bpm.",
       "intensity": "low",
-      "confidence": 0.9
+      "confidence": 0.85
     }
   ],
   "trace": {
     "schemaVersion": 1,
-    "runId": "rec-2026-06-15T10-33-35-904Z",
+    "runId": "rec-2026-06-16T09-36-20-778Z",
     "trigger": "pipeline",
     "source": "llm",
     "model": "openai/gpt-4o-mini",
     "generatedFrom": {
-      "activitiesUpdatedAt": "2026-06-15T10:33:27.432Z",
-      "coachStateUpdatedAt": "2026-06-15T10:33:27.915Z",
+      "activitiesUpdatedAt": "2026-06-16T09:36:14.918Z",
+      "coachStateUpdatedAt": "2026-06-16T09:36:15.549Z",
       "goalsUpdatedAt": "2026-05-24T00:00:00.000Z"
     },
     "week": {
@@ -50,12 +50,11 @@
       "gymCompletedSessions": 0
     },
     "adaptation": {
-      "previousRunId": "rec-2026-06-14T08-24-54-244Z",
+      "previousRunId": "rec-2026-06-15T10-33-35-904Z",
       "changed": true,
       "addedRecommendationIds": [],
       "removedRecommendationIds": [],
       "updatedRecommendationIds": [
-        "1",
         "2",
         "3",
         "4"
