@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18961082896",
+  "generatedAt": "2026-06-18T08:56:21.446Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18961082896\",\"sportType\":\"Run\",\"startDate\":\"2026-06-17T16:31:42Z\",\"title\":\"Carrera de noche\",\"description\":null,\"distanceKm\":5.01,\"movingTimeSeconds\":2429,\"calories\":308,\"averageRhythm\":8.08,\"averageHeartRate\":143.8,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[\"acute-load-spike\"]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You completed a 5km run with a steady pace and good heart rate. Maintain consistency as you prepare for the Rome Half Marathon.",
+    "focus": "Prioritize recovery and manage fatigue from recent training spikes.",
+    "nextSession": "Plan an easy aerobic run of 30-40 minutes at a comfortable pace.",
+    "caution": "Watch for signs of overtraining due to recent acute load spikes."
+  }
+}

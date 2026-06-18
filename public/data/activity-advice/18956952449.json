@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "18956952449",
+  "generatedAt": "2026-06-18T08:56:23.858Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"18956952449\",\"sportType\":\"WeightTraining\",\"startDate\":\"2026-06-17T09:48:11Z\",\"title\":\"Lunch Weight Training\",\"description\":null,\"distanceKm\":0,\"movingTimeSeconds\":2930,\"calories\":245,\"averageRhythm\":null,\"averageHeartRate\":120.4,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"base\",\"adherence\":1,\"fatigueFlags\":[\"acute-load-spike\"]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You are currently in the base training phase, focusing on building endurance and strength. Your recent weight training sessions are contributing positively to your overall fitness.",
+    "focus": "Prioritize recovery and manage your training load to prevent fatigue.",
+    "nextSession": "Plan a light recovery run or an easy aerobic session to maintain consistency without overloading.",
+    "caution": "Watch for signs of fatigue due to recent acute load spikes."
+  }
+}

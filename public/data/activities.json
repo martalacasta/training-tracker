@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17T09:13:47.221Z",
+  "updatedAt": "2026-06-18T08:56:12.051Z",
   "items": [
     {
       "id": "8997857366",
@@ -5661,6 +5661,38 @@
       "detailsBackfillDone": true,
       "detailsFetchAttempts": 1,
       "detailsFetchedAt": "2026-06-14T08:24:46.957Z"
+    },
+    {
+      "id": "18956952449",
+      "sportType": "WeightTraining",
+      "startDate": "2026-06-17T09:48:11Z",
+      "title": "Lunch Weight Training",
+      "description": null,
+      "distanceKm": 0,
+      "movingTimeSeconds": 2930,
+      "calories": 245,
+      "averageRhythm": null,
+      "averageHeartRate": 120.4,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-06-18T08:56:11.517Z"
+    },
+    {
+      "id": "18961082896",
+      "sportType": "Run",
+      "startDate": "2026-06-17T16:31:42Z",
+      "title": "Carrera de noche",
+      "description": null,
+      "distanceKm": 5.01,
+      "movingTimeSeconds": 2429,
+      "calories": 308,
+      "averageRhythm": 8.08,
+      "averageHeartRate": 143.8,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-06-18T08:56:11.517Z"
     }
   ]
 }
