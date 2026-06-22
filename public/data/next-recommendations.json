@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T08:41:17.905Z",
+  "updatedAt": "2026-06-22T10:15:44.184Z",
   "items": [
     {
       "id": "1",
@@ -11,51 +11,50 @@
     {
       "id": "2",
       "title": "Speed Work",
-      "description": "After a 10-minute warm-up, perform 5x800m intervals at a pace of 5:00 min/km with 2 minutes of recovery between each interval. Cool down for 10 minutes.",
+      "description": "After a 10-minute warm-up, perform 5x800m intervals at a pace of 5:00 min/km with 2 minutes of recovery between each interval. Cool down for 10 minutes afterward.",
       "intensity": "high",
       "confidence": 0.7
     },
     {
       "id": "3",
-      "title": "Easy Recovery Run",
-      "description": "Run 5 km at a relaxed pace of 7:30 min/km. Keep your heart rate below 135 bpm to aid recovery.",
+      "title": "Recovery Run",
+      "description": "Run 5 km at an easy pace of 7:30 min/km. Keep your heart rate below 135 bpm to aid recovery.",
       "intensity": "low",
       "confidence": 0.9
     },
     {
       "id": "4",
       "title": "Strength Training",
-      "description": "Focus on full-body strength training for 45 minutes, including squats, lunges, and core exercises. Maintain a heart rate around 120 bpm.",
+      "description": "Focus on full-body strength training with 3 sets of 10-12 reps for each exercise (squats, lunges, push-ups, and planks). Rest for 60 seconds between sets.",
       "intensity": "moderate",
       "confidence": 0.85
     }
   ],
   "trace": {
     "schemaVersion": 1,
-    "runId": "rec-2026-06-21T08-41-17-905Z",
+    "runId": "rec-2026-06-22T10-15-44-184Z",
     "trigger": "pipeline",
     "source": "llm",
     "model": "openai/gpt-4o-mini",
     "generatedFrom": {
-      "activitiesUpdatedAt": "2026-06-21T08:41:12.557Z",
-      "coachStateUpdatedAt": "2026-06-21T08:41:13.158Z",
+      "activitiesUpdatedAt": "2026-06-22T10:15:38.437Z",
+      "coachStateUpdatedAt": "2026-06-22T10:15:38.846Z",
       "goalsUpdatedAt": "2026-05-24T00:00:00.000Z"
     },
     "week": {
-      "weekStartDate": "2026-06-15",
-      "weekEndDate": "2026-06-21",
+      "weekStartDate": "2026-06-22",
+      "weekEndDate": "2026-06-28",
       "runTargetSessions": 4,
       "gymTargetSessions": 2,
-      "runCompletedSessions": 1,
-      "gymCompletedSessions": 1
+      "runCompletedSessions": 0,
+      "gymCompletedSessions": 0
     },
     "adaptation": {
-      "previousRunId": "rec-2026-06-20T07-58-03-542Z",
+      "previousRunId": "rec-2026-06-21T08-41-17-905Z",
       "changed": true,
       "addedRecommendationIds": [],
       "removedRecommendationIds": [],
       "updatedRecommendationIds": [
-        "1",
         "2",
         "3",
         "4"
