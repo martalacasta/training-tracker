@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T07:57:59.432Z",
+  "updatedAt": "2026-06-24T07:53:29.886Z",
   "items": [
     {
       "id": "8997857366",
@@ -5693,6 +5693,22 @@
       "detailsBackfillDone": true,
       "detailsFetchAttempts": 1,
       "detailsFetchedAt": "2026-06-18T08:56:11.517Z"
+    },
+    {
+      "id": "19037734257",
+      "sportType": "WeightTraining",
+      "startDate": "2026-06-23T10:37:28Z",
+      "title": "Lunch Weight Training",
+      "description": null,
+      "distanceKm": 0,
+      "movingTimeSeconds": 2419,
+      "calories": 180,
+      "averageRhythm": null,
+      "averageHeartRate": 112.2,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-06-24T07:53:29.604Z"
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "19037734257",
+  "generatedAt": "2026-06-24T07:53:39.880Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"19037734257\",\"sportType\":\"WeightTraining\",\"startDate\":\"2026-06-23T10:37:28Z\",\"title\":\"Lunch Weight Training\",\"description\":null,\"distanceKm\":0,\"movingTimeSeconds\":2419,\"calories\":180,\"averageRhythm\":null,\"averageHeartRate\":112.2,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"build\",\"adherence\":0.75,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You are currently in the build phase of your training, focusing on consistency and strength. Your recent weight training sessions have been effective in supporting your endurance goals.",
+    "focus": "Incorporate more quality workouts into your running sessions to enhance speed and stamina.",
+    "nextSession": "Plan a quality running workout for this week, focusing on intervals or tempo runs to improve your pace.",
+    "caution": "Monitor your fatigue levels and ensure adequate recovery to prevent overtraining."
+  }
+}
