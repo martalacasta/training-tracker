@@ -1,44 +1,44 @@
 {
-  "updatedAt": "2026-06-25T07:54:35.984Z",
+  "updatedAt": "2026-06-26T08:03:17.735Z",
   "items": [
     {
       "id": "1",
       "title": "Long Run",
-      "description": "Run 10 km at a pace of 6:30 min/km. Aim to keep your heart rate in Zone 2 (about 135-150 bpm). Include a 10-minute warm-up and a 5-minute cool down.",
+      "description": "Run 10 km at a pace of 6:30 min/km. Aim to keep your heart rate in Zone 2 (130-145 bpm).",
       "intensity": "moderate",
       "confidence": 0.8
     },
     {
       "id": "2",
-      "title": "Speed Work",
-      "description": "Perform 5x800m intervals at a pace of 5:00 min/km with 2 minutes of rest between each interval. Start with a 10-minute warm-up and finish with a 10-minute cool down. Aim to keep your heart rate in Zone 4 (about 160-175 bpm) during the intervals.",
+      "title": "Tempo Run",
+      "description": "Run 6 km with 4 km at a pace of 5:45 min/km. Start with a 1 km warm-up at an easy pace (7:00 min/km) and finish with a 1 km cool down. Target heart rate during tempo segments should be in Zone 3 (145-160 bpm).",
       "intensity": "high",
       "confidence": 0.7
     },
     {
       "id": "3",
-      "title": "Recovery Run",
-      "description": "Run 4 km at a relaxed pace of 7:30 min/km. Keep your heart rate in Zone 1 (about 120-130 bpm). This session should feel easy and help you recover from previous workouts.",
+      "title": "Easy Recovery Run",
+      "description": "Run 5 km at a relaxed pace of 7:30 min/km. Keep your heart rate below 130 bpm to aid recovery.",
       "intensity": "low",
       "confidence": 0.9
     },
     {
       "id": "4",
       "title": "Strength Training",
-      "description": "Continue with weight training focusing on full-body exercises. Aim for 3 sets of 10-12 reps for each exercise, including squats, lunges, and deadlifts. Rest for 60 seconds between sets.",
+      "description": "Focus on full-body strength training for 45 minutes. Include exercises like squats, lunges, and deadlifts. Aim for 3 sets of 10-12 reps for each exercise.",
       "intensity": "moderate",
       "confidence": 0.85
     }
   ],
   "trace": {
     "schemaVersion": 1,
-    "runId": "rec-2026-06-25T07-54-35-984Z",
+    "runId": "rec-2026-06-26T08-03-17-735Z",
     "trigger": "pipeline",
     "source": "llm",
     "model": "openai/gpt-4o-mini",
     "generatedFrom": {
-      "activitiesUpdatedAt": "2026-06-25T07:54:24.463Z",
-      "coachStateUpdatedAt": "2026-06-25T07:54:25.079Z",
+      "activitiesUpdatedAt": "2026-06-26T08:03:11.156Z",
+      "coachStateUpdatedAt": "2026-06-26T08:03:11.847Z",
       "goalsUpdatedAt": "2026-05-24T00:00:00.000Z"
     },
     "week": {
@@ -50,7 +50,7 @@
       "gymCompletedSessions": 1
     },
     "adaptation": {
-      "previousRunId": "rec-2026-06-24T07-53-36-554Z",
+      "previousRunId": "rec-2026-06-25T07-54-35-984Z",
       "changed": true,
       "addedRecommendationIds": [],
       "removedRecommendationIds": [],
