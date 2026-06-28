@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T07:27:13.605Z",
+  "updatedAt": "2026-06-28T07:57:58.910Z",
   "items": [
     {
       "id": "8997857366",
@@ -5709,6 +5709,22 @@
       "detailsBackfillDone": true,
       "detailsFetchAttempts": 1,
       "detailsFetchedAt": "2026-06-24T07:53:29.604Z"
+    },
+    {
+      "id": "19094522962",
+      "sportType": "Run",
+      "startDate": "2026-06-28T07:12:54Z",
+      "title": "Morning Run",
+      "description": null,
+      "distanceKm": 5.05,
+      "movingTimeSeconds": 2013,
+      "calories": 340,
+      "averageRhythm": 6.65,
+      "averageHeartRate": 173.8,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-06-28T07:57:58.444Z"
     }
   ]
 }

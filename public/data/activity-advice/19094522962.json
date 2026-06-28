@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "activityId": "19094522962",
+  "generatedAt": "2026-06-28T07:58:07.926Z",
+  "source": "llm",
+  "model": "openai/gpt-4o-mini",
+  "versions": {
+    "activity": "{\"id\":\"19094522962\",\"sportType\":\"Run\",\"startDate\":\"2026-06-28T07:12:54Z\",\"title\":\"Morning Run\",\"description\":null,\"distanceKm\":5.05,\"movingTimeSeconds\":2013,\"calories\":340,\"averageRhythm\":6.65,\"averageHeartRate\":173.8,\"sensation\":null}",
+    "context": "{\"coachState\":{\"trainingPhase\":\"build\",\"adherence\":0.5,\"fatigueFlags\":[]},\"goals\":[{\"id\":\"rome-half-marathon\",\"name\":\"Rome Half Marathon\",\"targetDate\":\"2026-10-18\",\"type\":\"race\",\"status\":\"on-track\",\"targetSessionsPerWeek\":4}]}"
+  },
+  "advice": {
+    "summary": "You completed a solid 5 km run with a good average heart rate. Keep building your endurance as you prepare for the Rome Half Marathon.",
+    "focus": "Incorporate more quality workouts into your training to improve speed and endurance.",
+    "nextSession": "Plan for a quality workout session focusing on intervals or tempo runs this week.",
+    "caution": "Monitor your heart rate during workouts to avoid overtraining."
+  }
+}
