@@ -1,44 +1,44 @@
 {
-  "updatedAt": "2026-06-29T09:07:28.256Z",
+  "updatedAt": "2026-06-30T08:02:09.984Z",
   "items": [
     {
       "id": "1",
       "title": "Long Run",
-      "description": "Run 10 km at a pace of 6:00 min/km. Focus on maintaining a steady heart rate in Zone 2 (130-150 bpm).",
+      "description": "Run 10 km at a pace of 6:00-6:30 min/km. Aim to keep your heart rate in Zone 2 (130-150 bpm).",
       "intensity": "moderate",
-      "confidence": 0.8
+      "confidence": 0.9
     },
     {
       "id": "2",
       "title": "Interval Training",
-      "description": "Perform 5 x 800m intervals at a pace of 5:30 min/km with 2 minutes of recovery jog between each interval. Aim to keep your heart rate in Zone 4 (160-175 bpm) during the intervals.",
+      "description": "Perform 5 x 800m intervals at a pace of 5:30 min/km with 2 minutes of recovery jog between each interval. Keep your heart rate in Zone 4 (160-175 bpm) during the intervals.",
       "intensity": "high",
-      "confidence": 0.7
+      "confidence": 0.85
     },
     {
       "id": "3",
-      "title": "Easy Recovery Run",
-      "description": "Run 5 km at a relaxed pace of 7:30 min/km. Keep your heart rate in Zone 1 (below 130 bpm) to aid recovery.",
+      "title": "Recovery Run",
+      "description": "Run 5 km at an easy pace of 7:00-7:30 min/km. Focus on keeping your heart rate below 140 bpm.",
       "intensity": "low",
       "confidence": 0.9
     },
     {
       "id": "4",
-      "title": "Weight Training Session",
-      "description": "Focus on full-body strength training. Include 3 sets of 10-12 reps for squats, lunges, and deadlifts, with 1-2 minutes of rest between sets. Aim for a heart rate around 120 bpm during the workout.",
+      "title": "Strength Training",
+      "description": "Complete a full-body strength training session focusing on core and leg exercises. Aim for 3 sets of 10-12 reps for each exercise with 1-minute rest between sets.",
       "intensity": "moderate",
-      "confidence": 0.85
+      "confidence": 0.8
     }
   ],
   "trace": {
     "schemaVersion": 1,
-    "runId": "rec-2026-06-29T09-07-28-256Z",
+    "runId": "rec-2026-06-30T08-02-09-984Z",
     "trigger": "pipeline",
     "source": "llm",
     "model": "openai/gpt-4o-mini",
     "generatedFrom": {
-      "activitiesUpdatedAt": "2026-06-29T09:07:22.155Z",
-      "coachStateUpdatedAt": "2026-06-29T09:07:22.772Z",
+      "activitiesUpdatedAt": "2026-06-30T08:02:04.439Z",
+      "coachStateUpdatedAt": "2026-06-30T08:02:05.049Z",
       "goalsUpdatedAt": "2026-05-24T00:00:00.000Z"
     },
     "week": {
@@ -50,7 +50,7 @@
       "gymCompletedSessions": 0
     },
     "adaptation": {
-      "previousRunId": "rec-2026-06-28T07-58-04-677Z",
+      "previousRunId": "rec-2026-06-29T09-07-28-256Z",
       "changed": true,
       "addedRecommendationIds": [],
       "removedRecommendationIds": [],

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T09:07:22.155Z",
+  "updatedAt": "2026-06-30T08:02:04.439Z",
   "items": [
     {
       "id": "8997857366",
@@ -5725,6 +5725,22 @@
       "detailsBackfillDone": true,
       "detailsFetchAttempts": 1,
       "detailsFetchedAt": "2026-06-28T07:57:58.444Z"
+    },
+    {
+      "id": "19111971411",
+      "sportType": "Swim",
+      "startDate": "2026-06-29T15:23:15Z",
+      "title": "Afternoon Swim",
+      "description": null,
+      "distanceKm": 0.82,
+      "movingTimeSeconds": 1348,
+      "calories": 215,
+      "averageRhythm": null,
+      "averageHeartRate": 131.9,
+      "sensation": null,
+      "detailsBackfillDone": true,
+      "detailsFetchAttempts": 1,
+      "detailsFetchedAt": "2026-06-30T08:02:04.169Z"
     }
   ]
 }
